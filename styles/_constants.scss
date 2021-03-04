@@ -3,39 +3,45 @@
  */
 $MOBILE: 320px;
 $TABLET: 768px;
-$DESKTOP: 1280px;
+$TABLET-L: 1024px;
+$DESKTOP: 1479px;
 
 /**
  * font-family
  */
-$BASE-FONT: 'Thintel', Helvetica, sans-serif;
+$BASE-FONT:  'Montserrat', Helvetica, sans-serif;
+//$FOOTER-FONT:  'Arial', Helvetica, sans-serif;
+$FOOTER-FONT: 'hinted-Roboto-o-Regular', Helvetica, sans-serif;
 
 /**
  * color
  */
-$BLUE-L: #2595bf;
-$BLUE: #5b71de;
-$BLUE-D: #5664d2;
-//__________
-$PURPLE-L: #c5c8ff;
-$PURPLE: #7e82ca;
-$HERO-SHADOW: #585daa;
-$PURPLE-D: #373b88;
-
-$curious-blue: #2595bf;
-$iris: #5664d2;
-$ocean-blue:#473cb1;
-
-$PINK: #c54478;
-$DARK-BASE: #1a0a14;
+$SANDY: #eee2c7;
+$BROWN: #99856e;
+$FLAG: #ddd0b1;
 $WHITE: #ffffff;
+$BLACK: #000000;
+$GRAY: #4c4c4c;
+$GRAY-1: #E5ECEF;
+$YELLOW: #FFE144;
+$YELLOW-1: #FED957;
+$YELLOW-2: #FFED4B;
+$GREEN: #6FF331;
+$RED: #D61407;;
+$FOOTER: rgba(0,0,0,0.3012);
+$YELLOW-3: #FFC93D;
 
 /**
  * z-layer
  */
 $z-modal: 1000;
-$z-preloader: 500;
-$z-close-btn-modal: 1;
+$z-timer: 100;
+$z-item: 1;
+$z-mobile-p: 6;
+$z-countdown:2;
+$z-item: 1;
+$z-content:1;
+
 
 /**
  * font-weight
@@ -57,8 +63,9 @@ $FW-HEAVY: 900;
 /**
  * other
  */
-$DESIGN-W-R: 2200px;
-$DESIGN-W: 255px;
-$DESIGN-H: 139px;
-$PIC: 1;
-$CELL-W: 194px;
+$DESIGN-W: 1440px;
+$DESIGN-H: 900px;
+$DESIGN-W-M: 375px;
+
+$WRAPPER-D: 1100px;
+$WRAPPER-D-M: 325px;

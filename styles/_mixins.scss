@@ -81,43 +81,19 @@
   #{$n}: vw($v);
 }
 
-@mixin option-r($n, $v, $vm:false){
-  #{$n}: r-vw($v);
-}
+//@mixin option-r($n, $v, $vm:false){
+//  #{$n}: r-vw($v);
+//}
 
-
-@mixin pixel-bg($bg:$PURPLE-D, $shadow:$PURPLE){
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 1em solid rgba($WHITE,0);
+@mixin wrapper($w: $WRAPPER-D, $wm:$WRAPPER-D-M){
+  @include option(width, $w, $wm);
+  margin: 0 auto;
+  max-width: 90%;
   box-sizing: border-box;
+  position: relative;
 
-  &:before,
-  &:after{
-    position: absolute;
-    content: "";
-    clear: both;
-    display: block;
-    width: auto;
-    height: auto;
-    background: $bg;
-    box-shadow: 0 1em 0 0 $shadow;
-    box-sizing: border-box;
-  }
-
-  &:before{
-    top: 0;
-    left: -1em;
-    right: -1em;
-    bottom: 1em;
-  }
-  &:after{
-    top: -1em;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  @include MOBILE{
+    max-width: 100%;
   }
 }
+

@@ -6,7 +6,7 @@
       @return url(inline-image("app/images/#{$path}"));
     }
   } @else {
-    @return url("../images/#{$path}");
+    @return url("../../public/images/#{$path}");
   }
 }
 
@@ -163,8 +163,12 @@
   @return adaptive( $v, $DESIGN-W, 1vw);
 }
 
-@function r-vw($v){
-  @return adaptive( $v, $DESIGN-W-R, 1vw);
+@function vw-t($v){
+  @return adaptive( $v, $DESIGN-W-M, 1vw*0.75);
+}
+
+@function vw-m($v){
+  @return adaptive( $v, $DESIGN-W-M, 1vw);
 }
 
 @function vh-vw($v){

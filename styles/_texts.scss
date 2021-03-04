@@ -3,6 +3,46 @@
  */
 %DEFAULT {
   font-family: $BASE-FONT;
-  @include option(font-size, $PIC);
+  font-size: 18px;
   color: #000000;
+  @include MOBILE {
+    font-size: 20px;
+  }
+}
+%H1{
+  @include option(font-size, 61, 42);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+%H2{
+  font-weight: 500;
+  @include option(font-size, 38px, 28px);
+  line-height: 1.2;
+}
+/**
+ *
+ */
+%FOOTER-TEXT {
+  font-family: $FOOTER-FONT;
+  line-height: 1.4;
+  color: #555555;
+  @include option(font-size, 10);
+}
+
+/**
+ *
+ */
+%SOCIAL-BLOCK-TITLE{
+  @include option(font-size, 19, 19);
+}
+/**
+ *
+ */
+%LINK{
+  font-family: $FOOTER-FONT;
+  @include option(font-size, 19, 18.33);
+  @include MOBILE{
+    line-height: 1.2;
+  }
 }

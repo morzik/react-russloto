@@ -21,9 +21,7 @@ const Picture = ({attr, list: listData, imgAttr}) => {
       )
     } else {
       content = (
-        <picture>
-          <img {...imgAttr}/>
-        </picture>
+        <img {...imgAttr}/>
       )
     }
   }

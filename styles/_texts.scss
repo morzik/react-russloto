@@ -1,0 +1,8 @@
+/**
+ * Обычный текст
+ */
+%DEFAULT {
+  font-family: $BASE-FONT;
+  @include option(font-size, $PIC);
+  color: #000000;
+}

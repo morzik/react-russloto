@@ -33,7 +33,10 @@ const Button = (props) => {
         onTouchEnd={pressedOff}
         onTouchCancel={pressedOff}
     >
-    {props.children}
+      <span className={"button__text"}>
+      {props.children}
+      </span>
+
   </Tag>)
 };
 

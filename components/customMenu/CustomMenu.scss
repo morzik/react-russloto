@@ -1,11 +1,11 @@
 .custom-menu {
   @mixin mod($mod) {
-    @include modifier("custom-menu", $mod){
+    @include modifier("custom-menu", $mod) {
       @content;
     }
   }
   @mixin item-mod($mod) {
-    @include modifier("custom-menu__item", $mod){
+    @include modifier("custom-menu__item", $mod) {
       @content;
     }
   }
@@ -22,7 +22,7 @@
   pointer-events: none;
   @include option(margin, -1px 0 20px, 0);
 
-  @include MOBILE{
+  @include MOBILE {
     display: none;
   }
 
@@ -39,9 +39,11 @@
     transition: color 0.3s ease-in-out;
     pointer-events: all;
 
-    &_hover{
-      color: #ffff03;
+
+    @include HOVER {
+      &:hover {
+        color: #ffff03;
+      }
     }
   }
-
 }

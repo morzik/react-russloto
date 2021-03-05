@@ -202,8 +202,7 @@
     @include option(width, 19px);
     @include option(height, 26px);
     margin: 0 auto;
-    background: red;
-    //background: image("intro/mark.svg") no-repeat center / contain;
+    background: image("intro/mark.svg") no-repeat center / contain;
   }
 
   &__steam{

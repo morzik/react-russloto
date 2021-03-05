@@ -6,9 +6,6 @@ import CustomMenu from "../customMenu/CustomMenu";
 
 
 const IntroHeader = ({logo, menu}) => {
-
-  console.log("!!!",menu);
-
   return (
     <div className={'intro__header'}>
       <IntroLogo {...logo}/>

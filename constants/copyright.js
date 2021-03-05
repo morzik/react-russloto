@@ -1,14 +1,18 @@
 export const intro = {
-  title:"Джекпот",
-  text:"Выигрывает каждый третий билет",
-  subtitle:"50 загородных домов",
-  prize:"от <span>500 000 000 ₽</span>",
-  mark:{
-    text:"Попробуйте \nновые тиражи \n«Русского лото!»"
+  title: "Джекпот",
+  text: "Выигрывает каждый третий билет",
+  subtitle: "50 загородных домов",
+  prize: "от <span>500 000 000 ₽</span>",
+  mark: {
+    text: "Попробуйте \nновые тиражи \n«Русского лото!»"
   },
-  button:{
-    tag:"a",
-    text:"button"
+  button: {
+    tag: "a",
+    text: "Купить билет",
+    attr: {
+      href: "https://www.stotlo.ru",
+      target: "_blank"
+    }
   },
   bg: {
     person: {
@@ -54,21 +58,21 @@ export const intro = {
       }
     }
   },
-  header:{
-    logo:{
-      attr:{
-        href:"https://www.stoloto.ru",
-        target:"_blank",
-        "data-mhref":"https://m.stoloto.ru"
+  header: {
+    logo: {
+      attr: {
+        href: "https://www.stoloto.ru",
+        target: "_blank",
+        "data-mhref": "https://m.stoloto.ru"
       },
-      image:{
-        imgAttr:{
-          src:"images/intro/logo.svg",
-          alt:"Русское лото"
+      image: {
+        imgAttr: {
+          src: "images/intro/logo.svg",
+          alt: "Русское лото"
         }
       }
     },
-    menu:[
+    menu: [
       {
         "className": "custom-menu__item custom-menu__item_1 custom-menu__item_active",
         "href": "#block3",
@@ -102,13 +106,40 @@ export const intro = {
 };
 
 
-export const menu = [
-  {
-    name: 'Home',
-    href: '/',
+export const about = {
+  "attr": {
+    "id": "block2"
   },
-  {
-    name: 'About',
-    href: '/about',
+  title: "Акция \n«Год без забот»",
+  subtitle: "среди всех билетов тиражей №1370, 1371, 1372 разыгрывается дополнительный приз в миллион рублей.",
+  link: "Подробнее об акции",
+  href: "rules.pdf",
+  sign: "Всего: ",
+  sign_m: "На этой неделе: ",
+  image: {
+    imgAttr: {
+      src: "images/about/img.svg",
+      alt: "icons-1"
+    }
   },
-];
+  items: [
+    {
+      image: {
+        imgAttr: {
+          src: "images/about/1.svg",
+          alt: "icons-1"
+        }
+      },
+      text: "50 загородных домов в 4-х тиражах, денежные призы"
+    },
+    {
+      image: {
+        imgAttr: {
+          src: "images/about/2.svg",
+          alt: "icons-2"
+        }
+      },
+      text: "останется 3 бочонка – выигрывает каждый \n3-й билет"
+    }
+  ]
+};

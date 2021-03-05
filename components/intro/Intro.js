@@ -7,24 +7,25 @@ import IntroHeader from "./IntroHeader";
 import {safeHTML} from "../../utils/safeHTML";
 
 const Intro = ({title,subtitle,text, prize, mark, header, button, bg}) => (
-  <section className={"intro"}>
-    <div className={"intro__content"}>
-      <IntroBg {...bg} />
-      <IntroHeader {...header}/>
-      <div className={"intro__info"}>
-        <h2 className="intro__title">
-          {title}
-        </h2>
-        <p className="intro__prize">{safeHTML(prize)}</p>
-        <p className="intro__subtitle">{subtitle}</p>
-        <span className="intro__text">
+  <section >
+    <div className={"intro"}>
+      <div className={"intro__content"}>
+        <IntroBg {...bg} />
+        <IntroHeader {...header}/>
+        <div className={"intro__info"}>
+          <h2 className="intro__title">
+            {title}
+          </h2>
+          <p className="intro__prize">{safeHTML(prize)}</p>
+          <p className="intro__subtitle">{subtitle}</p>
+          <span className="intro__text">
           <span>{text}</span>
         </span>
-        <Button {...button} >{button.text}</Button>
-        <IntroMark {...mark}/>
+          <Button {...button} >{button.text}</Button>
+          <IntroMark {...mark}/>
+        </div>
       </div>
     </div>
-
   </section>
 );
 

@@ -6,7 +6,7 @@
       @return url(inline-image("app/images/#{$path}"));
     }
   } @else {
-    @return url("../../public/images/#{$path}");
+    @return url("/images/#{$path}");
   }
 }
 

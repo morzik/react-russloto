@@ -104,7 +104,8 @@
     line-height: 1;
     font-weight: bold;
     color: $YELLOW;
-    span{
+    strong{
+      font-weight: bold;
       display: inline-block;
       vertical-align: baseline;
       @include option(font-size, 61px, 36px);

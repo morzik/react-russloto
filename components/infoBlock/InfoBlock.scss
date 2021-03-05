@@ -1,0 +1,174 @@
+.info-block {
+  // Константы
+  @mixin mod($mod) {
+    @include modifier("info-block", $mod) {
+      @content;
+    }
+  }
+  position: relative;
+  background-color: #050219;
+
+  &__content {
+    position: relative;
+    @include wrapper($w:818px);
+    @include option(padding, 59px 0 68px, 40px 0 45px);
+    box-sizing: border-box;
+    color: $WHITE;
+  }
+
+
+  &__title {
+    @extend %H2;
+    letter-spacing: -0.001em;
+    line-height: 1.28;
+    position: relative;
+    white-space: pre-line;
+    margin: 0;
+    br{
+      display: none;
+    }
+    @include MOBILE {
+      white-space: normal;
+      letter-spacing: 0.002em;
+      line-height: 1.22;
+      br{
+        display: block;
+      }
+    }
+  }
+
+  &__subtitle {
+    @include option(font-size, 18px);
+    letter-spacing: -0.001em;
+    line-height: 1.28;
+    @include MOBILE {
+      display: none;
+    }
+  }
+
+
+  &__list {
+    position: relative;
+    color: $BLACK;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    box-sizing: border-box;
+    @include option(margin, 79px 0 39px, 49px auto 16px);
+    padding: 0;
+    @include MOBILE {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    flex: 0 1 32%;
+    @include option(margin, 0, 0 0 30px);
+
+    &:nth-child(2){
+      @include option(margin, 0, 0 0 7px);
+    }
+
+    &:nth-last-of-type(1) {
+      margin: 0;
+    }
+
+    @include MOBILE {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__item-icon {
+    @include option(width, auto, 63px);
+    @include option(height, 56.15px, 50px);
+    @include option(margin, 0 0 27px, 0 18px 0 0);
+    display: block;
+    svg{
+      @include option(height, 56.15px, 50px);
+    }
+    @include MOBILE {
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: center;
+      vertical-align: top;
+      svg {
+        margin: auto;
+      }
+    }
+  }
+
+  &__item-text {
+    @include option(width, auto, 234px);
+    @include option(font-size, 18px, 16px);
+    @include option(line-height, 24.3px, 21.6px);
+    white-space: pre-line;
+    letter-spacing: 0.005em;
+    color: $WHITE;
+    span{
+      display: block;
+      @include option(height, 13px, 0);
+    }
+    @include MOBILE{
+      display: inline-block;
+      vertical-align: top;
+      letter-spacing: -0.005em;
+      min-height: 4em*1.38;
+      span{
+        display: none;
+      }
+    }
+  }
+
+  &__more {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    width: auto;
+    @include MOBILE {
+      align-items: flex-start;
+      margin: 0 auto;
+    }
+  }
+
+  &__more-icon {
+    flex: 0 0 auto;
+    display: block;
+    @include option(font-size, 38px, 59px);
+    width: 1em;
+    height: 1em;
+    @include option(margin, 0 9px 3px 0, 3px 19px 0px 5px);
+    background: image("info-block/tv.svg") no-repeat center / contain;
+  }
+
+  &__more-text {
+    position: relative;
+    @include option(font-size, 14px, 12px);
+    @include option(width, auto, 285px);
+    margin: 0;
+    line-height: 1.15;
+    color: rgba($WHITE, 0.5);
+    @include MOBILE {
+      line-height: 1.25;
+    }
+
+    span {
+      color: $WHITE;
+      display: block;
+      @include option(font-size, 16px, 12px);
+      @include option(margin-bottom, 9px, 11px);
+      letter-spacing: 0.07em;
+    }
+  }
+
+  &__button{
+    @include option(width, 300px, 325px);
+    @include option(height, 68px, 60px);
+    @include option(margin, 40px auto 0, 27px auto 0);
+    @include MOBILE {
+      box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+}

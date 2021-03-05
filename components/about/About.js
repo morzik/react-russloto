@@ -5,7 +5,7 @@ import AboutItem from "./AboutItem";
 
 const About = ({attr, image, title, subtitle, sign,items}) => {
   const listItems = items.map(({image,text})=>(
-    <AboutItem image={image} text={text} />
+    <AboutItem image={image} text={text} key={text}/>
   ))
 
   return (

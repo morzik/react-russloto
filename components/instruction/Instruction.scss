@@ -1,0 +1,108 @@
+.instruction {
+  // Константы
+  @mixin mod($mod) {
+    @include modifier("instruction", $mod){
+      @content;
+    }
+  }
+
+  img{
+    pointer-events: none;
+    position: relative;
+    display: block;
+    height: 100%;
+  }
+
+
+  @mixin hover {
+    .instruction__item_active &{
+      @content;
+    }
+  }
+
+  position: relative;
+  background: $WHITE;
+  @include option(margin, -1px 0 0);
+  z-index: 2;
+
+  &__content{
+    position: relative;
+    @include wrapper($w: 818px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    @include option(padding, 93px 0 72px 420px, 0 0 39px);
+
+    @include MOBILE{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__video{
+    position: absolute;
+    @include option(top, 30px, 27px);
+    @include option(bottom, auto, auto);
+    @include option(left, -2px, auto);
+    @include option(width, 274px, 194px);
+    @include option(height, 546px, 390px);
+    @include option(margin, auto, 0px 3px 0 0 );
+    border: none;
+    outline: none;
+    pointer-events: none;
+    box-sizing: border-box;
+    //display: none;
+    @include MOBILE{
+      position: relative;
+    }
+    video{
+      position: relative;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%,0%);
+      width: 102%;
+      display: block;
+    }
+    ._ie  * & {
+      display: none;
+    }
+  }
+
+  &__video-pic {
+    position: absolute;
+    @include option(top, 30px, 27px);
+    @include option(bottom, auto, auto);
+    @include option(left, 8px);
+    @include option(width, 370px);
+    @include option(height, 581px);
+    //display: none;
+    //._ie  * & {
+    //  display: block;
+    //}
+    @include MOBILE {
+      position: relative;
+    }
+  }
+
+  &__info{
+    flex: 0 1 auto;
+    @include option(width, 400px, 325px);
+    @include option(margin, 0 0 0 0, 51px 0 0);
+
+  }
+
+  &__title{
+    @extend %H2;
+    @include option(margin, 0 0 40px, 0 0 28px);
+    text-transform: none;
+    @include MOBILE{
+      letter-spacing: 0.002em;
+    }
+  }
+
+  &__list{
+    @include option(margin, 0 0 36px, 0 0 19px);
+    @include option(padding, 0, 0);
+  }
+}

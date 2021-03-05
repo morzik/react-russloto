@@ -7,10 +7,10 @@ import CustomMenu from "../customMenu/CustomMenu";
 
 const IntroHeader = ({logo, menu}) => {
   return (
-    <div className={'intro__header'}>
+    <header className={'intro__header'}>
       <IntroLogo {...logo}/>
       <CustomMenu menu={menu} />
-    </div>
+    </header>
   )
 };
 

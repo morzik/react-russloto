@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const Picture = ({attr, list: listData, imgAttr}) => {
   let content = null;
   if (attr){

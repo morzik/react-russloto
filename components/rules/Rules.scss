@@ -1,0 +1,169 @@
+.rules {
+  // Константы
+  @mixin mod($mod) {
+    @include modifier("rules", $mod){
+      @content;
+    }
+  }
+
+  overflow: hidden;
+  background: linear-gradient(66.56deg, #FFD643 -7.17%, #FF8743 98.95%);
+  @include MOBILE{
+    position: relative;
+    z-index: 6;
+    overflow: visible;
+  }
+
+  img{
+    position: relative;
+    display: block;
+    height: 100%;
+  }
+
+  &__content{
+    box-sizing: border-box;
+    @include wrapper($w:818px);
+    @include option(padding, 70px 0 80px, 23px 0 41px);
+  }
+
+  &__title{
+    @extend %H2;
+    @include option(width, 650px, auto);
+    letter-spacing: -0.01em;
+    margin: 0;
+    @include MOBILE{
+      letter-spacing: 0.01em;
+      font-weight: 500;
+      line-height: 1.36;
+      white-space: pre-line;
+    }
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include option(padding, 0, 0 0 0);
+    @include option(margin, 63px 28px 0 0, 24px 0 0 );
+    @include MOBILE{
+      display: block;
+    }
+  }
+
+  &__item{
+    display: block;
+    flex: 0 1 auto;
+    text-align: left;
+    @include option(width, 230px, auto);
+    @include option(margin, 0, 0 auto 4px);
+
+    &:nth-of-type(1){
+      @include option(width, 220px, auto);
+
+    }
+
+    &:nth-of-type(2){
+      @include option(margin, 0, 0 auto 25px);
+      .rules__item-image{
+        img{
+          @include option(width, 215px, auto);
+        }
+      }
+    }
+
+    @include MOBILE{
+      display: block;
+      width: 100%;
+      text-align: left;
+
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+
+  &__item-title{
+    @include option(font-size, 18px, 16px);
+    @include option(margin-bottom, 14px, 9px);
+    font-weight: 600;
+    line-height: 1.25;
+    height: 1.25 * 2em;
+
+    @include MOBILE{
+      height: auto;
+      text-align: left;
+      letter-spacing: -0.01em;
+      line-height: 1.39;
+    }
+  }
+
+
+  &__item-image{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    vertical-align: middle;
+    @include option(height, 124px, 64px);
+    @include option(margin, 0 0 29px, 0 0 19px);
+    img{
+      pointer-events: none;
+      display: block;
+      height: auto;
+      @include option(width, 169px, auto);
+      @include MOBILE{
+        height: 100%;
+      }
+    }
+    @include MOBILE{
+      display: block;
+    }
+
+    &_desktop{
+      @include MOBILE{
+        display: none;
+      }
+    }
+
+    &_mob{
+      display: none;
+      @include MOBILE{
+        display: block;
+      }
+    }
+  }
+
+
+  &__item-text{
+    @include option(font-size, 16px, 16px);
+    @include option(line-height, 24.3px, 21.6px);
+    @include MOBILE{
+      text-align: left;
+    }
+  }
+
+  &__item-sign{
+    @include option(height, 37px, 37px);
+    @include option(margin, 20px 0 0, 16px 0 0 4px);
+    img{
+      pointer-events: none;
+      display: block;
+      height: 100%;
+    }
+  }
+
+  &__button{
+    background: $GREEN;
+    @include option(width, 300px, auto);
+    @include option(margin, 31px auto 0, 23px auto 0);
+    transition: background .3s ease-in-out;
+    @include HOVER{
+      &:hover{
+        background: #80F85D;
+      }
+    }
+  }
+}

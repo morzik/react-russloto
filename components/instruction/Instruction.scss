@@ -73,9 +73,10 @@
     position: absolute;
     @include option(top, 30px, 27px);
     @include option(bottom, auto, auto);
-    @include option(left, 8px);
-    @include option(width, 370px);
-    @include option(height, 581px);
+    @include option(left, -2px, auto);
+    @include option(width, 274px, 194px);
+    @include option(height, 546px, 390px);
+    @include option(margin, auto, 0px 3px 0 0 );
     //display: none;
     //._ie  * & {
     //  display: block;

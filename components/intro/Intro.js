@@ -6,9 +6,10 @@ import Button from "../button/Button";
 import IntroHeader from "./IntroHeader";
 import {safeHTML} from "../../utils/safeHTML";
 
-const Intro = ({title, subtitle, text, prize, mark, header, button, bg}) => (
-  <section>
-    <div className={"intro"}>
+const Intro = ({attr, title, subtitle, text, prize, mark, header, button, bg}) => (
+  <section >
+    <div className={"intro"} {...attr}>
+
       <div className={"intro__content"}>
         <IntroBg {...bg} />
         <IntroHeader {...header}/>
@@ -21,7 +22,7 @@ const Intro = ({title, subtitle, text, prize, mark, header, button, bg}) => (
           <mark className="intro__text">
             <span>{text}</span>
           </mark>
-          <Button {...button} >{button.text}</Button>
+          <Button {...button} className={"intro__button"}>{button.text}</Button>
           <IntroMark {...mark}/>
         </div>
       </div>

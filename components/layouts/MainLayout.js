@@ -5,8 +5,11 @@ import About from '../about/About';
 import Instruction from "../instruction/Instruction";
 import InfoBlock from "../infoBlock/InfoBlock";
 import Winners from "../winners/Winners";
+import Rules from "../rules/Rules";
+import Safety from "../safety/Safety";
+import Footer from "../footer/Footer";
 
-import {intro, about, instruction, infoBlock, winners, statistics} from "../../constants/copyright";
+import {intro, about, instruction, infoBlock, winners, statistics, rules, safety, footer} from "../../constants/copyright";
 import Statistics from "../statistics/Statistics";
 
 
@@ -15,7 +18,8 @@ const MainLayout = ({children}) => (
     <Head>
       <meta charSet="utf-8"/>
       <title>title</title>
-      <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+      {/*<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>*/}
+      <meta name="viewport" content="width=device-width"/>
       <meta name="description" content="description" />
       <meta name="mobile-web-app-capable" content="yes"/>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -32,7 +36,9 @@ const MainLayout = ({children}) => (
     <InfoBlock {...infoBlock}/>
     <Winners {...winners}/>
     <Statistics {...statistics}/>
-
+    <Rules {...rules}/>
+    <Safety {...safety}/>
+    <Footer {...footer}/>
   </div>
 );
 

@@ -97,12 +97,14 @@
     font-weight: bold;
     color: $YELLOW;
     letter-spacing: 0.04em;
+    margin: 0;
   }
   &__prize{
     @include option(margin, 0 0 16px);
     @include option(font-size, 51px, 32px);
     line-height: 1;
     font-weight: bold;
+    white-space: nowrap;
     color: $YELLOW;
     strong{
       font-weight: bold;

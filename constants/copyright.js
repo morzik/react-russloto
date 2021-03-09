@@ -1,4 +1,7 @@
 export const intro = {
+  attr: {
+    id: "block1"
+  },
   title: "Джекпот",
   text: "Выигрывает каждый третий билет",
   subtitle: "50 загородных домов",
@@ -17,16 +20,16 @@ export const intro = {
     person: {
       list: [
         {
-          srcset: "images/intro/person_m.webp 1x,images/intro/person_m_2.webp 2x",
+          srcSet: "images/intro/person_m.webp 1x,images/intro/person_m_2.webp 2x",
           type: "image/webp",
           media: "(max-width:1023px)"
         },
         {
-          srcset: "images/intro/person_m.png 1x,images/intro/person_m_2.png 2x",
+          srcSet: "images/intro/person_m.png 1x,images/intro/person_m_2.png 2x",
           media: "(max-width:1023px)"
         },
         {
-          srcset: "images/intro/person.webp",
+          srcSet: "images/intro/person.webp",
           type: "image/webp"
         }
       ],
@@ -38,16 +41,16 @@ export const intro = {
     table: {
       list: [
         {
-          srcset: "images/intro/table_m.webp 1x,images/intro/table_m_2.webp 2x",
+          srcSet: "images/intro/table_m.webp 1x,images/intro/table_m_2.webp 2x",
           type: "image/webp",
           media: "(max-width:1023px)"
         },
         {
-          srcset: "images/intro/table_m.png 1x,images/intro/table_m_2.png 2x",
+          srcSet: "images/intro/table_m.png 1x,images/intro/table_m_2.png 2x",
           media: "(max-width:1023px)"
         },
         {
-          srcset: "images/intro/table.webp",
+          srcSet: "images/intro/table.webp",
           type: "image/webp"
         }
       ],
@@ -73,38 +76,38 @@ export const intro = {
     },
     menu: [
       {
-        "className": "custom-menu__item custom-menu__item_1 custom-menu__item_active",
-        "href": "#block3",
-        "label": "Как участвовать"
+        className: "custom-menu__item custom-menu__item_1 custom-menu__item_active",
+        href: "#block3",
+        label: "Как участвовать"
       },
       {
 
-        "className": "custom-menu__item_2",
-        "href": "#block2",
-        "label": "О лотерее"
+        className: "custom-menu__item_2",
+        href: "#block2",
+        label: "О лотерее"
       },
       {
-        "className": "custom-menu__item_3",
-        "href": "#block5",
-        "label": "Победители"
+        className: "custom-menu__item_3",
+        href: "#block5",
+        label: "Победители"
       },
 
       {
-        "className": "custom-menu__item_4",
-        "href": "#block7",
-        "label": "Правила"
+        className: "custom-menu__item_4",
+        href: "#block7",
+        label: "Правила"
       },
       {
-        "className": "custom-menu__item_5",
-        "href": "#block8",
-        "label": "Безопасность"
+        className: "custom-menu__item_5",
+        href: "#block8",
+        label: "Безопасность"
       }
     ]
   }
 
 };
 export const about = {
-  "attr": {
+  attr: {
     id: "block2"
   },
   title: "Акция \n«Год без забот»",
@@ -158,16 +161,16 @@ export const instruction = {
     image: {
       list: [
         {
-          srcset: "images/instruction/video-pic_m.webp 1x,images/instruction/video-pic_m_2.webp 2x",
+          srcSet: "images/instruction/video-pic-m.webp 1x,images/instruction/video-pic-m@2x.webp 2x",
           type: "image/webp",
           media: "(max-width:1023px)"
         },
         {
-          srcset: "images/instruction/video-pic_m.png 1x, images/instruction/video-pic_m_2.png 2x",
+          srcSet: "images/instruction/video-pic-m.png 1x, images/instruction/video-pic-m@2x.png 2x",
           media: "(max-width:1023px)"
         },
         {
-          srcset: "images/instruction/video-pic.webp",
+          srcSet: "images/instruction/video-pic.webp",
           type: "image/webp"
         }
       ],
@@ -229,18 +232,21 @@ export const infoBlock = {
   title: "Играйте <br>в настоящее <br>«Русское \nлото» <br>каждую неделю!",
   info: [
     {
+      id:"1",
       icon: {
         name: "info-block/1"
       },
       text: "Главная и&nbsp;самая любимая телелотерея&nbsp;страны. Розыгрыши по выходным, которых с&nbsp;нетерпением ждут всей семьей"
     },
     {
+      id:"2",
       icon: {
         name: "info-block/2"
       },
       text: "Разыгрываем: дома, автомобили, путешествия и&nbsp;рекордные денежные призы"
     },
     {
+      id:"3",
       icon: {
         name: "info-block/3"
       },
@@ -293,6 +299,17 @@ export const winners = {
     {
       id: "1",
       photo: "images/winners/1",
+      prev: {
+        list:[
+          {
+            srcSet:"images/winners/prev/1.webp",
+            type:"image/webp"
+          }
+        ],
+        imgAttr: {
+          src: "images/winners/prev/1.png"
+        }
+      },
       logo_1: "images/winners/logo/1.svg",
       logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Забыли про билеты на&nbsp;два месяца&raquo;",
@@ -304,6 +321,17 @@ export const winners = {
     {
       id: "2",
       photo: "images/winners/2",
+      prev: {
+        list:[
+          {
+            srcSet:"images/winners/prev/2.webp",
+            type:"image/webp"
+          }
+        ],
+        imgAttr: {
+          src: "images/winners/prev/2.png"
+        }
+      },
       logo_1: "images/winners/logo/1.svg",
       logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Победа перевернула мой мир&raquo;",
@@ -315,6 +343,17 @@ export const winners = {
     {
       id: "3",
       photo: "images/winners/3",
+      prev: {
+        list:[
+          {
+            srcSet:"images/winners/prev/3.webp",
+            type:"image/webp"
+          }
+        ],
+        imgAttr: {
+          src: "images/winners/prev/3.png"
+        }
+      },
       logo_1: "images/winners/logo/1.svg",
       logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Удачно я&nbsp;на&nbsp;почту зашёл&raquo;",
@@ -326,6 +365,17 @@ export const winners = {
     {
       id: "4",
       photo: "images/winners/4",
+      prev: {
+        list:[
+          {
+            srcSet:"images/winners/prev/4.webp",
+            type:"image/webp"
+          }
+        ],
+        imgAttr: {
+          src: "images/winners/prev/4.png"
+        }
+      },
       logo_1: "images/winners/logo/1.svg",
       logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Конечно, я&nbsp;рад такому повороту событий&raquo;",
@@ -337,6 +387,17 @@ export const winners = {
     {
       id: "5",
       photo: "images/winners/5",
+      prev: {
+        list:[
+          {
+            srcSet:"images/winners/prev/5.webp",
+            type:"image/webp"
+          }
+        ],
+        imgAttr: {
+          src: "images/winners/prev/5.png"
+        }
+      },
       logo_1: "images/winners/logo/1.svg",
       logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Всегда думал, что готов к новым победам&raquo;",
@@ -348,6 +409,17 @@ export const winners = {
     {
       id: "6",
       photo: "images/winners/6",
+      prev: {
+        list:[
+          {
+            srcSet:"images/winners/prev/6.webp",
+            type:"image/webp"
+          }
+        ],
+        imgAttr: {
+          src: "images/winners/prev/6.png"
+        }
+      },
       logo_1: "images/winners/logo/1.svg",
       logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Приятно осознавать, что выиграл в&nbsp;лотерею&raquo;",
@@ -359,6 +431,17 @@ export const winners = {
     {
       id: "7",
       photo: "images/winners/7",
+      prev: {
+        list:[
+          {
+            srcSet:"images/winners/prev/7.webp",
+            type:"image/webp"
+          }
+        ],
+        imgAttr: {
+          src: "images/winners/prev/7.png"
+        }
+      },
       logo_1: "images/winners/logo/1.svg",
       logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Билет оказался с&nbsp;сюрпризом&raquo;",
@@ -370,6 +453,17 @@ export const winners = {
     {
       id: "8",
       photo: "images/winners/8",
+      prev: {
+        list:[
+          {
+            srcSet:"images/winners/prev/8.webp",
+            type:"image/webp"
+          }
+        ],
+        imgAttr: {
+          src: "images/winners/prev/8.png"
+        }
+      },
       logo_1: "images/winners/logo/1.svg",
       logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Потерял дар речи&raquo;",
@@ -381,6 +475,17 @@ export const winners = {
     {
       id: "9",
       photo: "images/winners/9",
+      prev: {
+        list:[
+          {
+            srcSet:"images/winners/prev/9.webp",
+            type:"image/webp"
+          }
+        ],
+        imgAttr: {
+          src: "images/winners/prev/9.png"
+        }
+      },
       logo_1: "images/winners/logo/1.svg",
       logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Почти затёрли билет до&nbsp;дыр!&raquo;",
@@ -392,6 +497,17 @@ export const winners = {
     {
       id: "10",
       photo: "images/winners/10",
+      prev: {
+        list:[
+          {
+            srcSet:"images/winners/prev/10.webp",
+            type:"image/webp"
+          }
+        ],
+        imgAttr: {
+          src: "images/winners/prev/10.png"
+        }
+      },
       logo_1: "images/winners/logo/1.svg",
       logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Чуть со&nbsp;стула не&nbsp;упал&raquo;",
@@ -403,6 +519,17 @@ export const winners = {
     {
       id: "11",
       photo: "images/winners/11",
+      prev: {
+        list:[
+          {
+            srcSet:"images/winners/prev/11.webp",
+            type:"image/webp"
+          }
+        ],
+        imgAttr: {
+          src: "images/winners/prev/11.png"
+        }
+      },
       logo_1: "images/winners/logo/1.svg",
       logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Некоторое время хлопал глазами&raquo;",
@@ -414,6 +541,17 @@ export const winners = {
     {
       id: "12",
       photo: "images/winners/12",
+      prev: {
+        list:[
+          {
+            srcSet:"images/winners/prev/12.webp",
+            type:"image/webp"
+          }
+        ],
+        imgAttr: {
+          src: "images/winners/prev/12.png"
+        }
+      },
       logo_1: "images/winners/logo/1.svg",
       logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Неужели это произошло наяву?&raquo;",
@@ -425,6 +563,17 @@ export const winners = {
     {
       id: "13",
       photo: "images/winners/13",
+      prev: {
+        list:[
+          {
+            srcSet:"images/winners/prev/13.webp",
+            type:"image/webp"
+          }
+        ],
+        imgAttr: {
+          src: "images/winners/prev/13.png"
+        }
+      },
       logo_1: "images/winners/logo/1.svg",
       logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Я&nbsp;&mdash; богатый дедушка&raquo;",
@@ -436,6 +585,17 @@ export const winners = {
     {
       id: "14",
       photo: "images/winners/14",
+      prev: {
+        list:[
+          {
+            srcSet:"images/winners/prev/14.webp",
+            type:"image/webp"
+          }
+        ],
+        imgAttr: {
+          src: "images/winners/prev/14.png"
+        }
+      },
       logo_1: "images/winners/logo/1.svg",
       logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Моё желание исполнилось&raquo;",
@@ -447,6 +607,17 @@ export const winners = {
     {
       id: "15",
       photo: "images/winners/15",
+      prev: {
+        list:[
+          {
+            srcSet:"images/winners/prev/15.webp",
+            type:"image/webp"
+          }
+        ],
+        imgAttr: {
+          src: "images/winners/prev/15.png"
+        }
+      },
       logo_1: "images/winners/logo/1.svg",
       logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Я&nbsp;&mdash; оптимист&raquo;",
@@ -456,10 +627,16 @@ export const winners = {
       sign: "Выигрыш"
     }
   ],
-  previews: {
+  previewsAttr: {
     direction: "vertical",
     spaceBetween: 0,
     slidesPerView: 5
+  },
+  carouselAttr: {
+    direction: "horizontal",
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 1
   },
   button: {
     text: "Стать следующим",
@@ -484,21 +661,26 @@ export const statistics = {
   },
   title: "Итоги 2020 года \nв «Русском лото»",
   subtitle: "Присоединяйтесь \nк победителям!",
-  map:{
-    image:{
-      list:[
+  map: {
+    image: {
+      list: [
         {
-          srcSet:"images/1px.png",
-          media:"(max-width:1023px)"
+          srcSet: "images/statistics/map-m.webp 1x, images/statistics/map-m@2x.webp 2x",
+          media: "(max-width:1023px)",
+          type: "image/webp"
         },
         {
-          srcSet:"images/statistics/map.webp",
-          type:"iamge/webp"
+          srcSet: "images/statistics/map-m.png 1x, images/statistics/map-m@2x.png 2x",
+          media: "(max-width:1023px)"
+        },
+        {
+          srcSet: "images/statistics/map.webp",
+          type: "iamge/webp"
         }
       ],
-      imgAttr:{
-        src:"images/statistics/map.png",
-        alt:"map"
+      imgAttr: {
+        src: "images/statistics/map.png",
+        alt: "map"
       }
     }
   },
@@ -537,4 +719,291 @@ export const statistics = {
     "data-mhref": "https://m.stoloto.ru/ruslotto/game?lastdraw",
     target: "_blank"
   }
+};
+
+
+export const rules = {
+  attr: {
+    id: "block7"
+  },
+  title: "Правила \n«Русского лото»",
+  list: [
+    {
+      id: "1",
+      image: {
+        imgAttr: {
+          src: "images/information-block/1.svg",
+          alt: "Первый тур"
+        }
+      },
+      title: "Первый тур",
+      text: "Выигрывают билеты, в&nbsp;которых совпали 5&nbsp;чисел в&nbsp;любой горизонтальной строке."
+    },
+    {
+      id: "2",
+      image: {
+        list: [
+          {
+            srcSet: "images/information-block/4.svg",
+            media: "(max-width:1023px)"
+          }
+        ],
+        imgAttr: {
+          src: "images/information-block/2.svg",
+          alt: "Второй тур"
+        }
+      },
+      title: "Второй тур",
+      text: "Выигрывают билеты, в&nbsp;которых совпали 15&nbsp;чисел в&nbsp;верхнем или нижнем поле. Если 15&nbsp;чисел совпали на&nbsp;15&nbsp;ходу, выигрывают джекпот."
+    },
+    {
+      id: "3",
+      image: {
+        imgAttr: {
+          src: "images/information-block/3.svg",
+          alt: "Третий и последующие туры"
+        }
+      },
+      title: "Третий \nи последующие туры",
+      text: "Выигрывают билеты, в&nbsp;которых совпали все 30&nbsp;чисел"
+    }
+  ],
+  button: {
+    text: "Участвовать",
+    tag: "a",
+    className: "button_green rules__button",
+    id: "buy-tickets-6",
+    target: "_blank",
+    href: "https://www.stoloto.ru/ruslotto/game?lastdraw",
+    "data-mhref": "https://m.stoloto.ru/ruslotto/game?lastdraw"
+  }
+};
+
+export const safety = {
+  attr: {
+    id: "block8"
+  },
+  title: "Покупайте лотереи онлайн &mdash; \nэто&nbsp;безопасно",
+  carouselAttr: {
+    className: "carousel",
+    centeredSlides: true,
+    loop: false,
+    slidesPerView: "auto",
+    watchOverflow: false,
+    effect: 'coverflow',
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 5,
+      slideShadows: false,
+    },
+    breakpoints: {
+      1024: {
+        centeredSlides: false,
+        effect: 'none',
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        watchOverflow: true
+      }
+    }
+  },
+  list: [
+    {
+      className: "safety__card_1 safety__card_active",
+      id: "card-1",
+      icon: {
+        name: "safety/1"
+      },
+      title: "безопасная<br/>регистрация",
+      text: "При регистрации вы указываете только свой электронный адрес и&nbsp;номер телефона. На&nbsp;этот&nbsp;номер мы будем&nbsp;отправлять вам sms&nbsp;с паролем для получения выигрышей на&nbsp;сайте. ",
+      attr: {
+        className: "safety__card_1 safety__card_active"
+      }
+    },
+    {
+      className: "safety__card_2",
+      id: "card-2",
+      icon: {
+        name: "safety/2"
+      },
+      title: "безопасность<br/>данных",
+      text: "Мы не сохраняем номера банковских карт, платёжные пароли и другие данные, которые вы вводите при оплате билетов. Вся информация хранится только на стороне платёжной системы, которую вы выбираете сами.",
+      "links": [
+        {
+          "image": "images/information/links/1.svg",
+          "alt": "payment"
+        },
+        {
+          "image": "images/information/links/2.svg",
+          "alt": "payment"
+        },
+        {
+          "image": "images/information/links/3.svg",
+          "alt": "payment"
+        }
+      ],
+      attr: {
+        className: "safety__card_2"
+      }
+    },
+    {
+      className: "safety__card_3",
+      id: "card-3",
+      icon: {
+        name: "safety/3"
+      },
+      title: "Государственные<br/>лотереи",
+      text: "Организатором всех лотерей в России являются Министерство спорта и Министерство финансов. Они следят за тем, чтобы все розыгрыши проводились честно, а победители вовремя получали выигрыши. ",
+      attr: {
+        className: "safety__card_3"
+      }
+    },
+    {
+      className: "safety__card_4",
+      id: "card-4",
+      icon: {
+        name: "safety/4"
+      },
+      title: "Ваш билет<br>никогда<br>не потеряется",
+      text: "Вся информация о купленных билетах хранится в вашем личном кабинете. Если возникнут проблемы, вы сможете обратиться в нашу службу поддержки. Мы всегда вам поможем. ",
+      attr: {
+        className: "safety__card_4"
+      }
+    }
+  ],
+  button: {
+    text: "Купить билет",
+    tag: "a",
+    className: "button_yellowColor",
+    id: "buy-tickets-7",
+    target: "_blank",
+    href: "https://www.stoloto.ru/ruslotto/game?lastdraw",
+    "data-mhref": "https://m.stoloto.ru/ruslotto/game?lastdraw"
+  }
+};
+
+export const footer = {
+  logo: {
+    image: {
+      imgAttr: {
+        src: "images/footer/logo-footer.svg",
+        alt: "logo"
+      }
+    },
+    target: "_blank",
+    href: "https://www.stoloto.ru/",
+    "data-mhref": "https://m.stoloto.ru/"
+  },
+  text: "Фраза &laquo;Выигрывает каждый 3-й билет!&raquo; указывает на&nbsp;вероятность выигрыша в&nbsp;&laquo;ВГЛ 3&nbsp;Спорт&raquo; (алгоритм определения выигрышей &#8470;&nbsp;6), рассчитанную математическим путём и&nbsp;равную 1&nbsp;к 3,36. &laquo;ВГЛ 3&nbsp;Спорт&raquo; (алгоритм определения выигрышей &#8470;&nbsp;6). Срок проведения лотереи&nbsp;&mdash; до&nbsp;31.12.2029&nbsp;г. Информацию об&nbsp;организаторе лотереи, о&nbsp;правилах её&nbsp;проведения, призовом фонде лотереи, количестве призов или выигрышей, сроках, месте и&nbsp;порядке получения призов или выигрышей можно узнать на&nbsp;сайте <a href='https://www.stoloto.ru' data-mhref='https://m.stoloto.ru'>stoloto.ru</a><br><br>АО&nbsp;&laquo;ТК&nbsp;&laquo;Центр&raquo;, ОГРН 1127746385095, адрес: 109316, Москва, Волгоградский пр-т, д.&nbsp;43, корп.&nbsp;3, этаж&nbsp;10, пом. XXV, ком. 13Б.<br>Лотерея не&nbsp;является способом заработка и&nbsp;источником дохода. Выигрыши носят вероятностный характер. Реклама.&nbsp;18+",
+  socialBlock: {
+    list: [
+      {
+        id:"vk",
+        icon: {
+          name: "social/vk"
+        },
+        className: "social-block__item social-block__item_vk",
+        target: "_blank",
+        href: "https://vk.com/stoloto"
+      },
+      {
+        id:"fb",
+        icon: {
+          name: "social/fb"
+        },
+        className: "social-block__item social-block__item_fb",
+        target: "_blank",
+        href: "https://www.facebook.com/stoloto.ru"
+      },
+      {
+        id:"ok",
+        icon: {
+          name: "social/ok"
+        },
+        className: "social-block__item social-block__item_ok",
+        target: "_blank",
+        href: "https://ok.ru/stoloto"
+      },
+      {
+        id:"tw",
+        icon: {
+          name: "social/tw"
+        },
+        className: "social-block__item social-block__item_tw",
+        target: "_blank",
+        href: "https://twitter.com/stoloto"
+      },
+      {
+        id:"ig",
+        icon: {
+          name: "social/ig"
+        },
+        className: "social-block__item social-block__item_ig",
+        target: "_blank",
+        href: "https://www.instagram.com/stoloto/"
+      },
+      {
+        id:"yt",
+        icon: {
+          name: "social/yt"
+        },
+        className: "social-block__item social-block__item_yt",
+        target: "_blank",
+        href: "https://www.youtube.com/c/stolototv?sub_confirmation=1"
+      }
+    ]
+  },
+  partners: [
+    {
+      id:"1",
+      image: {
+        list: [
+          {
+            srcSet: "images/footer/part-1-m.webp 1x,images/footer/part-1-m@2x.webp 2x",
+            type: "image/webp",
+            media: "(max-width:1023px)"
+          },
+          {
+            srcSet: "images/footer/part-1-m.png 1x,images/footer/part-1-m@2x.png 2x",
+            media: "(max-width:1023px)"
+          },
+          {
+            srcSet: "images/footer/part-1.webp",
+            type: "image/webp"
+          }
+        ],
+        imgAttr: {
+          src: "images/footer/part-1.png",
+          alt: "icons-1"
+        }
+      },
+      text: "Организаторами лотерей являются Министерство спорта РФ и Министерство финансов РФ."
+    },
+    {
+      id:"2",
+      image: {
+        list: [
+          {
+            srcSet: "images/footer/part-2-m.webp 1x,images/footer/part-2-m@2x.webp 2x",
+            type: "image/webp",
+            media: "(max-width:1023px)"
+          },
+          {
+            srcSet: "images/footer/part-2-m.png 1x,images/footer/part-2-m@2x.png 2x",
+            media: "(max-width:1023px)"
+          },
+          {
+            srcSet: "images/footer/part-2.webp",
+            type: "image/webp"
+          }
+        ],
+        imgAttr: {
+          src: "images/footer/part-2.png",
+          alt: "icons-1"
+        }
+      },
+      className: "footer__partner-icon_big",
+      text: "«Столото» состоит во Всемирной и Европейской лотерейных ассоциациях (The World Lottery Association и The European Lotteries Association). Это гарантирует соблюдение прав участников, случайность определения победителей, своевременную выплату выигрышей, конфиденциальность личных данных.",
+      note: "WLA — международное объединение компаний-операторов государственных лотерей.<br/>ELA — объединение лотерейных компаний из Европы и соседних регионов."
+    }
+  ]
 };

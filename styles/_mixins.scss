@@ -76,11 +76,20 @@
   }
 }
 
-
-@mixin option($n, $v, $vm:false){
-  #{$n}: vw($v);
+@mixin option($n, $v, $vm: $v) {
+  @include DESKTOP{
+    #{$n}:vh($v);
+  }
+  @include TABLET-L{
+    #{$n}:vw($v);
+  }
+  @include MOBILE{
+    #{$n}:vw-m($vm);
+  }
+  @include TABLET{
+    #{$n}:vw-t($vm);
+  }
 }
-
 //@mixin option-r($n, $v, $vm:false){
 //  #{$n}: r-vw($v);
 //}

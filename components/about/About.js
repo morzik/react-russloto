@@ -3,14 +3,15 @@ import Picture from "../picture/Picture";
 import AboutItem from "./AboutItem";
 
 
-const About = ({attr, image, title, subtitle, sign,items}) => {
-  const listItems = items.map(({image,text})=>(
+const About = ({attr, image, title, subtitle, sign, items}) => {
+  const listItems = items.map(({image, text}) => (
     <AboutItem image={image} text={text} key={text}/>
   ))
 
   return (
-    <section>
+    <section >
       <div className={"about"} {...attr}>
+
         <div className="about__content">
           <div className="about__bg"/>
           <div className="about__info">

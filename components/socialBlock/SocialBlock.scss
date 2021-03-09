@@ -1,0 +1,74 @@
+.social-block {
+  // Константы
+  @mixin mod($mod) {
+    @include modifier("social-block", $mod){
+      @content;
+    }
+  }
+  @mixin link-mod($mod) {
+    @include modifier("social-block__link", $mod){
+      @content;
+    }
+  }
+
+  @include MOBILE{
+    width: 100%;
+  }
+
+
+  &__list{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    @include option(width, 270, auto);
+    @include option(margin, 0, 0);
+    @include MOBILE{
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &__item{
+    display: flex;
+    flex: 0 0 auto;
+    opacity: 1;
+    @include option(font-size, 26.54px, 28px);
+    @include option(padding, 6px);
+    @include option(margin, 0 15px 0 0, 0);
+    width: 1em;
+    height: 1em;
+    cursor: pointer;
+    border: 1px solid #a2a7aa;
+    border-radius: 50%;
+    transition: opacity 0.3s ease-in-out;
+    box-sizing: border-box;
+
+    svg{
+      pointer-events: none;
+      max-width: 100%;
+      max-height: 100%;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      transform: translate3d(0,0,0);
+
+      & > *{
+        transition: fill .3s ease-in-out;
+      }
+    }
+
+    @include MOBILE{
+      svg> * {
+      }
+    }
+
+    @include HOVER{
+      &:hover{
+        opacity: 0.5;
+      }
+    }
+  }
+
+
+}

@@ -8,17 +8,19 @@ const Statistics = ({attr, title, map, list, subtitle, button}) => {
     <StatisticsItem index={index} text={text} key={index}/>
   ));
   return (
-    <div className={"statistics"} {...attr}>
-      <div className="statistics__content">
-        <h2 className="statistics__title">{title}</h2>
-        <StatisticMap {...map}/>
-        <ul className="statistics__list">
-          {listItems}
-        </ul>
-        <p className="statistics__subtitle">{subtitle}</p>
-        <Button {...button}>{button.text}</Button>
+    <section >
+      <div className={"statistics"} {...attr}>
+        <div className="statistics__content">
+          <h2 className="statistics__title">{title}</h2>
+          <StatisticMap {...map}/>
+          <ul className="statistics__list">
+            {listItems}
+          </ul>
+          <p className="statistics__subtitle">{subtitle}</p>
+          <Button {...button}>{button.text}</Button>
+        </div>
       </div>
-    </div>
+    </section>
   )
 };
 

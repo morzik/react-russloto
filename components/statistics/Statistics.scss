@@ -1,0 +1,115 @@
+.statistics {
+  // Константы
+  @mixin mod($mod) {
+    @include modifier("statistics", $mod){
+      @content;
+    }
+  }
+  position: relative;
+  background: linear-gradient(0deg, #404040, #404040), linear-gradient(87.51deg, #BB5FC4 1.71%, #EF4949 49.84%, #F26B41 97.22%);
+
+  &__content{
+    position: relative;
+    @include wrapper($w:818px);
+    @include option(padding, 67px 0 88px, 26px 0 43px 0px);
+    box-sizing: border-box;
+    color: $WHITE;
+    text-align: left;
+  }
+
+  &__title{
+    @extend %H2;
+    @include option(font-size, 38px, 28px);
+    margin: 0;
+    font-weight: 500;
+    color: $YELLOW-3;
+    @include MOBILE{
+      white-space: pre-line;
+      color: $WHITE;
+    }
+  }
+
+  &__subtitle{
+    @include option(font-size, 30px, 17px);
+    @include option(line-height, 39px, 25px);
+    @include option(margin, 0px 0 52px, 0px 0 25px);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    white-space: pre-line;
+    @include MOBILE{
+      width: 100%;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+      br{
+        display: none;
+      }
+    }
+  }
+
+  &__list{
+    padding: 0;
+    @include option(margin, 59px 0 64px, 17px 0 13px);
+  }
+  &__item{
+    @include option(margin, 0 0 41px, 0 0 28px);
+    &:nth-last-of-type(1){
+      margin-bottom: 0;
+    }
+  }
+  &__item-index{
+    display: inline-block;
+    @include option(font-size, 30px, 30px);
+    @include option(line-height, 24px);
+    @include option(margin, 0 0 12px, 0 0 8px);
+    font-weight: 500;
+  }
+  &__item-text{
+    @include option(font-size, 18px, 16px);
+    line-height: 1;
+    margin: 0;
+  }
+
+  &__map{
+    position: absolute;
+    @include option(top, 201px, auto);
+    @include option(right, -168px, 0px);
+    @include option(width, 631px, 327px);
+    @include option(margin, 0, 25px 0 0);
+    img{
+      pointer-events: none;
+      width: 100%;
+      display: block;
+    }
+
+    @include MOBILE{
+      position: relative;
+    }
+  }
+
+  &__map-salute{
+    position: absolute;
+    img{
+      pointer-events: none;
+      display: block;
+      width: 100%;
+    }
+    &:nth-of-type(1){
+      @include option(width, 133.46px, 73.55px);
+      @include option(top, 24px, 18px);
+      @include option(left, 40px, 4px);
+    }
+
+    &:nth-of-type(2){
+      @include option(width, 109px, 55px);
+      @include option(top, -7px, -15px);
+      @include option(left, 200px, 80px);
+    }
+
+  }
+
+  &__button{
+    @include option(width, 341px, 323px);
+    @include option(height, 68px, 60px);
+    letter-spacing: -0.04em;
+  }
+}

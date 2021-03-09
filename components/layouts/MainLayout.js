@@ -4,8 +4,10 @@ import Intro from '../intro/Intro';
 import About from '../about/About';
 import Instruction from "../instruction/Instruction";
 import InfoBlock from "../infoBlock/InfoBlock";
+import Winners from "../winners/Winners";
 
-import {intro, about, instruction, infoBlock} from "../../constants/copyright";
+import {intro, about, instruction, infoBlock, winners, statistics} from "../../constants/copyright";
+import Statistics from "../statistics/Statistics";
 
 
 const MainLayout = ({children}) => (
@@ -28,6 +30,8 @@ const MainLayout = ({children}) => (
 
     <Instruction {...instruction}/>
     <InfoBlock {...infoBlock}/>
+    <Winners {...winners}/>
+    <Statistics {...statistics}/>
 
   </div>
 );

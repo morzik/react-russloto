@@ -37,7 +37,7 @@
     "react-html-parser": "^2.0.2",
     "react-redux": "^7.2.1",
     "react-transition-group": "^4.4.1",
-    "swiper": "^6.1.2",
+    "swiper": "^6.5.0",
     "use-deep-compare-effect": "^1.4.0",
     "yup": "^0.29.3"
   },

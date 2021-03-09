@@ -1,0 +1,525 @@
+.winners {
+  // Константы
+  @mixin mod($mod) {
+    @include modifier("winners", $mod){
+      @content;
+    }
+  }
+
+
+  @mixin box($mod) {
+    @include modifier("winners__card-box", $mod){
+      @content;
+    }
+  }
+  @mixin more-checked {
+    .winners__item-read-input:checked ~ &{
+      @content;
+    }
+  }
+  position: relative;
+  background: linear-gradient(66.68deg, #F4762F 0%, #FFAF4A 67.68%, #FFCF53 95.54%), #D4D9DE;
+
+  &__content{
+    position: relative;
+    @include option(width, 1050px, $DESIGN-W-M);
+    @include option(padding, 179px 11px 3px, 161px 0 36px);
+    margin: 0 auto;
+    max-width: 90%;
+    box-sizing: border-box;
+
+    @include MOBILE{
+      max-width: 93%;
+    }
+  }
+
+  &__bg{
+    position: absolute;
+    @include option(top, 15px);
+    @include option(left, -641px);
+    @include option(width, 1191px);
+    @include option(height, 664px);
+    pointer-events: none;
+
+    img{
+      position: relative;
+      display: block;
+      height: 100%;
+    }
+    @include MOBILE{
+      display: none;
+    }
+  }
+
+
+  &__button{
+    position: absolute;
+    @include option(left, 128px, auto);
+    @include option(bottom, 84px, auto);
+    @include option(margin, 0px auto 0, 0px auto 34px);
+    @include MOBILE {
+      position: relative;
+    }
+  }
+
+  &__carousel{
+    display: flex;
+    @include option(width, 1050px, 346px);
+    @include option(margin,  0, 0 auto 29px);
+
+    .swiper-wrapper{
+      align-items: flex-start;
+    }
+  }
+
+  &__carousel-block{
+    width: 100%;
+    @include MOBILE{
+      overflow: visible;
+    }
+
+    &_desk{
+      @include MOBILE{
+        display: none!important;
+      }
+    }
+
+    &_mob{
+      display: none;
+      @include MOBILE{
+        display: block;
+      }
+    }
+  }
+
+  &__carousel-nav{
+    display: none;
+    position: absolute;
+    @include option(top, 241px, 238px);
+    @include option(font-size, 65px);
+    width: 1em;
+    height: 1em;
+    background-color: $BLACK;
+    border-radius: 50%;
+    transition: transform 0.3s, opacity 0.3s;
+    box-shadow: 0 0.06em 0.06em rgba(0, 0, 0, 0.25);
+    z-index: 2;
+    cursor: pointer;
+    @include MOBILE{
+      display: block;
+    }
+    &_prev{
+      @include option(left, 7px, -15px);
+    }
+    &_next{
+      @include option(right, 7px, -15px);
+    }
+
+    &:active{
+      transform: scale(0.9);
+    }
+
+    &.swiper-button-disabled{
+      opacity: 0;
+    }
+  }
+
+
+  &__carousel-nav-block{
+    width: 100%;
+    height: 100%;
+    background: image("winners/nav-carousel.svg") no-repeat center / contain;
+
+    &_prev{
+      transform: rotate(180deg);
+    }
+  }
+
+
+  &__item{
+    list-style: none;
+    position: relative;
+    width: 100%;
+    //@include option(width, 1050px, 346px);
+    box-sizing: border-box;
+
+    @include MOBILE{
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      height: auto;
+    }
+  }
+
+  &__item-decor{
+    position: absolute;
+    @include option(top, auto, -134px);
+    @include option(bottom, 182px, auto);
+    @include option(left, 12px, 26px);
+    @include option(height, 178px, 178px);
+    z-index: 2;
+  }
+
+  &__item-bg{
+    pointer-events: none;
+    position: absolute;
+    @include option(bottom, -4px, auto);
+    @include option(left, 300px, auto);
+    @include option(width, 761px, 346px);
+    @include option(height, 787px, 235px);
+    @include option(margin, 0px, 0 auto 38px);
+
+    @include MOBILE{
+      position: relative;
+      order: 1;
+      background: #FFD953 image("winners/car-bg-m.svg") no-repeat center / cover;
+    }
+
+  }
+
+  &__item-bg-block{
+    position: relative;
+    width: 100%;
+    @include option(height, 787px, 361px);
+    @include option(margin-top, 0px, -126px);
+    overflow: hidden;
+
+    img{
+      position: relative;
+      display: block;
+      height: 100%;
+      margin: auto;
+    }
+
+    @include MOBILE {
+      z-index: 2;
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
+
+  &__item-about{
+    @include option(width, 333px, 290px);
+    @include option(height, 341px, auto);
+    @include option(margin-bottom, 20px, 0px);
+    @include option(margin-left, 115px, 0px);
+    @include option(padding-left, 0px, 10px);
+    box-sizing: border-box;
+    @include MOBILE{
+      order: 3;
+    }
+  }
+
+  &__item-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    @include option(height, 2 * 24px);
+    @include option(margin-bottom, 3px, 19px);
+    @include option(font-size, 16px);
+    line-height: 1.5;
+    white-space: pre-line;
+
+    @include MOBILE{
+      display: block;
+    }
+  }
+
+  &__history {
+    width: 100%;
+    @include option(font-size, 16px);
+    line-height: 24/16*1em;
+    border: none;
+    background: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba($BLACK,.3);
+    color: $BLACK;
+  }
+
+  &__item-read-input {
+    display: none;
+  }
+
+  .rc-collapse-content{
+    background: none;
+    color: $BLACK;
+    padding: 0;
+    & > .rc-collapse-content-box{
+      @include option(margin, 0 0 5px);
+    }
+  }
+
+  .rc-collapse-item > .rc-collapse-header {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    @include option(padding, 0 0 6px, 0 0 1px);
+    @include option(font-size, 16px);
+    line-height: 1.5;
+    white-space: pre-line;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: $BLACK;
+    .arrow{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      @include option(width, 13.83px);
+      @include option(height, 6.83px);
+      margin: auto 0;
+      border:none;
+      background: image("winners/arrow.svg") no-repeat center / contain;
+      transition: transform 0.3s;
+    }
+    .rc-collapse-item-active > & {
+      .arrow{
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__item-info{
+    position: relative;
+    @include option(margin-top, 0px, -54px);
+    @include option(padding-bottom, 177px, 10px);
+    @include option(padding-left, 115px, 10px);
+    color: $WHITE;
+    @include MOBILE{
+      color: $BLACK;
+      order: 2;
+    }
+
+  }
+
+  &__item-info-name{
+    @include option(margin-bottom, 5px, 20px);
+    @include option(font-size, 55px, 28px);
+    @include option(letter-spacing, 2px, 1.1px);
+    line-height: 1.127;
+    white-space: pre-line;
+    font-weight: 900;
+    text-transform: uppercase;
+    @include MOBILE {
+      line-height: 1.285;
+      position: relative;
+      z-index: $z-content+3;
+      font-weight: 800;
+    }
+  }
+
+  &__item-info-sign{
+    @include option(margin, 0 0 -1px,  0 0  3px);
+    @include option(font-size, 16px);
+    line-height: 1.5;
+    white-space: pre-line;
+    font-weight: bold;
+  }
+
+  &__item-info-sum{
+    @include option(font-size, 40px);
+    line-height: 1.125;
+    white-space: pre-line;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 0.2/40*1em;
+    @include MOBILE{
+      line-height: 0.9;
+      font-weight: 700;
+    }
+  }
+
+  &__preview{
+    position: absolute;
+    @include option(top, -40px);
+    bottom: 0;
+    right: 0;
+    @include option(height, 735px + 40px);
+    margin: auto 0;
+    // opacity: 0;
+    @include MOBILE{
+      display: none;
+    }
+    ._ie & {
+      @include option(top, -18px);
+      @include option(height, 735px);
+    }
+  }
+
+  &__preview-block{
+    position: relative;
+    height: 100%;
+    @include option(padding, 19px 0 30px 20px);
+    box-sizing: border-box;
+    -webkit-mask: linear-gradient(180deg,rgba(#feaa48,0) 3%, rgba(#feaa48,1) 7%,  #feaa48 93%,rgba(254,170,72,0) 98%);
+    //-webkit-mask: linear-gradient(180deg,rgba(#feaa48,0) 0%, rgba(#feaa48,1) 7% );
+    ._ie & {
+      @include option(padding, 0px 0 30px 20px);
+    }
+  }
+
+  &__prev{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @include option(width, 364px);
+    @include option(height, 118px + 29px);
+    transition: transform 0.3s;
+    transform-origin: right top;
+  }
+
+  &__prev-block{
+    position: relative;
+    display: flex;
+    width: 100%;
+    @include option(height, 118px);
+    font-size: 0;
+    cursor: pointer;
+  }
+
+  .swiper-slide {
+    margin-top: 0 !important;
+  }
+
+  &__prev-bg{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    @include option(width, 154px);
+    @include option(height, 118px);
+    background: image("winners/prew-bg.png") no-repeat center / cover;
+  }
+
+  &__prev-bg-block{
+    position: absolute;
+    @include option(top, -18px);
+    left: 0;
+    width: 100%;
+    @include option(height, 118px + 18px);
+    overflow: hidden;
+
+    img{
+      position: absolute;
+      @include option(top, 0px);
+      @include option(right, -8px);
+      @include option(width, 161px);
+      height: auto;
+    }
+
+  }
+
+  &__prev-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    @include option(width, 210px);
+    @include option(height, 118px);
+    @include option(padding, 7px 20px);
+    background-color: $WHITE;
+    box-sizing: border-box;
+  }
+
+  &__prev-info-name{
+    position: relative;
+    @include option(font-size, 16px);
+    line-height: 1.125;
+    margin: 0;
+  }
+
+  &__prev-info-sum{
+    position: relative;
+    @include option(font-size, 20px, 40px);
+    line-height: 1.2;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__prev-info-read{
+    @include option(width, 105px);
+    position: relative;
+    display: inline-block;
+    @include option(font-size, 12px);
+    line-height: 1.33;
+    white-space: pre-line;
+    color: rgba(#533818, 0.7);
+    margin: 0;
+
+    &:before{
+      position: absolute;
+      content: "";
+      top: 100%;
+      left: 0;
+      width: 100%;
+      @include option(height, 1px);
+      min-height: 1px;
+      background-color: rgba(#533818, 0.7);
+    }
+  }
+
+  &__preview-nav{
+    position: absolute;
+    left: 0;
+    right: 0;
+    @include option(width, 40px);
+    @include option(height, 21px);
+    margin: 0 auto;
+    transition: transform 0.3s, opacity 0.3s;
+    cursor: pointer;
+    z-index: 2;
+    &_prev{
+      @include option(top, 11px);
+      ._ie & {
+        @include option(top, -29px);
+      }
+    }
+    &_next{
+      @include option(bottom, 18px);
+    }
+
+    &:active{
+      &_prev{
+        transform: translateY(-40%);
+      }
+      &_next{
+        transform: translateY(40%);
+      }
+    }
+  }
+
+  &__preview-nav.swiper-button-disabled{
+    opacity: 0;
+  }
+
+  &__preview-nav-block{
+    width: 100%;
+    height: 100%;
+    background: image("winners/nav-prew.svg") no-repeat center / contain;
+
+    &_next{
+      transform: rotate(180deg);
+    }
+  }
+
+  &__link{
+    position: absolute;
+    @include option(top, 61px, auto);
+    @include option(left, 126px, auto);
+
+    @include MOBILE{
+      position: relative;
+      margin: 0 auto;
+    }
+  }
+  .swiper-slide{
+    background: none;
+  }
+}

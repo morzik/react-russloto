@@ -1,13 +1,14 @@
 import React from "react";
 import {safeHTML} from "../../utils/safeHTML";
+import Picture from "../picture/Picture";
 
-const WinnersPrev = ({attr,photo,name,sum}) => {
+const WinnersPrev = ({attr,prev,name,sum}) => {
   return (
     <div {...attr} className={"winners__prev"}>
       <div className="winners__prev-block">
         <div className="winners__prev-bg">
           <div className="winners__prev-bg-block">
-            <img src={`${photo}.png`} alt={name}/>
+            <Picture {...prev}/>
           </div>
         </div>
         <div className="winners__prev-info">

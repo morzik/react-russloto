@@ -20,9 +20,9 @@ const WinnersItem = ({attr,photo,name,title,history,sum,sign,className}) => {
         </Collapse>
       </div>
       <div className="winners__item-info">
-        <p className="winners__item-info-name">{name}</p>
-        <p className="winners__item-info-sign">{sign}</p>
-        <p className="winners__item-info-sum">{sum}</p>
+        <p className="winners__item-info-name">{safeHTML(name)}</p>
+        <p className="winners__item-info-sign">{safeHTML(sign)}</p>
+        <p className="winners__item-info-sum">{safeHTML(sum)}</p>
       </div>
     </div>
   )

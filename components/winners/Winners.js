@@ -1,36 +1,56 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import WinnersItem from "./WinnersItem";
 import WinnersCarousel from "./WinnersCarousel";
 import Picture from "../picture/Picture";
 import Button from "../button/Button";
 import {safeHTML} from "../../utils/safeHTML";
+import WinnersPrevius from "./WinnersPrevius";
 
-const Winners = ({attr, bg, carousel, item, button, link, previews}) => {
-
+const Winners = ({attr, bg, carousel, item, button, link, previewsAttr, carouselAttr}) => {
+  const [width, setWidth] = useState(null);
+  useEffect(() => {
+    global.window && global.window.addEventListener("resize", () => {
+      setWidth(global.window && global.window.innerWidth);
+    });
+    setWidth(global.window && global.window.innerWidth);
+  }, []);
   return (
-    <section className={"winners"} {...attr}>
-      <div className="winners__content">
-        <div className="winners__bg">
-          <Picture {...bg}/>
-        </div>
-        <div className="winners__carousel">
-          <WinnersItem {...item} className={"winners__carousel-block winners__carousel-block_desk"}/>
-          <div className="winners__carousel-nav winners__carousel-nav_prev">
-            <div className="winners__carousel-nav-block winners__carousel-nav-block_prev" />
+    <section>
+      <div className={"winners"} {...attr}>
+        <div className="winners__content">
+          <div className="winners__bg">
+            <Picture {...bg}/>
           </div>
-          <div className="winners__carousel-nav winners__carousel-nav_next">
-            <div className="winners__carousel-nav-block winners__carousel-nav-block_next" />
-          </div>
+          {getItem(item, carousel, carouselAttr, width)}
+          <Button {...button}>{safeHTML(button.text)}</Button>
+          <Button {...link}>{safeHTML(link.text)}</Button>
         </div>
-        <Button {...button}>{safeHTML(button.text)}</Button>
-        <Button {...link}>{safeHTML(link.text)}</Button>
-      </div>
-      <div className="winners__preview">
-        <WinnersCarousel carousel={carousel} {...previews}/>
+        {getPreview(carousel, previewsAttr, width)}
+
       </div>
     </section>
   )
 };
+
+function getPreview(carousel, previewsAttr, width) {
+  if (width < 1023)
+    return null;
+  else
+    return (
+      <div className="winners__preview">
+        <WinnersPrevius carousel={carousel} {...previewsAttr}/>
+      </div>
+    );
+}
+
+function getItem(item, carousel, carouselAttr, width) {
+  return width < 1023 ? (
+    <div className="winners__carousel">
+      <WinnersCarousel carousel={carousel} {...carouselAttr}/>
+    </div>
+  ) : (<WinnersItem {...item} className={"winners__item_desk"}/>);
+}
+
 
 export default Winners;
 

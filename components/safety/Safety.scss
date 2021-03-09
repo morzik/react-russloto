@@ -1,0 +1,483 @@
+.safety {
+  // Константы
+  $c1: 1.8;
+  $c2: 1.2;
+  @mixin mod($mod) {
+    @include modifier("safety", $mod) {
+      @content;
+    }
+  }
+  @mixin card($mod) {
+    @include modifier("safety__card", $mod) {
+      @content;
+    }
+  }
+  @mixin card-side($mod) {
+    @include modifier("safety__card-side", $mod) {
+      @content;
+    }
+  }
+  @mixin card-active {
+    @include MOBILE {
+      .swiper-slide-active.safety__card & {
+        @content;
+      }
+    }
+    @include NOT-MOB {
+      .safety__card_active &,
+      .safety__card:hover & {
+        @content;
+      }
+    }
+  }
+  @mixin swiper-active {
+    @include MOBILE {
+      .swiper-slide-active.safety__card & {
+        @content;
+      }
+    }
+  }
+  @mixin card-hover {
+    @include NOT-MOB {
+      .safety__card_active &,
+      .safety__card:hover & {
+        @content;
+      }
+    }
+  }
+
+  @mixin cardCheck() {
+    .safety__card-input:checked + * & {
+      @content;
+    }
+    .safety__card_checked + * & {
+      @content;
+    }
+  }
+  @mixin ie-cardCheck() {
+    ._ie * .safety__card-input:checked + * & {
+      @content;
+    }
+    ._ie * .safety__card_checked + * & {
+      @content;
+    }
+  }
+
+
+  overflow: hidden;
+  background: $WHITE;
+
+  @include MOBILE {
+    position: relative;
+    z-index: 6;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    @include wrapper($w: 818px);
+    @include option(height, 793px, auto);
+    @include option(padding, 57px 0 64px, 19px 0 44px);
+  }
+
+  &__title {
+    @extend %H2;
+    letter-spacing: 0;
+    display: block;
+    color: $BLACK;
+    width: 100%;
+    font-weight: 500;
+    line-height: 1.3;
+    @include option(font-size, 38px, 30px);
+    white-space: pre-line;
+    @include option(margin, 0, 0 0 67px) ;
+    @include MOBILE {
+      font-weight: 500;
+      line-height: 1.17;
+      letter-spacing: -0.04em;
+      white-space: normal;
+    }
+  }
+
+  &__carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @include option(height, 280px, auto);
+    @include option(padding, 5px 0 0, 0);
+    width: 100%;
+    @include MOBILE {
+      display: block;
+    }
+
+    .carousel {
+      overflow: visible;
+    }
+
+    .swiper-wrapper {
+      align-items: center;
+    }
+  }
+
+
+  &__card {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    @include option(width, 158px, 163px);
+    @include option(height, 200px, 207px);
+    @include option(margin, 0 10px);
+    transition: .4s linear;
+    will-change: transform;
+    cursor: pointer;
+
+    &_1 {
+      @include option(margin, 0 10px 0 0);
+    }
+
+    &_4 {
+      @include option(margin, 0 0 0 10px);
+    }
+
+    &:hover,
+    &_active {
+      @include NOT-MOB {
+        @include option(width, 280px, 216px);
+        @include option(height, 355px, 274px);
+      }
+    }
+
+    &.swiper-slide-active {
+      @include MOBILE {
+        transform: scale(1.32);
+        z-index: 2;
+      }
+    }
+  }
+
+  &__card-block {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: .4s ease-in-out;
+    @include NOT-MOB {
+      transform: scale(0.56);
+    }
+
+    ._ie * & {
+      transform-style: inherit;
+      perspective: inherit;
+    }
+
+    @include card-hover {
+      transform: scale(1) translate3d(0, 0, 0);
+    }
+
+  }
+
+  &__card-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include option(width, 280px, 163px);
+    @include option(height, 355px, 207px);
+    transition: .4s ease-in-out;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    -moz-transform: perspective(1200px);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%);
+    @include MOBILE {
+      width: 100%;
+      height: 100%;
+    }
+
+    ._ie * & {
+      -webkit-perspective: inherit;
+      perspective: inherit;
+      -moz-transform: inherit;
+      -webkit-transform-style: inherit;
+      -moz-transform-style: inherit;
+      transform-style: inherit;
+    }
+  }
+
+  &__card-inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include option(width, 280px, 163px);
+    @include option(height, 355px, 207px);
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: .4s ease-in-out;
+
+    ._ie * & {
+      transform-style: inherit;
+      -webkit-transform-style: inherit;
+      perspective: inherit;
+    }
+
+    @include cardCheck {
+      transform: rotateY(-180deg);
+    }
+
+    @include ie-cardCheck {
+      transform: none;
+    }
+  }
+
+  &__card-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    @include option(border-radius, 11px, 20px);
+    transition: .4s ease-in-out;
+
+    ._ie * & {
+      backface-visibility: inherit;
+      -webkit-backface-visibility: inherit;
+      transform-style: inherit;
+      -webkit-transform-style: inherit;
+    }
+
+    &_front {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #E5E4E4;
+      @include option(padding, 30px 20px 33px, 15px 15px 18px);
+
+      @include cardCheck {
+        background-size: cover;
+        visibility: hidden;
+      }
+      @include card-hover {
+        background-color: #FFCD17;
+        @include option(padding, 32px 20px 28px, 15px 26px);
+      }
+      @include swiper-active {
+        background-color: #FFCD17;
+      }
+    }
+
+    &_back {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include option(width, 280px, 163px);
+      @include option(height, 355px, 207px);
+      background-color: #282828;
+      @include option(padding, 25px 26px 80px, 15px 16px 50px);
+      transform: rotateY(180deg);
+      transition: opacity 0.3s;
+
+      ._ie * & {
+        transform: rotate(0deg);
+        opacity: 0;
+      }
+
+      @include cardCheck {
+        opacity: 1;
+      }
+      @include ie-cardCheck {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+    }
+  }
+
+  &__card-side-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: no-repeat center right/ auto 100%;
+    @include option(border-radius, 11px, 20px);
+    background-image: image("safety/bg/bg1.svg");
+
+    @include card("2") {
+      background-image: image("safety/bg/bg2.svg");
+    }
+
+    @include card-active {
+      background-position: center left;
+    }
+
+  }
+
+  &__card-side-title {
+    position: relative;
+    width: 100%;
+    @include option(font-size, 18px, 10px);
+    line-height: 1.23;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: .4s ease-in-out;
+    transform-origin: left bottom;
+    font-weight: 500;
+    text-align: left;
+    margin: 0;
+    @include card("active") {
+      @include option(font-size, 18px, 10px);
+    }
+  }
+
+  &__card-side-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include option(width, 107px * $c1, 107px * $c2);
+    @include option(height, 107px * $c1, 107px * $c2);
+    margin: 0 auto;
+    transition: .4s ease-in-out;
+    transform-origin: center top;
+  }
+
+  &__card-side-image-block {
+    transition: .4s ease-in-out;
+
+    @include card("1") {
+      @include option(width, 70px * $c1, 70px * $c2);
+      @include option(height, 72px * $c1, 72px * $c2);
+    }
+
+    @include card("2") {
+      @include option(width, 65px * $c1, 65px * $c2);
+      @include option(height, 85.22px * $c1, 85.22px * $c2);
+    }
+
+    @include card("3") {
+      @include option(width, 107px * $c1, 107px * $c2);
+      @include option(height, 107px * $c1, 107px * $c2);
+    }
+
+    @include card("4") {
+      @include option(width, 87px * $c1, 87px * $c2);
+      @include option(height, 54px * $c1, 54px * $c2);
+    }
+
+    svg {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: block;
+
+      path {
+        transition: fill 0.4s ease-in-out;
+      }
+
+      @include card-active {
+        .color-str {
+          stroke: $WHITE;
+        }
+        .color-fill {
+          fill: $WHITE;
+        }
+        .color-o {
+          fill: $YELLOW;
+        }
+      }
+    }
+  }
+
+  &__card-side-arrow {
+    position: absolute;
+    right: auto;
+    left: auto;
+    @include option(bottom, 36px, 22px);
+    @include option(width, 58px, 40px);
+    @include option(height, 18px, 10px);
+    background: image("safety/arrow.svg") no-repeat center left / contain;
+    transition: .4s ease-in-out;
+    @include card-side("front") {
+      @include option(right, 18px, 7px);
+      opacity: 0;
+    }
+
+    @include card-side("back") {
+      @include option(left, 18px, 10px);
+      transform: rotate(180deg);
+      background: image("safety/arrow-back.svg") no-repeat center left / contain;
+    }
+
+    &_front {
+      @include card-hover {
+        opacity: 1;
+        transition-delay: 0.3s;
+      }
+    }
+
+    @include swiper-active {
+      opacity: 1;
+      transition-delay: 0.3s;
+    }
+
+  }
+
+  &__card-side-text {
+    @include option(margin-bottom, 22px, 10px);
+    @include option(font-size, 16px, 9.32px);
+    color: $WHITE;
+    will-change: transfrom;
+    line-height: 1.35;
+  }
+
+  &__card-links {
+    width: 100%;
+    font-size: 0;
+  }
+
+  &__card-side-links {
+    &__card-side-links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__card-link {
+      display: inline-block;
+      @include option(height, 19px, 12px);
+      margin: 0;
+    }
+
+    &__stroke_white,
+    &__fill_white,
+    &__fill_yellow {
+      transition: .7s ease-in-out;
+    }
+
+  }
+
+  &__button {
+    flex: 0 0 auto;
+    @include option(width, 300px, 325);
+    transition: background .3s ease-in-out;
+    @include option(border-radius, 23);
+    @include MOBILE {
+      @include option(margin, 70px auto 0px, 73px auto 0);
+      box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

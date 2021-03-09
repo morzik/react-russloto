@@ -7,12 +7,15 @@ import Button from "../button/Button";
 
 const InfoBlock = ({attr, title, info, more, button}) => {
   return (
-    <section className={"info-block"} {...attr}>
-      <div className="info-block__content">
-        <h2 className="info-block__title">{safeHTML(title)}</h2>
-        <InfoBlockList info={info}/>
-        <InfoBlockMore {...more}/>
-        <Button {...button}>{button.text}</Button>
+    <section >
+      <div className={"info-block"} {...attr}>
+
+        <div className="info-block__content">
+          <h2 className="info-block__title">{safeHTML(title)}</h2>
+          <InfoBlockList info={info}/>
+          <InfoBlockMore {...more}/>
+          <Button {...button}>{button.text}</Button>
+        </div>
       </div>
     </section>
   )

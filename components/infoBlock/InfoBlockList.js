@@ -3,8 +3,8 @@ import InfoBlockItem from "./InfoBlockItem";
 
 const InfoBlockList = ({info}) => {
 
-  const listItems = info.map(({icon,text})=>(
-    <InfoBlockItem icon={icon} text={text}/>
+  const listItems = info.map(({icon,text,id})=>(
+    <InfoBlockItem icon={icon} text={text} key={id}/>
   ));
 
   return (

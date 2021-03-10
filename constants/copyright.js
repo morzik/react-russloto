@@ -629,14 +629,18 @@ export const winners = {
   ],
   previewsAttr: {
     direction: "vertical",
+    loop: true,
+    slidesPerView: 5,
     spaceBetween: 0,
-    slidesPerView: 5
+    centeredSlides: false,
+    slideToClickedSlide: true
   },
   carouselAttr: {
     direction: "horizontal",
     loop: true,
-    spaceBetween: 10,
-    slidesPerView: 1
+    slidesPerView: 1,
+    centeredSlides: true,
+    spaceBetween: 18
   },
   button: {
     text: "Стать следующим",
@@ -793,26 +797,30 @@ export const safety = {
     effect: 'coverflow',
     coverflowEffect: {
       rotate: 0,
-      stretch: 5,
+      stretch: 40,
+      depth: 120,
+      modifier: 1,
       slideShadows: false,
     },
     breakpoints: {
       1024: {
+        loop: false,
         centeredSlides: false,
         effect: 'none',
         slidesPerView: "auto",
-        spaceBetween: 0,
         watchOverflow: true
       }
     }
   },
   list: [
     {
-      className: "safety__card_1 safety__card_active",
       id: "card-1",
+      className: "safety__card_1",
+      isActive:true,
       icon: {
         name: "safety/1"
       },
+      links:[],
       title: "безопасная<br/>регистрация",
       text: "При регистрации вы указываете только свой электронный адрес и&nbsp;номер телефона. На&nbsp;этот&nbsp;номер мы будем&nbsp;отправлять вам sms&nbsp;с паролем для получения выигрышей на&nbsp;сайте. ",
       attr: {
@@ -820,25 +828,26 @@ export const safety = {
       }
     },
     {
-      className: "safety__card_2",
       id: "card-2",
+      className: "safety__card_2",
+      isActive:false,
       icon: {
         name: "safety/2"
       },
       title: "безопасность<br/>данных",
       text: "Мы не сохраняем номера банковских карт, платёжные пароли и другие данные, которые вы вводите при оплате билетов. Вся информация хранится только на стороне платёжной системы, которую вы выбираете сами.",
-      "links": [
+      links: [
         {
-          "image": "images/information/links/1.svg",
-          "alt": "payment"
+          src: "images/safety/links/1.svg",
+          alt: "visa"
         },
         {
-          "image": "images/information/links/2.svg",
-          "alt": "payment"
+          src: "images/safety/links/2.svg",
+          alt: "mastercard"
         },
         {
-          "image": "images/information/links/3.svg",
-          "alt": "payment"
+          src: "images/safety/links/3.svg",
+          alt: "мир"
         }
       ],
       attr: {
@@ -846,11 +855,13 @@ export const safety = {
       }
     },
     {
-      className: "safety__card_3",
       id: "card-3",
+      className: "safety__card_3",
+      isActive:false,
       icon: {
         name: "safety/3"
       },
+      links:[],
       title: "Государственные<br/>лотереи",
       text: "Организатором всех лотерей в России являются Министерство спорта и Министерство финансов. Они следят за тем, чтобы все розыгрыши проводились честно, а победители вовремя получали выигрыши. ",
       attr: {
@@ -858,11 +869,13 @@ export const safety = {
       }
     },
     {
-      className: "safety__card_4",
       id: "card-4",
+      className: "safety__card_4",
+      isActive:false,
       icon: {
         name: "safety/4"
       },
+      links:[],
       title: "Ваш билет<br>никогда<br>не потеряется",
       text: "Вся информация о купленных билетах хранится в вашем личном кабинете. Если возникнут проблемы, вы сможете обратиться в нашу службу поддержки. Мы всегда вам поможем. ",
       attr: {

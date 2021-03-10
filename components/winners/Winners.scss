@@ -282,11 +282,9 @@
       background: image("winners/arrow.svg") no-repeat center / contain;
       transition: transform 0.3s;
     }
-    .rc-collapse-item-active > & {
-      .arrow{
-        transform: rotate(180deg);
-      }
-    }
+  }
+  .rc-collapse-item-active > .rc-collapse-header > .arrow {
+    transform: rotate(180deg);
   }
 
   &__item-info{

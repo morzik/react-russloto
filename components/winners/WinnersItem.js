@@ -8,7 +8,12 @@ const WinnersItem = ({attr,photo,name,title,history,sum,sign,className}) => {
       <img src={"images/winners/winners.svg"} alt={"decoration"} className="winners__item-decor"/>
       <div className="winners__item-bg">
         <div className="winners__item-bg-block">
-          <img src={`${photo}.png`} alt={name}/>
+          <picture>
+            <source srcSet={`${photo}-m.webp`} type={"image/webp"} media={"(max-width:1023px)"}/>
+            <source srcSet={`${photo}-m.png`}  media={"(max-width:1023px)"}/>
+            <source srcSet={`${photo}.webp`} type={"image/webp"}/>
+            <img src={`${photo}.png`} alt={name}/>
+          </picture>
         </div>
       </div>
       <div className="winners__item-about">

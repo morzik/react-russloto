@@ -12,18 +12,10 @@
       @content;
     }
   }
-  @mixin more-checked {
-    .winners__item-read-input:checked ~ &{
-      @content;
-    }
-  }
+
   position: relative;
   background: linear-gradient(66.68deg, #F4762F 0%, #FFAF4A 67.68%, #FFCF53 95.54%), #D4D9DE;
-
-  @include MOBILE{
-    overflow: hidden;
-  }
-
+  overflow: hidden;
 
   &__content{
     position: relative;
@@ -108,12 +100,10 @@
       display: block;
     }
     &_prev{
-      //@include option(left, 7px, -15px);
-      @include option(left, 7px, 0);
+      @include option(left, 7px, -10px);
     }
     &_next{
-      //@include option(right, 7px, -15px);
-      @include option(right, 7px, 0);
+      @include option(right, 7px, -10px);
     }
 
     &:active{
@@ -138,10 +128,8 @@
 
 
   &__item{
-    list-style: none;
     position: relative;
     width: 100%;
-    //@include option(width, 1050px, 346px);
     box-sizing: border-box;
 
     @include MOBILE{
@@ -150,10 +138,6 @@
       flex-direction: column;
       height: auto;
       text-align: left;
-
-      &_desk{
-        //display: none;
-      }
     }
   }
 
@@ -187,7 +171,7 @@
     position: relative;
     width: 100%;
     @include option(height, 787px, 361px);
-    @include option(margin-top, 0px, -126px);
+    @include option(margin, 0, -126px 0 0);
     overflow: hidden;
 
     img{

@@ -5,7 +5,7 @@ import WinnersPrev from "./WinnersPrev";
 
 SwiperCore.use([Navigation, Pagination]);
 
-const WinnersPrevius = ({carousel,direction,spaceBetween, slidesPerView}) =>{
+const WinnersPrevius = ({carousel, ...attr}) =>{
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -16,7 +16,7 @@ const WinnersPrevius = ({carousel,direction,spaceBetween, slidesPerView}) =>{
   ));
   return(
     <>
-      <Swiper className={"winners__preview-block"} direction={direction} spaceBetween={spaceBetween} slidesPerView={slidesPerView}
+      <Swiper className={"winners__preview-block"} {...attr}
               onInit={(swiper) => {
                 requestAnimationFrame(() => {
                   swiper.params.navigation.prevEl = prevRef.current;

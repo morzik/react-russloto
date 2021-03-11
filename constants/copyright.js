@@ -18,42 +18,46 @@ export const intro = {
   },
   bg: {
     person: {
-      list: [
-        {
-          srcSet: "images/intro/person_m.webp 1x,images/intro/person_m_2.webp 2x",
-          type: "image/webp",
-          media: "(max-width:1023px)"
-        },
-        {
-          srcSet: "images/intro/person_m.png 1x,images/intro/person_m_2.png 2x",
-          media: "(max-width:1023px)"
-        },
-        {
-          srcSet: "images/intro/person.webp",
-          type: "image/webp"
-        }
-      ],
+      sourceData: {
+        sources: [
+          {
+            srcSet: "images/intro/person_m.webp 1x,images/intro/person_m_2.webp 2x",
+            type: "image/webp",
+            media: "(max-width:1023px)"
+          },
+          {
+            srcSet: "images/intro/person_m.png 1x,images/intro/person_m_2.png 2x",
+            media: "(max-width:1023px)"
+          },
+          {
+            srcSet: "images/intro/person.webp",
+            type: "image/webp"
+          }
+        ]
+      },
       imgAttr: {
         src: "images/intro/person.png",
         alt: "icons-1"
       }
     },
     table: {
-      list: [
-        {
-          srcSet: "images/intro/table_m.webp 1x,images/intro/table_m_2.webp 2x",
-          type: "image/webp",
-          media: "(max-width:1023px)"
-        },
-        {
-          srcSet: "images/intro/table_m.png 1x,images/intro/table_m_2.png 2x",
-          media: "(max-width:1023px)"
-        },
-        {
-          srcSet: "images/intro/table.webp",
-          type: "image/webp"
-        }
-      ],
+      sourceData: {
+        sources: [
+          {
+            srcSet: "images/intro/table_m.webp 1x,images/intro/table_m_2.webp 2x",
+            type: "image/webp",
+            media: "(max-width:1023px)"
+          },
+          {
+            srcSet: "images/intro/table_m.png 1x,images/intro/table_m_2.png 2x",
+            media: "(max-width:1023px)"
+          },
+          {
+            srcSet: "images/intro/table.webp",
+            type: "image/webp"
+          }
+        ]
+      },
       imgAttr: {
         src: "images/intro/table.png",
         alt: "icons-2"
@@ -159,21 +163,24 @@ export const instruction = {
   },
   videoPic: {
     image: {
-      list: [
-        {
-          srcSet: "images/instruction/video-pic-m.webp 1x,images/instruction/video-pic-m@2x.webp 2x",
-          type: "image/webp",
-          media: "(max-width:1023px)"
-        },
-        {
-          srcSet: "images/instruction/video-pic-m.png 1x, images/instruction/video-pic-m@2x.png 2x",
-          media: "(max-width:1023px)"
-        },
-        {
-          srcSet: "images/instruction/video-pic.webp",
-          type: "image/webp"
-        }
-      ],
+      sourceData: {
+        srcSetPrefix: "images/instruction/video-pic",
+        sources: [
+          {
+            srcSetSuffix: "-m@2x.webp",
+            type: "image/webp",
+            media: "(max-width:1023px)"
+          },
+          {
+            srcSetSuffix: "-m.png",
+            media: "(max-width:1023px)"
+          },
+          {
+            srcSetSuffix: ".webp",
+            type: "image/webp"
+          }
+        ]
+      },
       imgAttr: {
         src: "images/instruction/video-pic.png",
         alt: "iphone"
@@ -232,21 +239,21 @@ export const infoBlock = {
   title: "Играйте <br>в настоящее <br>«Русское \nлото» <br>каждую неделю!",
   info: [
     {
-      id:"1",
+      id: "1",
       icon: {
         name: "info-block/1"
       },
       text: "Главная и&nbsp;самая любимая телелотерея&nbsp;страны. Розыгрыши по выходным, которых с&nbsp;нетерпением ждут всей семьей"
     },
     {
-      id:"2",
+      id: "2",
       icon: {
         name: "info-block/2"
       },
       text: "Разыгрываем: дома, автомобили, путешествия и&nbsp;рекордные денежные призы"
     },
     {
-      id:"3",
+      id: "3",
       icon: {
         name: "info-block/3"
       },
@@ -273,12 +280,14 @@ export const winners = {
     id: "block5"
   },
   bg: {
-    list: [
-      {
-        srcSet: "images/1px.png",
-        media: "(max-width:1023px)"
-      }
-    ],
+    sourceData: {
+      sources: [
+        {
+          srcSet: "images/1px.png",
+          media: "(max-width:1023px)"
+        }
+      ]
+    },
     imgAttr: {
       src: "images/winners/bg.svg",
       alt: "decoration"
@@ -286,6 +295,28 @@ export const winners = {
   },
   item: {
     id: "0",
+    image: {
+      sourceData: {
+        sources: [
+          {
+            "srcSetSuffix": "-m.webp",
+            "type": "image/webp",
+            "media": "(max-width:1023px)"
+          },
+          {
+            "srcSetSuffix": "-m.png",
+            "media": "(max-width:1023px)"
+          },
+          {
+            "srcSetSuffix": ".webp",
+            "type": "image/webp"
+          }
+        ]
+      },
+      imgAttr: {
+        src: "images/winners/1.png"
+      }
+    },
     photo: "images/winners/1",
     logo_1: "images/winners/logo/1.svg",
     logo_2: "images/winners/logo/1_m.svg",
@@ -298,14 +329,38 @@ export const winners = {
   carousel: [
     {
       id: "1",
-      photo: "images/winners/1",
+      photo: {
+        sourceData: {
+          srcSetPrefix: "images/winners/1",
+          sources: [
+            {
+              "srcSetSuffix": "-m.webp",
+              "type": "image/webp",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": "-m.png",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": ".webp",
+              "type": "image/webp"
+            }
+          ]
+        },
+        imgAttr: {
+          src: "images/winners/1.png"
+        }
+      },
       prev: {
-        list:[
-          {
-            srcSet:"images/winners/prev/1.webp",
-            type:"image/webp"
-          }
-        ],
+        sourceData: {
+          sources: [
+            {
+              srcSet: "images/winners/prev/1.webp",
+              type: "image/webp"
+            }
+          ]
+        },
         imgAttr: {
           src: "images/winners/prev/1.png"
         }
@@ -320,14 +375,38 @@ export const winners = {
     },
     {
       id: "2",
-      photo: "images/winners/2",
+      photo: {
+        sourceData: {
+          srcSetPrefix: "images/winners/2",
+          sources: [
+            {
+              "srcSetSuffix": "-m.webp",
+              "type": "image/webp",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": "-m.png",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": ".webp",
+              "type": "image/webp"
+            }
+          ]
+        },
+        imgAttr: {
+          src: "images/winners/2.png"
+        }
+      },
       prev: {
-        list:[
-          {
-            srcSet:"images/winners/prev/2.webp",
-            type:"image/webp"
-          }
-        ],
+        sourceData: {
+          sources: [
+            {
+              srcSet: "images/winners/prev/2.webp",
+              type: "image/webp"
+            }
+          ]
+        },
         imgAttr: {
           src: "images/winners/prev/2.png"
         }
@@ -342,14 +421,38 @@ export const winners = {
     },
     {
       id: "3",
-      photo: "images/winners/3",
+      photo: {
+        sourceData: {
+          srcSetPrefix: "images/winners/3",
+          sources: [
+            {
+              "srcSetSuffix": "-m.webp",
+              "type": "image/webp",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": "-m.png",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": ".webp",
+              "type": "image/webp"
+            }
+          ]
+        },
+        imgAttr: {
+          src: "images/winners/3.png"
+        }
+      },
       prev: {
-        list:[
-          {
-            srcSet:"images/winners/prev/3.webp",
-            type:"image/webp"
-          }
-        ],
+        sourceData: {
+          sources: [
+            {
+              srcSet: "images/winners/prev/3.webp",
+              type: "image/webp"
+            }
+          ]
+        },
         imgAttr: {
           src: "images/winners/prev/3.png"
         }
@@ -364,14 +467,38 @@ export const winners = {
     },
     {
       id: "4",
-      photo: "images/winners/4",
+      photo: {
+        sourceData: {
+          srcSetPrefix: "images/winners/4",
+          sources: [
+            {
+              "srcSetSuffix": "-m.webp",
+              "type": "image/webp",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": "-m.png",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": ".webp",
+              "type": "image/webp"
+            }
+          ]
+        },
+        imgAttr: {
+          src: "images/winners/4.png"
+        }
+      },
       prev: {
-        list:[
-          {
-            srcSet:"images/winners/prev/4.webp",
-            type:"image/webp"
-          }
-        ],
+        sourceData: {
+          sources: [
+            {
+              srcSet: "images/winners/prev/4.webp",
+              type: "image/webp"
+            }
+          ]
+        },
         imgAttr: {
           src: "images/winners/prev/4.png"
         }
@@ -386,14 +513,38 @@ export const winners = {
     },
     {
       id: "5",
-      photo: "images/winners/5",
+      photo: {
+        sourceData: {
+          srcSetPrefix: "images/winners/5",
+          sources: [
+            {
+              "srcSetSuffix": "-m.webp",
+              "type": "image/webp",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": "-m.png",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": ".webp",
+              "type": "image/webp"
+            }
+          ]
+        },
+        imgAttr: {
+          src: "images/winners/5.png"
+        }
+      },
       prev: {
-        list:[
-          {
-            srcSet:"images/winners/prev/5.webp",
-            type:"image/webp"
-          }
-        ],
+        sourceData: {
+          sources: [
+            {
+              srcSet: "images/winners/prev/5.webp",
+              type: "image/webp"
+            }
+          ]
+        },
         imgAttr: {
           src: "images/winners/prev/5.png"
         }
@@ -408,14 +559,38 @@ export const winners = {
     },
     {
       id: "6",
-      photo: "images/winners/6",
+      photo: {
+        sourceData: {
+          srcSetPrefix: "images/winners/6",
+          sources: [
+            {
+              "srcSetSuffix": "-m.webp",
+              "type": "image/webp",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": "-m.png",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": ".webp",
+              "type": "image/webp"
+            }
+          ]
+        },
+        imgAttr: {
+          src: "images/winners/6.png"
+        }
+      },
       prev: {
-        list:[
-          {
-            srcSet:"images/winners/prev/6.webp",
-            type:"image/webp"
-          }
-        ],
+        sourceData: {
+          sources: [
+            {
+              srcSet: "images/winners/prev/6.webp",
+              type: "image/webp"
+            }
+          ]
+        },
         imgAttr: {
           src: "images/winners/prev/6.png"
         }
@@ -430,14 +605,38 @@ export const winners = {
     },
     {
       id: "7",
-      photo: "images/winners/7",
+      photo: {
+        sourceData: {
+          srcSetPrefix: "images/winners/7",
+          sources: [
+            {
+              "srcSetSuffix": "-m.webp",
+              "type": "image/webp",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": "-m.png",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": ".webp",
+              "type": "image/webp"
+            }
+          ]
+        },
+        imgAttr: {
+          src: "images/winners/7.png"
+        }
+      },
       prev: {
-        list:[
-          {
-            srcSet:"images/winners/prev/7.webp",
-            type:"image/webp"
-          }
-        ],
+        sourceData: {
+          sources: [
+            {
+              srcSet: "images/winners/prev/7.webp",
+              type: "image/webp"
+            }
+          ]
+        },
         imgAttr: {
           src: "images/winners/prev/7.png"
         }
@@ -452,14 +651,38 @@ export const winners = {
     },
     {
       id: "8",
-      photo: "images/winners/8",
+      photo: {
+        sourceData: {
+          srcSetPrefix: "images/winners/8",
+          sources: [
+            {
+              "srcSetSuffix": "-m.webp",
+              "type": "image/webp",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": "-m.png",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": ".webp",
+              "type": "image/webp"
+            }
+          ]
+        },
+        imgAttr: {
+          src: "images/winners/8.png"
+        }
+      },
       prev: {
-        list:[
-          {
-            srcSet:"images/winners/prev/8.webp",
-            type:"image/webp"
-          }
-        ],
+        sourceDate: {
+          sources: [
+            {
+              srcSet: "images/winners/prev/8.webp",
+              type: "image/webp"
+            }
+          ]
+        },
         imgAttr: {
           src: "images/winners/prev/8.png"
         }
@@ -474,14 +697,38 @@ export const winners = {
     },
     {
       id: "9",
-      photo: "images/winners/9",
+      photo: {
+        sourceData: {
+          srcSetPrefix: "images/winners/9",
+          sources: [
+            {
+              "srcSetSuffix": "-m.webp",
+              "type": "image/webp",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": "-m.png",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": ".webp",
+              "type": "image/webp"
+            }
+          ]
+        },
+        imgAttr: {
+          src: "images/winners/9.png"
+        }
+      },
       prev: {
-        list:[
-          {
-            srcSet:"images/winners/prev/9.webp",
-            type:"image/webp"
-          }
-        ],
+        sourceDate: {
+          sources: [
+            {
+              srcSet: "images/winners/prev/9.webp",
+              type: "image/webp"
+            }
+          ]
+        },
         imgAttr: {
           src: "images/winners/prev/9.png"
         }
@@ -496,14 +743,38 @@ export const winners = {
     },
     {
       id: "10",
-      photo: "images/winners/10",
+      photo: {
+        sourceData: {
+          srcSetPrefix: "images/winners/10",
+          sources: [
+            {
+              "srcSetSuffix": "-m.webp",
+              "type": "image/webp",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": "-m.png",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": ".webp",
+              "type": "image/webp"
+            }
+          ]
+        },
+        imgAttr: {
+          src: "images/winners/10.png"
+        }
+      },
       prev: {
-        list:[
-          {
-            srcSet:"images/winners/prev/10.webp",
-            type:"image/webp"
-          }
-        ],
+        sourceDate: {
+          sources: [
+            {
+              srcSet: "images/winners/prev/10.webp",
+              type: "image/webp"
+            }
+          ]
+        },
         imgAttr: {
           src: "images/winners/prev/10.png"
         }
@@ -518,14 +789,38 @@ export const winners = {
     },
     {
       id: "11",
-      photo: "images/winners/11",
+      photo: {
+        sourceData: {
+          srcSetPrefix: "images/winners/11",
+          sources: [
+            {
+              "srcSetSuffix": "-m.webp",
+              "type": "image/webp",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": "-m.png",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": ".webp",
+              "type": "image/webp"
+            }
+          ]
+        },
+        imgAttr: {
+          src: "images/winners/11.png"
+        }
+      },
       prev: {
-        list:[
-          {
-            srcSet:"images/winners/prev/11.webp",
-            type:"image/webp"
-          }
-        ],
+        sourceDate: {
+          sources: [
+            {
+              srcSet: "images/winners/prev/11.webp",
+              type: "image/webp"
+            }
+          ]
+        },
         imgAttr: {
           src: "images/winners/prev/11.png"
         }
@@ -540,14 +835,38 @@ export const winners = {
     },
     {
       id: "12",
-      photo: "images/winners/12",
+      photo: {
+        sourceData: {
+          srcSetPrefix: "images/winners/12",
+          sources: [
+            {
+              "srcSetSuffix": "-m.webp",
+              "type": "image/webp",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": "-m.png",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": ".webp",
+              "type": "image/webp"
+            }
+          ]
+        },
+        imgAttr: {
+          src: "images/winners/12.png"
+        }
+      },
       prev: {
-        list:[
-          {
-            srcSet:"images/winners/prev/12.webp",
-            type:"image/webp"
-          }
-        ],
+        sourceDate: {
+          sources: [
+            {
+              srcSet: "images/winners/prev/12.webp",
+              type: "image/webp"
+            }
+          ]
+        },
         imgAttr: {
           src: "images/winners/prev/12.png"
         }
@@ -562,14 +881,38 @@ export const winners = {
     },
     {
       id: "13",
-      photo: "images/winners/13",
+      photo: {
+        sourceData: {
+          srcSetPrefix: "images/winners/13",
+          sources: [
+            {
+              "srcSetSuffix": "-m.webp",
+              "type": "image/webp",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": "-m.png",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": ".webp",
+              "type": "image/webp"
+            }
+          ]
+        },
+        imgAttr: {
+          src: "images/winners/13.png"
+        }
+      },
       prev: {
-        list:[
-          {
-            srcSet:"images/winners/prev/13.webp",
-            type:"image/webp"
-          }
-        ],
+        sourceDate: {
+          sources: [
+            {
+              srcSet: "images/winners/prev/13.webp",
+              type: "image/webp"
+            }
+          ]
+        },
         imgAttr: {
           src: "images/winners/prev/13.png"
         }
@@ -584,14 +927,38 @@ export const winners = {
     },
     {
       id: "14",
-      photo: "images/winners/14",
+      photo: {
+        sourceData: {
+          srcSetPrefix: "images/winners/14",
+          sources: [
+            {
+              "srcSetSuffix": "-m.webp",
+              "type": "image/webp",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": "-m.png",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": ".webp",
+              "type": "image/webp"
+            }
+          ]
+        },
+        imgAttr: {
+          src: "images/winners/14.png"
+        }
+      },
       prev: {
-        list:[
-          {
-            srcSet:"images/winners/prev/14.webp",
-            type:"image/webp"
-          }
-        ],
+        sourceDate: {
+          sources: [
+            {
+              srcSet: "images/winners/prev/14.webp",
+              type: "image/webp"
+            }
+          ]
+        },
         imgAttr: {
           src: "images/winners/prev/14.png"
         }
@@ -606,14 +973,38 @@ export const winners = {
     },
     {
       id: "15",
-      photo: "images/winners/15",
+      photo: {
+        sourceData: {
+          srcSetPrefix: "images/winners/15",
+          sources: [
+            {
+              "srcSetSuffix": "-m.webp",
+              "type": "image/webp",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": "-m.png",
+              "media": "(max-width:1023px)"
+            },
+            {
+              "srcSetSuffix": ".webp",
+              "type": "image/webp"
+            }
+          ]
+        },
+        imgAttr: {
+          src: "images/winners/15.png"
+        }
+      },
       prev: {
-        list:[
-          {
-            srcSet:"images/winners/prev/15.webp",
-            type:"image/webp"
-          }
-        ],
+        sourceData: {
+          sources: [
+            {
+              srcSet: "images/winners/prev/15.webp",
+              type: "image/webp"
+            }
+          ]
+        },
         imgAttr: {
           src: "images/winners/prev/15.png"
         }
@@ -628,11 +1019,12 @@ export const winners = {
     }
   ],
   previewsAttr: {
-    direction: "vertical",
+    direction: 'vertical',
     loop: true,
+    loopAdditionalSlides: 0,
     slidesPerView: 5,
     spaceBetween: 0,
-    centeredSlides: false,
+    centeredSlides: true,
     slideToClickedSlide: true
   },
   carouselAttr: {
@@ -667,21 +1059,23 @@ export const statistics = {
   subtitle: "Присоединяйтесь \nк победителям!",
   map: {
     image: {
-      list: [
-        {
-          srcSet: "images/statistics/map-m.webp 1x, images/statistics/map-m@2x.webp 2x",
-          media: "(max-width:1023px)",
-          type: "image/webp"
-        },
-        {
-          srcSet: "images/statistics/map-m.png 1x, images/statistics/map-m@2x.png 2x",
-          media: "(max-width:1023px)"
-        },
-        {
-          srcSet: "images/statistics/map.webp",
-          type: "iamge/webp"
-        }
-      ],
+      sourceData: {
+        sources: [
+          {
+            srcSet: "images/statistics/map-m.webp 1x, images/statistics/map-m@2x.webp 2x",
+            media: "(max-width:1023px)",
+            type: "image/webp"
+          },
+          {
+            srcSet: "images/statistics/map-m.png 1x, images/statistics/map-m@2x.png 2x",
+            media: "(max-width:1023px)"
+          },
+          {
+            srcSet: "images/statistics/map.webp",
+            type: "image/webp"
+          }
+        ]
+      },
       imgAttr: {
         src: "images/statistics/map.png",
         alt: "map"
@@ -746,12 +1140,14 @@ export const rules = {
     {
       id: "2",
       image: {
-        list: [
-          {
-            srcSet: "images/information-block/4.svg",
-            media: "(max-width:1023px)"
-          }
-        ],
+        sourceData: {
+          sources: [
+            {
+              srcSet: "images/information-block/4.svg",
+              media: "(max-width:1023px)"
+            }
+          ]
+        },
         imgAttr: {
           src: "images/information-block/2.svg",
           alt: "Второй тур"
@@ -816,11 +1212,11 @@ export const safety = {
     {
       id: "card-1",
       className: "safety__card_1",
-      isActive:true,
+      isActive: true,
       icon: {
         name: "safety/1"
       },
-      links:[],
+      links: [],
       title: "безопасная<br/>регистрация",
       text: "При регистрации вы указываете только свой электронный адрес и&nbsp;номер телефона. На&nbsp;этот&nbsp;номер мы будем&nbsp;отправлять вам sms&nbsp;с паролем для получения выигрышей на&nbsp;сайте. ",
       attr: {
@@ -830,7 +1226,7 @@ export const safety = {
     {
       id: "card-2",
       className: "safety__card_2",
-      isActive:false,
+      isActive: false,
       icon: {
         name: "safety/2"
       },
@@ -857,11 +1253,11 @@ export const safety = {
     {
       id: "card-3",
       className: "safety__card_3",
-      isActive:false,
+      isActive: false,
       icon: {
         name: "safety/3"
       },
-      links:[],
+      links: [],
       title: "Государственные<br/>лотереи",
       text: "Организатором всех лотерей в России являются Министерство спорта и Министерство финансов. Они следят за тем, чтобы все розыгрыши проводились честно, а победители вовремя получали выигрыши. ",
       attr: {
@@ -871,11 +1267,11 @@ export const safety = {
     {
       id: "card-4",
       className: "safety__card_4",
-      isActive:false,
+      isActive: false,
       icon: {
         name: "safety/4"
       },
-      links:[],
+      links: [],
       title: "Ваш билет<br>никогда<br>не потеряется",
       text: "Вся информация о купленных билетах хранится в вашем личном кабинете. Если возникнут проблемы, вы сможете обратиться в нашу службу поддержки. Мы всегда вам поможем. ",
       attr: {
@@ -910,7 +1306,7 @@ export const footer = {
   socialBlock: {
     list: [
       {
-        id:"vk",
+        id: "vk",
         icon: {
           name: "social/vk"
         },
@@ -919,7 +1315,7 @@ export const footer = {
         href: "https://vk.com/stoloto"
       },
       {
-        id:"fb",
+        id: "fb",
         icon: {
           name: "social/fb"
         },
@@ -928,7 +1324,7 @@ export const footer = {
         href: "https://www.facebook.com/stoloto.ru"
       },
       {
-        id:"ok",
+        id: "ok",
         icon: {
           name: "social/ok"
         },
@@ -937,7 +1333,7 @@ export const footer = {
         href: "https://ok.ru/stoloto"
       },
       {
-        id:"tw",
+        id: "tw",
         icon: {
           name: "social/tw"
         },
@@ -946,7 +1342,7 @@ export const footer = {
         href: "https://twitter.com/stoloto"
       },
       {
-        id:"ig",
+        id: "ig",
         icon: {
           name: "social/ig"
         },
@@ -955,7 +1351,7 @@ export const footer = {
         href: "https://www.instagram.com/stoloto/"
       },
       {
-        id:"yt",
+        id: "yt",
         icon: {
           name: "social/yt"
         },
@@ -967,23 +1363,25 @@ export const footer = {
   },
   partners: [
     {
-      id:"1",
+      id: "1",
       image: {
-        list: [
-          {
-            srcSet: "images/footer/part-1-m.webp 1x,images/footer/part-1-m@2x.webp 2x",
-            type: "image/webp",
-            media: "(max-width:1023px)"
-          },
-          {
-            srcSet: "images/footer/part-1-m.png 1x,images/footer/part-1-m@2x.png 2x",
-            media: "(max-width:1023px)"
-          },
-          {
-            srcSet: "images/footer/part-1.webp",
-            type: "image/webp"
-          }
-        ],
+        sourceData: {
+          sources: [
+            {
+              srcSet: "images/footer/part-1-m.webp 1x,images/footer/part-1-m@2x.webp 2x",
+              type: "image/webp",
+              media: "(max-width:1023px)"
+            },
+            {
+              srcSet: "images/footer/part-1-m.png 1x,images/footer/part-1-m@2x.png 2x",
+              media: "(max-width:1023px)"
+            },
+            {
+              srcSet: "images/footer/part-1.webp",
+              type: "image/webp"
+            }
+          ]
+        },
         imgAttr: {
           src: "images/footer/part-1.png",
           alt: "icons-1"
@@ -992,23 +1390,25 @@ export const footer = {
       text: "Организаторами лотерей являются Министерство спорта РФ и Министерство финансов РФ."
     },
     {
-      id:"2",
+      id: "2",
       image: {
-        list: [
-          {
-            srcSet: "images/footer/part-2-m.webp 1x,images/footer/part-2-m@2x.webp 2x",
-            type: "image/webp",
-            media: "(max-width:1023px)"
-          },
-          {
-            srcSet: "images/footer/part-2-m.png 1x,images/footer/part-2-m@2x.png 2x",
-            media: "(max-width:1023px)"
-          },
-          {
-            srcSet: "images/footer/part-2.webp",
-            type: "image/webp"
-          }
-        ],
+        sourceData: {
+          sources: [
+            {
+              srcSet: "images/footer/part-2-m.webp 1x,images/footer/part-2-m@2x.webp 2x",
+              type: "image/webp",
+              media: "(max-width:1023px)"
+            },
+            {
+              srcSet: "images/footer/part-2-m.png 1x,images/footer/part-2-m@2x.png 2x",
+              media: "(max-width:1023px)"
+            },
+            {
+              srcSet: "images/footer/part-2.webp",
+              type: "image/webp"
+            }
+          ]
+        },
         imgAttr: {
           src: "images/footer/part-2.png",
           alt: "icons-1"

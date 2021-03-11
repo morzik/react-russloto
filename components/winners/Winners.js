@@ -8,6 +8,9 @@ import WinnersPrevius from "./WinnersPrevius";
 
 const Winners = ({attr, bg, carousel, item, button, link, previewsAttr, carouselAttr}) => {
   const [width, setWidth] = useState(null);
+  const [newId, setId] = useState(carousel[0].id);
+
+  // console.log("carousel[0].id:",carousel[0].id);
   useEffect(() => {
     global.window && global.window.addEventListener("resize", () => {
       setWidth(global.window && global.window.innerWidth);
@@ -48,7 +51,7 @@ function getItem(item, carousel, carouselAttr, width) {
     <div className="winners__carousel">
       <WinnersCarousel carousel={carousel} {...carouselAttr}/>
     </div>
-  ) : (<WinnersItem {...item} className={"winners__item_desk"}/>);
+  ) : (<WinnersItem {...item}/>);
 }
 
 

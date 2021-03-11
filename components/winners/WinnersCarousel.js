@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, {useRef, useState} from "react";
 import SwiperCore, {Navigation, Pagination} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import WinnersItem from "./WinnersItem";
@@ -6,6 +6,8 @@ import WinnersItem from "./WinnersItem";
 SwiperCore.use([Navigation, Pagination]);
 
 const WinnersCarousel = ({carousel, ...attr}) => {
+
+
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 

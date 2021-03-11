@@ -1,31 +1,35 @@
 import React from "react";
 
-const Picture = ({attr, list: listData, imgAttr}) => {
-  let content = null;
-  if (attr){
-    content = (<picture {...attr}/>)
-  } else {
-    let list;
-    if (listData){
-      list = listData.map((sourceAttr, id)=>{
-        return (
-            <source key={id} {...sourceAttr}/>
-        )
-      })
-      content = (
-        <picture>
-          {list}
-          <img {...imgAttr}/>
-        </picture>
-      )
-    } else {
-      content = (
-        <img {...imgAttr}/>
-      )
-    }
-  }
-  return content;
+const Picture = ({ attr = {}, sourceData, imgAttr } = {}) => {
+  return (
+    <picture {...attr}>
+      {getSources(sourceData)}
+      {getImage(imgAttr)}
+    </picture>
+  );
 };
 
-export default Picture;
+function getSources(sourceData) {
+  return sourceData ? (
+    <>
+      {sourceData.sources.map(
+        ({ type, media, srcSetSuffix, srcSet }, index) => (
+          <source
+            key={index}
+            type={type}
+            media={media}
+            srcSet={`${
+              srcSet ? srcSet : sourceData.srcSetPrefix + srcSetSuffix
+            }`}
+          />
+        )
+      )}
+    </>
+  ) : null;
+}
 
+function getImage(imgAttr) {
+  return imgAttr ? <img alt={"text"} {...imgAttr} /> : null;
+}
+
+export default Picture;

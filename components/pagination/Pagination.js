@@ -1,14 +1,32 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 
 const Pagination = ({list}) => {
-  // const myRef = useRef(null)
-  // const executeScroll = () => myRef.current.scrollIntoView();
-  const arr = [];
 
-  const [isActive, setActive] = useState(list[0].id);
-  const listItems = list.map(({href,id}) => (
-    <li className={"pagination__item"} key={id} ref={(item) => { arr.push(item) }}>
+  const [activeId, setActive] = useState(0);
+
+  useEffect(() => {
+    const html = document.documentElement;
+    const all = document.querySelectorAll("section");
+
+    function lamdaMiddle(i) {
+      return Math.abs(html.clientHeight / 2 - (all[i].getBoundingClientRect().y + all[i].getBoundingClientRect().height / 2));
+    }
+
+    let min = lamdaMiddle(0);
+    let minI = 0;
+    for (var i = 0; i < all.length; i++) {
+      if (min > lamdaMiddle(i)) {
+        min = lamdaMiddle(i);
+        minI = i;
+      }
+    }
+
+    setActive(minI);
+  });
+
+  const listItems = list.map(({href},index) => (
+    <li className={`pagination__item ${activeId === index?"pagination__item_active":""}`} key={index}>
       <a href={href}/>
     </li>
   ))

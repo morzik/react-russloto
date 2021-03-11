@@ -1,4 +1,6 @@
 import React from "react";
+import * as PropTypes from "prop-types";
+import Intro from "../intro/Intro";
 
 const Picture = ({ attr = {}, sourceData, imgAttr } = {}) => {
   return (
@@ -33,3 +35,18 @@ function getImage(imgAttr) {
 }
 
 export default Picture;
+
+Picture.propTypes = {
+  /**
+   * заголовок
+   */
+  imgAttr: PropTypes.object,
+  /**
+   * подзаголовок
+   */
+  sourceData: PropTypes.object,
+  /**
+   * приз
+   */
+  attr: PropTypes.object
+};

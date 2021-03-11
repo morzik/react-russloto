@@ -231,7 +231,6 @@ export const instruction = {
     "data-mhref": "https://m.stoloto.ru/ruslotto/game?lastdraw"
   }
 };
-
 export const infoBlock = {
   attr: {
     id: "block4"
@@ -274,7 +273,6 @@ export const infoBlock = {
     "data-mhref": "https://m.stoloto.ru/ruslotto/game?lastdraw"
   }
 };
-
 export const winners = {
   attr: {
     id: "block5"
@@ -295,8 +293,9 @@ export const winners = {
   },
   item: {
     id: "0",
-    image: {
+    photo: {
       sourceData: {
+        srcSetPrefix:"images/winners/1",
         sources: [
           {
             "srcSetSuffix": "-m.webp",
@@ -317,7 +316,19 @@ export const winners = {
         src: "images/winners/1.png"
       }
     },
-    photo: "images/winners/1",
+    prev: {
+      sourceData: {
+        sources: [
+          {
+            srcSet: "images/winners/prev/1.webp",
+            type: "image/webp"
+          }
+        ]
+      },
+      imgAttr: {
+        src: "images/winners/prev/1.png"
+      }
+    },
     logo_1: "images/winners/logo/1.svg",
     logo_2: "images/winners/logo/1_m.svg",
     title: "&laquo;Хотела себя ущипнуть и&nbsp;убедиться, что не&nbsp;сплю&raquo;",
@@ -1013,7 +1024,7 @@ export const winners = {
       logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Я&nbsp;&mdash; оптимист&raquo;",
       history: "Виктор не&nbsp;стал&nbsp;бы лотерейным победителем, если&nbsp;бы не&nbsp;съездил в&nbsp;гости к&nbsp;другу в&nbsp;город Шахты Ростовской области. Он&nbsp;купил счастливый билет за&nbsp;компанию. Друзья решили посоревноваться, кому больше повезёт.",
-      name: "Виктор \nЧернов",
+      name: "Виктор Чернов",
       sum: "загородный дом",
       sign: "Выигрыш"
     }
@@ -1050,7 +1061,6 @@ export const winners = {
     "data-modal": "#winners-modal"
   }
 };
-
 export const statistics = {
   attr: {
     id: "block6"
@@ -1118,8 +1128,6 @@ export const statistics = {
     target: "_blank"
   }
 };
-
-
 export const rules = {
   attr: {
     id: "block7"
@@ -1178,7 +1186,6 @@ export const rules = {
     "data-mhref": "https://m.stoloto.ru/ruslotto/game?lastdraw"
   }
 };
-
 export const safety = {
   attr: {
     id: "block8"
@@ -1289,7 +1296,6 @@ export const safety = {
     "data-mhref": "https://m.stoloto.ru/ruslotto/game?lastdraw"
   }
 };
-
 export const footer = {
   logo: {
     image: {
@@ -1417,6 +1423,42 @@ export const footer = {
       className: "footer__partner-icon_big",
       text: "«Столото» состоит во Всемирной и Европейской лотерейных ассоциациях (The World Lottery Association и The European Lotteries Association). Это гарантирует соблюдение прав участников, случайность определения победителей, своевременную выплату выигрышей, конфиденциальность личных данных.",
       note: "WLA — международное объединение компаний-операторов государственных лотерей.<br/>ELA — объединение лотерейных компаний из Европы и соседних регионов."
+    }
+  ]
+};
+export const pagination = {
+  list: [
+    {
+      id:0,
+      href: "#block1"
+    },
+    {
+      id:1,
+      href: "#block2"
+    },
+    {
+      id:2,
+      href: "#block3"
+    },
+    {
+      id:3,
+      href: "#block4"
+    },
+    {
+      id:4,
+      href: "#block5"
+    },
+    {
+      id:5,
+      href: "#block6"
+    },
+    {
+      id:6,
+      href: "#block7"
+    },
+    {
+      id:7,
+      href: "#block8"
     }
   ]
 };

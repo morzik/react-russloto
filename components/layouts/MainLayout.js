@@ -8,8 +8,9 @@ import Winners from "../winners/Winners";
 import Rules from "../rules/Rules";
 import Safety from "../safety/Safety";
 import Footer from "../footer/Footer";
+import Pagination from "../pagination/Pagination";
 
-import {intro, about, instruction, infoBlock, winners, statistics, rules, safety, footer} from "../../constants/copyright";
+import {intro, about, instruction, infoBlock, winners, statistics, rules, safety, footer, pagination} from "../../constants/copyright";
 import Statistics from "../statistics/Statistics";
 
 
@@ -39,6 +40,7 @@ const MainLayout = ({children}) => (
     <Rules {...rules}/>
     <Safety {...safety}/>
     <Footer {...footer}/>
+    <Pagination {...pagination}/>
   </div>
 );
 

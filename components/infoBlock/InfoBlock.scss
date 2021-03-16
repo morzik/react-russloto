@@ -5,6 +5,12 @@
       @content;
     }
   }
+
+  @mixin item-mod($mod) {
+    @include modifier("info-block__item", $mod) {
+      @content;
+    }
+  }
   position: relative;
   background-color: #050219;
 
@@ -65,11 +71,11 @@
     flex: 0 1 32%;
     @include option(margin, 0, 0 0 30px);
 
-    &:nth-child(2){
+    &_2{
       @include option(margin, 0, 0 0 7px);
     }
 
-    &:nth-last-of-type(1) {
+    &_3 {
       margin: 0;
     }
 
@@ -84,8 +90,13 @@
     @include option(height, 56.15px, 50px);
     @include option(margin, 0 0 27px, 0 18px 0 0);
     display: block;
+    transition: transform .3s ease-in-out;
     svg{
       @include option(height, 56.15px, 50px);
+
+      & > *{
+        transition: finter ease-in-out .3s, stroke .3s ease-in-out;
+      }
     }
     @include MOBILE {
       display: inline-flex;
@@ -94,6 +105,14 @@
       vertical-align: top;
       svg {
         margin: auto;
+      }
+    }
+
+    @include item-mod("active"){
+      transform: translate(0,-10%);
+      svg > *{
+        stroke: $WHITE;
+        filter: drop-shadow(0 0 2px #FFCA42);
       }
     }
   }
@@ -167,7 +186,7 @@
     @include option(height, 68px, 60px);
     @include option(margin, 40px auto 0, 27px auto 0);
     @include MOBILE {
-      box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 0 rgba(0, 0, 0, 0.1);
     }
   }
 

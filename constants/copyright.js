@@ -238,6 +238,7 @@ export const infoBlock = {
   title: "Играйте <br>в настоящее <br>«Русское \nлото» <br>каждую неделю!",
   info: [
     {
+      className:"info-block__item_1",
       id: "1",
       icon: {
         name: "info-block/1"
@@ -245,6 +246,7 @@ export const infoBlock = {
       text: "Главная и&nbsp;самая любимая телелотерея&nbsp;страны. Розыгрыши по выходным, которых с&nbsp;нетерпением ждут всей семьей"
     },
     {
+      className:"info-block__item_2",
       id: "2",
       icon: {
         name: "info-block/2"
@@ -252,6 +254,7 @@ export const infoBlock = {
       text: "Разыгрываем: дома, автомобили, путешествия и&nbsp;рекордные денежные призы"
     },
     {
+      className:"info-block__item_3",
       id: "3",
       icon: {
         name: "info-block/3"

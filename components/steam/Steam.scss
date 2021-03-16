@@ -1,0 +1,62 @@
+.steam {
+  // Константы
+  @mixin mod($mod) {
+    @include modifier("steam", $mod){
+      @content;
+    }
+  }
+
+  position: absolute;
+  pointer-events: none;
+
+  &__item{
+    position: absolute;
+    top:0;
+    left:0;
+    @include option(width, 442px);
+    @include option(height, 400px);
+    background: image("intro/steam.png") no-repeat;
+    background-size: contain;
+    transform-origin: center;
+    opacity: 0;
+
+    $t:10s;
+    $all:6;
+    $t-setp: $t/$all;
+    animation: infinite $t steam-anim;
+    &_1{
+      animation-delay: 0s;
+    }
+    &_2{
+      animation-delay: ($t-setp*1);
+    }
+    &_3{
+      animation-delay: ($t-setp*2);
+    }
+    &_4{
+      animation-delay: ($t-setp*3);
+    }
+    &_5{
+      animation-delay: ($t-setp*4);
+    }
+    &_6{
+      animation-delay:($t-setp*5);
+    }
+  }
+
+}
+
+@keyframes steam-anim {
+  0%{
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(.2) rotate(90deg);
+  }
+  25%{
+    opacity: .5;
+  }
+  100%{
+    opacity: 0;
+    transform: translate(-40%,-100%) scale(1) rotate(170deg);
+  }
+
+}

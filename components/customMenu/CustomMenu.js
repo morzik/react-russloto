@@ -1,12 +1,18 @@
 import React from "react";
+import { Link } from 'react-scroll';
 
 
 const CustomMenu = ({menu}) => {
   const menuList = menu.map(({href, label, className}) => (
     <li key={label} className={`custom-menu__item ${className}`}>
-      <a href={href} >
+      <Link activeClass="active"
+            to={href}
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}>
         {label}
-      </a>
+      </Link>
     </li>
 
   ));

@@ -80,35 +80,34 @@ export const intro = {
     },
     menu: [
       {
-        className: "custom-menu__item custom-menu__item_1 custom-menu__item_active",
-        href: "#block3",
+        className: "custom-menu__item_1 custom-menu__item_active",
+        href: "block3",
         label: "Как участвовать"
       },
       {
 
         className: "custom-menu__item_2",
-        href: "#block2",
+        href: "block2",
         label: "О лотерее"
       },
       {
         className: "custom-menu__item_3",
-        href: "#block5",
+        href: "block5",
         label: "Победители"
       },
 
       {
         className: "custom-menu__item_4",
-        href: "#block7",
+        href: "block7",
         label: "Правила"
       },
       {
         className: "custom-menu__item_5",
-        href: "#block8",
+        href: "block8",
         label: "Безопасность"
       }
     ]
   }
-
 };
 export const about = {
   attr: {
@@ -1433,35 +1432,35 @@ export const pagination = {
   list: [
     {
       id:0,
-      href: "#block1"
+      href: "block1"
     },
     {
       id:1,
-      href: "#block2"
+      href: "block2"
     },
     {
       id:2,
-      href: "#block3"
+      href: "block3"
     },
     {
       id:3,
-      href: "#block4"
+      href: "block4"
     },
     {
       id:4,
-      href: "#block5"
+      href: "block5"
     },
     {
       id:5,
-      href: "#block6"
+      href: "block6"
     },
     {
       id:6,
-      href: "#block7"
+      href: "block7"
     },
     {
       id:7,
-      href: "#block8"
+      href: "block8"
     }
   ]
 };

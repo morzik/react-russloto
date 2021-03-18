@@ -1,8 +1,8 @@
 import React from "react";
 import * as PropTypes from "prop-types";
 import IntroLogo from "./IntroLogo";
-import Link from "next/link";
 import CustomMenu from "../customMenu/CustomMenu";
+
 
 
 const IntroHeader = ({logo, menu}) => {

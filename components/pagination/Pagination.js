@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import { Link } from 'react-scroll';
 
 
 const Pagination = ({list}) => {
@@ -37,7 +38,12 @@ const Pagination = ({list}) => {
 
   const listItems = list.map(({href}, index) => (
     <li className={`pagination__item ${activeId === index ? "pagination__item_active" : ""}`} key={index}>
-      <a href={href} />
+      <Link activeClass="active"
+            to={href}
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}/>
     </li>
   ));
   return (

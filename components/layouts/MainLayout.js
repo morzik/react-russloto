@@ -9,9 +9,19 @@ import Rules from "../rules/Rules";
 import Safety from "../safety/Safety";
 import Footer from "../footer/Footer";
 import Pagination from "../pagination/Pagination";
-
-import {intro, about, instruction, infoBlock, winners, statistics, rules, safety, footer, pagination} from "../../constants/copyright";
 import Statistics from "../statistics/Statistics";
+import {
+  intro,
+  about,
+  instruction,
+  infoBlock,
+  winners,
+  statistics,
+  rules,
+  safety,
+  footer,
+  pagination
+} from "../../constants/copyright";
 
 
 const MainLayout = ({children}) => (
@@ -21,13 +31,13 @@ const MainLayout = ({children}) => (
       <title>title</title>
       {/*<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>*/}
       <meta name="viewport" content="width=device-width"/>
-      <meta name="description" content="description" />
+      <meta name="description" content="description"/>
       <meta name="mobile-web-app-capable" content="yes"/>
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
       <meta name="format-detection" content="telephone=no"/>
       <meta name="apple-mobile-web-app-capable" content="yes"/>
       <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/favicon.ico"/>
     </Head>
 
     <Intro {...intro}/>
@@ -41,6 +51,7 @@ const MainLayout = ({children}) => (
     <Safety {...safety}/>
     <Footer {...footer}/>
     <Pagination {...pagination}/>
+
   </div>
 );
 

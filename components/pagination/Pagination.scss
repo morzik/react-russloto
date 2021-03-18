@@ -49,6 +49,7 @@
     @include option(width, 10px);
     @include option(height, 10px);
     @include option(margin, 3px 0 0 0);
+    cursor: pointer;
 
     a{
       position: relative;

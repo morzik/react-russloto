@@ -1,6 +1,5 @@
 import React from "react";
 import * as PropTypes from "prop-types";
-import Intro from "../intro/Intro";
 import "lazysizes";
 
 const Picture = ({ attr = {}, sourceData, imgAttr } = {}) => {
@@ -21,7 +20,7 @@ function getSources(sourceData) {
             key={index}
             type={type}
             media={media}
-            data-srcSet={`${
+            data-srcset={`${
               srcSet ? srcSet : sourceData.srcSetPrefix + srcSetSuffix
             }`}
           />

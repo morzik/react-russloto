@@ -1,11 +1,12 @@
-@import "../components/header/Header";
 @import "../components/footer/Footer";
 @import "../components/layouts/MainLayout";
+@import "../components/customModal/CustomModal";
 
 //Стилизация для collapse
 @import "~rc-collapse/assets/index.css";
 
 @import "../components/button/Button";
+@import "../components/picture/Picture";
 @import "../components/customModal/CustomModal";
 @import "../components/customMenu/CustomMenu";
 @import "../components/intro/Intro";
@@ -21,6 +22,7 @@
 @import "../components/socialBlock/SocialBlock";
 @import "../components/pagination/Pagination";
 @import "../components/steam/Steam";
+@import "../components/winnersModal/WinnersModal";
 
 
 

@@ -5,6 +5,8 @@ import Picture from "../picture/Picture";
 import Button from "../button/Button";
 import {safeHTML} from "../../utils/safeHTML";
 import WinnersPrevius from "./WinnersPrevius";
+import {requestModal} from "../../redux/reducer/modals";
+import {useDispatch} from "react-redux";
 
 const Winners = ({attr, bg, carousel, item, button, link, previewsAttr, carouselAttr}) => {
   const [width, setWidth] = useState(null);
@@ -17,6 +19,8 @@ const Winners = ({attr, bg, carousel, item, button, link, previewsAttr, carousel
     });
     setWidth(global.window && global.window.innerWidth);
   }, []);
+
+  const dispatch = useDispatch();
   return (
     <section>
       <div className={"winners"} {...attr}>
@@ -26,7 +30,7 @@ const Winners = ({attr, bg, carousel, item, button, link, previewsAttr, carousel
           </div>
           {getItem(item, carousel, carouselAttr, width)}
           <Button {...button}>{safeHTML(button.text)}</Button>
-          <Button {...link}>{safeHTML(link.text)}</Button>
+          <Button {...link} onClick={() => {dispatch(requestModal({type: 'winnersModal'}))}} >{safeHTML(link.text)}</Button>
         </div>
         {getPreview(carousel, previewsAttr, width)}
 

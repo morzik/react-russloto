@@ -28,7 +28,7 @@
   0% {
     visibility: visible;
     opacity: 0;
-    transform: translate(0, -10vh);
+    transform: translate(0, 10vh);
   }
 
   100% {
@@ -38,9 +38,7 @@
   }
 }
 
-//%SHAKE {
-//  @include shake-animation(SCALE-SHAKE, .025, 1, 1.0s);
-//}
+
 @keyframes loader {
   0% {
     transform: rotate(0deg);

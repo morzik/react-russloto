@@ -6,7 +6,7 @@ import Picture from "../picture/Picture";
 const WinnersItem = ({attr,photo,name,title,history,sum,sign,className}) => {
   return (
     <div className={`winners__item ${className?className:""}`} {...attr}>
-      <img src={"images/winners/winners.svg"} alt={"decoration"} className="winners__item-decor"/>
+      <img data-src="images/winners/winners.svg" alt={"decoration"} className={"winners__item-decor lazyload"}/>
       <div className="winners__item-bg">
         <div className="winners__item-bg-block">
           <Picture {...photo} />

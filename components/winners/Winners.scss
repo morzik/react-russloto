@@ -20,7 +20,7 @@
   &__content{
     position: relative;
     @include option(width, 1050px, $DESIGN-W-M);
-    @include option(padding, 179px 11px 3px, 161px 0 36px);
+    @include option(padding, 179px 11px 0, 161px 0 36px);
     margin: 0 auto;
     max-width: 90%;
     box-sizing: border-box;
@@ -468,16 +468,13 @@
       ._ie & {
         @include option(top, -29px);
       }
+      &:active{
+        transform: translateY(-40%);
+      }
     }
     &_next{
       @include option(bottom, 18px);
-    }
-
-    &:active{
-      &_prev{
-        transform: translateY(-40%);
-      }
-      &_next{
+      &:active{
         transform: translateY(40%);
       }
     }

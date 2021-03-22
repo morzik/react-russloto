@@ -36,8 +36,9 @@ export const intro = {
         ]
       },
       imgAttr: {
-        src: "images/intro/person.png",
-        alt: "icons-1"
+        "data-src": "images/intro/person.png",
+        alt: "icons-1",
+        className: "lazyload"
       }
     },
     table: {
@@ -59,8 +60,9 @@ export const intro = {
         ]
       },
       imgAttr: {
-        src: "images/intro/table.png",
-        alt: "icons-2"
+        "data-src": "images/intro/table.png",
+        alt: "icons-2",
+        className: "lazyload"
       }
     }
   },
@@ -73,8 +75,9 @@ export const intro = {
       },
       image: {
         imgAttr: {
-          src: "images/intro/logo.svg",
-          alt: "Русское лото"
+          "data-src": "images/intro/logo.svg",
+          alt: "Русское лото",
+          className: "lazyload"
         }
       }
     },
@@ -121,16 +124,20 @@ export const about = {
   sign_m: "На этой неделе: ",
   image: {
     imgAttr: {
-      src: "images/about/img.svg",
-      alt: "icons-1"
+      "data-src": "images/about/img.svg",
+      alt: "icons-1",
+      "data-expand": "-5",
+      className: "lazyload"
     }
   },
   items: [
     {
       image: {
         imgAttr: {
-          src: "images/about/1.svg",
-          alt: "icons-1"
+          "data-src": "images/about/1.svg",
+          alt: "icons-1",
+          "data-expand": "-5",
+          className: "lazyload"
         }
       },
       text: "50 загородных домов в 4-х тиражах, денежные призы"
@@ -138,8 +145,10 @@ export const about = {
     {
       image: {
         imgAttr: {
-          src: "images/about/2.svg",
-          alt: "icons-2"
+          "data-src": "images/about/2.svg",
+          alt: "icons-2",
+          "data-expand": "-5",
+          className: "lazyload"
         }
       },
       text: "останется 3 бочонка – выигрывает каждый \n3-й билет"
@@ -181,8 +190,10 @@ export const instruction = {
         ]
       },
       imgAttr: {
-        src: "images/instruction/video-pic.png",
-        alt: "iphone"
+        "data-src": "images/instruction/video-pic.png",
+        alt: "iphone",
+        "data-expand": "-5",
+        className: "lazyload"
       },
     }
   },
@@ -237,7 +248,7 @@ export const infoBlock = {
   title: "Играйте <br>в настоящее <br>«Русское \nлото» <br>каждую неделю!",
   info: [
     {
-      className:"info-block__item_1",
+      className: "info-block__item_1",
       id: "1",
       icon: {
         name: "info-block/1"
@@ -245,7 +256,7 @@ export const infoBlock = {
       text: "Главная и&nbsp;самая любимая телелотерея&nbsp;страны. Розыгрыши по выходным, которых с&nbsp;нетерпением ждут всей семьей"
     },
     {
-      className:"info-block__item_2",
+      className: "info-block__item_2",
       id: "2",
       icon: {
         name: "info-block/2"
@@ -253,7 +264,7 @@ export const infoBlock = {
       text: "Разыгрываем: дома, автомобили, путешествия и&nbsp;рекордные денежные призы"
     },
     {
-      className:"info-block__item_3",
+      className: "info-block__item_3",
       id: "3",
       icon: {
         name: "info-block/3"
@@ -289,7 +300,8 @@ export const winners = {
       ]
     },
     imgAttr: {
-      src: "images/winners/bg.svg",
+      "data-src": "images/winners/bg.svg",
+      className: "lazyload",
       alt: "decoration"
     }
   },
@@ -297,7 +309,7 @@ export const winners = {
     id: "0",
     photo: {
       sourceData: {
-        srcSetPrefix:"images/winners/1",
+        srcSetPrefix: "images/winners/1",
         sources: [
           {
             "srcSetSuffix": "-m.webp",
@@ -315,7 +327,8 @@ export const winners = {
         ]
       },
       imgAttr: {
-        src: "images/winners/1.png"
+        "data-src": "images/winners/1.png",
+        className: "lazyload"
       }
     },
     prev: {
@@ -328,7 +341,8 @@ export const winners = {
         ]
       },
       imgAttr: {
-        src: "images/winners/prev/1.png"
+        "data-src": "images/winners/prev/1.png",
+        className: "lazyload"
       }
     },
     logo_1: "images/winners/logo/1.svg",
@@ -362,7 +376,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/1.png"
+          "data-src": "images/winners/1.png",
+          className: "lazyload"
         }
       },
       prev: {
@@ -375,7 +390,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/prev/1.png"
+          "data-src": "images/winners/prev/1.png",
+          className: "lazyload"
         }
       },
       logo_1: "images/winners/logo/1.svg",
@@ -408,7 +424,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/2.png"
+          "data-src": "images/winners/2.png",
+          className: "lazyload"
         }
       },
       prev: {
@@ -421,7 +438,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/prev/2.png"
+          "data-src": "images/winners/prev/2.png",
+          className: "lazyload"
         }
       },
       logo_1: "images/winners/logo/1.svg",
@@ -454,7 +472,9 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/3.png"
+          "data-src": "images/winners/3.png"
+          ,
+          className: "lazyload"
         }
       },
       prev: {
@@ -467,7 +487,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/prev/3.png"
+          "data-src": "images/winners/prev/3.png",
+          className: "lazyload"
         }
       },
       logo_1: "images/winners/logo/1.svg",
@@ -500,7 +521,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/4.png"
+          "data-src": "images/winners/4.png",
+          className: "lazyload"
         }
       },
       prev: {
@@ -513,7 +535,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/prev/4.png"
+          "data-src": "images/winners/prev/4.png",
+          className: "lazyload"
         }
       },
       logo_1: "images/winners/logo/1.svg",
@@ -546,7 +569,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/5.png"
+          "data-src": "images/winners/5.png",
+          className: "lazyload"
         }
       },
       prev: {
@@ -559,7 +583,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/prev/5.png"
+          "data-src": "images/winners/prev/5.png",
+          className: "lazyload"
         }
       },
       logo_1: "images/winners/logo/1.svg",
@@ -592,7 +617,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/6.png"
+          "data-src": "images/winners/6.png",
+          className: "lazyload"
         }
       },
       prev: {
@@ -605,7 +631,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/prev/6.png"
+          "data-src": "images/winners/prev/6.png",
+          className: "lazyload"
         }
       },
       logo_1: "images/winners/logo/1.svg",
@@ -638,7 +665,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/7.png"
+          "data-src": "images/winners/7.png",
+          className: "lazyload"
         }
       },
       prev: {
@@ -651,7 +679,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/prev/7.png"
+          "data-src": "images/winners/prev/7.png",
+          className: "lazyload"
         }
       },
       logo_1: "images/winners/logo/1.svg",
@@ -684,7 +713,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/8.png"
+          "data-src": "images/winners/8.png",
+          className: "lazyload"
         }
       },
       prev: {
@@ -697,7 +727,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/prev/8.png"
+          "data-src": "images/winners/prev/8.png",
+          className: "lazyload"
         }
       },
       logo_1: "images/winners/logo/1.svg",
@@ -730,7 +761,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/9.png"
+          "data-src": "images/winners/9.png",
+          className: "lazyload"
         }
       },
       prev: {
@@ -743,7 +775,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/prev/9.png"
+          "data-src": "images/winners/prev/9.png",
+          className: "lazyload"
         }
       },
       logo_1: "images/winners/logo/1.svg",
@@ -776,7 +809,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/10.png"
+          "data-src": "images/winners/10.png",
+          className: "lazyload"
         }
       },
       prev: {
@@ -789,7 +823,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/prev/10.png"
+          "data-src": "images/winners/prev/10.png",
+          className: "lazyload"
         }
       },
       logo_1: "images/winners/logo/1.svg",
@@ -822,7 +857,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/11.png"
+          "data-src": "images/winners/11.png",
+          className: "lazyload"
         }
       },
       prev: {
@@ -835,7 +871,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/prev/11.png"
+          "data-src": "images/winners/prev/11.png",
+          className: "lazyload"
         }
       },
       logo_1: "images/winners/logo/1.svg",
@@ -868,7 +905,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/12.png"
+          "data-src": "images/winners/12.png",
+          className: "lazyload"
         }
       },
       prev: {
@@ -881,7 +919,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/prev/12.png"
+          "data-src": "images/winners/prev/12.png",
+          className: "lazyload"
         }
       },
       logo_1: "images/winners/logo/1.svg",
@@ -914,7 +953,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/13.png"
+          "data-src": "images/winners/13.png",
+          className: "lazyload"
         }
       },
       prev: {
@@ -927,7 +967,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/prev/13.png"
+          "data-src": "images/winners/prev/13.png",
+          className: "lazyload"
         }
       },
       logo_1: "images/winners/logo/1.svg",
@@ -960,7 +1001,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/14.png"
+          "data-src": "images/winners/14.png",
+          className: "lazyload"
         }
       },
       prev: {
@@ -973,7 +1015,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/prev/14.png"
+          "data-src": "images/winners/prev/14.png",
+          className: "lazyload"
         }
       },
       logo_1: "images/winners/logo/1.svg",
@@ -1006,7 +1049,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/15.png"
+          "data-src": "images/winners/15.png",
+          className: "lazyload"
         }
       },
       prev: {
@@ -1019,7 +1063,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/prev/15.png"
+          "data-src": "images/winners/prev/15.png",
+          className: "lazyload"
         }
       },
       logo_1: "images/winners/logo/1.svg",
@@ -1059,7 +1104,7 @@ export const winners = {
   link: {
     className: "button_winners-link winners__link",
     text: "Больше историй в <u>соцсетях</u>",
-    tag: "a",
+    tag: "button",
     "data-modal": "#winners-modal"
   }
 };
@@ -1089,17 +1134,23 @@ export const statistics = {
         ]
       },
       imgAttr: {
-        src: "images/statistics/map.png",
-        alt: "map"
+        "data-src": "images/statistics/map.png",
+        alt: "map",
+        "data-expand": "-5",
+        className: "lazyload"
       }
     }
   },
   salutes: [
     {
-      src: "images/statistics/salut-1.svg"
+      "data-src": "images/statistics/salut-1.svg",
+      "data-expand": "-5",
+      className: "lazyload"
     },
     {
-      src: "images/statistics/salut-2.svg"
+      "data-src": "images/statistics/salut-2.svg",
+      "data-expand": "-5",
+      className: "lazyload"
     }
   ],
   list: [
@@ -1140,8 +1191,10 @@ export const rules = {
       id: "1",
       image: {
         imgAttr: {
-          src: "images/information-block/1.svg",
-          alt: "Первый тур"
+          "data-src": "images/information-block/1.svg",
+          alt: "Первый тур",
+          "data-expand": "-5",
+          className: "lazyload"
         }
       },
       title: "Первый тур",
@@ -1159,8 +1212,10 @@ export const rules = {
           ]
         },
         imgAttr: {
-          src: "images/information-block/2.svg",
-          alt: "Второй тур"
+          "data-src": "images/information-block/2.svg",
+          alt: "Второй тур",
+          "data-expand": "-5",
+          className: "lazyload"
         }
       },
       title: "Второй тур",
@@ -1170,8 +1225,10 @@ export const rules = {
       id: "3",
       image: {
         imgAttr: {
-          src: "images/information-block/3.svg",
-          alt: "Третий и последующие туры"
+          "data-src": "images/information-block/3.svg",
+          "data-expand": "-5",
+          alt: "Третий и последующие туры",
+          className: "lazyload"
         }
       },
       title: "Третий \nи последующие туры",
@@ -1243,15 +1300,18 @@ export const safety = {
       text: "Мы не сохраняем номера банковских карт, платёжные пароли и другие данные, которые вы вводите при оплате билетов. Вся информация хранится только на стороне платёжной системы, которую вы выбираете сами.",
       links: [
         {
-          src: "images/safety/links/1.svg",
+          "data-src": "images/safety/links/1.svg",
+          className: "lazyload",
           alt: "visa"
         },
         {
-          src: "images/safety/links/2.svg",
+          "data-src": "images/safety/links/2.svg",
+          className: "lazyload",
           alt: "mastercard"
         },
         {
-          src: "images/safety/links/3.svg",
+          "data-src": "images/safety/links/3.svg",
+          className: "lazyload",
           alt: "мир"
         }
       ],
@@ -1302,8 +1362,10 @@ export const footer = {
   logo: {
     image: {
       imgAttr: {
-        src: "images/footer/logo-footer.svg",
-        alt: "logo"
+        "data-src": "images/footer/logo-footer.svg",
+        alt: "logo",
+        "data-expand": "-5",
+        className: "lazyload"
       }
     },
     target: "_blank",
@@ -1391,8 +1453,10 @@ export const footer = {
           ]
         },
         imgAttr: {
-          src: "images/footer/part-1.png",
-          alt: "icons-1"
+          "data-src": "images/footer/part-1.png",
+          alt: "icons-1",
+          "data-expand": "-5",
+          className: "lazyload"
         }
       },
       text: "Организаторами лотерей являются Министерство спорта РФ и Министерство финансов РФ."
@@ -1418,8 +1482,10 @@ export const footer = {
           ]
         },
         imgAttr: {
-          src: "images/footer/part-2.png",
-          alt: "icons-1"
+          "data-src": "images/footer/part-2.png",
+          alt: "icons-1",
+          "data-expand": "-5",
+          className: "lazyload"
         }
       },
       className: "footer__partner-icon_big",
@@ -1431,36 +1497,190 @@ export const footer = {
 export const pagination = {
   list: [
     {
-      id:0,
+      id: 0,
       href: "block1"
     },
     {
-      id:1,
+      id: 1,
       href: "block2"
     },
     {
-      id:2,
+      id: 2,
       href: "block3"
     },
     {
-      id:3,
+      id: 3,
       href: "block4"
     },
     {
-      id:4,
+      id: 4,
       href: "block5"
     },
     {
-      id:5,
+      id: 5,
       href: "block6"
     },
     {
-      id:6,
+      id: 6,
       href: "block7"
     },
     {
-      id:7,
+      id: 7,
       href: "block8"
     }
   ]
+};
+
+export const winnersModal = {
+  title: "Еще больше историй в <a href='https://vk.com/stoloto' target='_blank'>соцсетях</a>",
+  list: [
+    {
+      list: [
+        {
+          image: {
+            sourceData: {
+              sources: [
+                {
+                  "srcSet": "images/winnersModal/1.webp",
+                  "type": "image/webp"
+                }
+              ]
+            },
+            imgAttr: {
+              "data-src": "images/winnersModal/1.png",
+              className: "lazyload"
+            }
+          }
+        },
+        {
+          image: {
+            sourceData: {
+              sources: [
+                {
+                  "srcSet": "images/winnersModal/2.webp",
+                  "type": "image/webp"
+                }
+              ]
+            },
+            imgAttr: {
+              "data-src": "images/winnersModal/2.png",
+              className: "lazyload"
+            }
+          }
+        },
+        {
+          image: {
+            sourceData: {
+              sources: [
+                {
+                  "srcSet": "images/winnersModal/3.webp",
+                  "type": "image/webp"
+                }
+              ]
+            },
+            imgAttr: {
+              "data-src": "images/winnersModal/3.png",
+              className: "lazyload"
+            }
+          }
+        },
+        {
+          image: {
+            sourceData: {
+              sources: [
+                {
+                  "srcSet": "images/winnersModal/4.webp",
+                  "type": "image/webp"
+                }
+              ]
+            },
+            imgAttr: {
+              "data-src": "images/winnersModal/4.png",
+              className: "lazyload"
+            }
+          }
+        }
+      ]
+    },
+    {
+      list: [
+        {
+          image: {
+            sourceData: {
+              sources: [
+                {
+                  "srcSet": "images/winnersModal/5.webp",
+                  "type": "image/webp"
+                }
+              ]
+            },
+            imgAttr: {
+              "data-src": "images/winnersModal/5.png",
+              className: "lazyload"
+            }
+          }
+        },
+        {
+          image: {
+            sourceData: {
+              sources: [
+                {
+                  "srcSet": "images/winnersModal/6.webp",
+                  "type": "image/webp"
+                }
+              ]
+            },
+            imgAttr: {
+              "data-src": "images/winnersModal/6.png",
+              className: "lazyload"
+            }
+          }
+        },
+        {
+          image: {
+            sourceData: {
+              sources: [
+                {
+                  "srcSet": "images/winnersModal/7.webp",
+                  "type": "image/webp"
+                }
+              ]
+            },
+            imgAttr: {
+              "data-src": "images/winnersModal/7.png",
+              className: "lazyload"
+            }
+          }
+        },
+        {
+          image: {
+            sourceData: {
+              sources: [
+                {
+                  "srcSet": "images/winnersModal/8.webp",
+                  "type": "image/webp"
+                }
+              ]
+            },
+            imgAttr: {
+              "data-src": "images/winnersModal/8.png",
+              className: "lazyload"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  caruselAttr:{
+    slidesPerView: 'auto',
+    spaceBetween: 50,
+    loop: false,
+    navigation: {
+      nextEl: '.winners-modal__carousel-nav_next',
+      prevEl: '.winners-modal__carousel-nav_prev'
+    },
+    pagination: {
+      el: '.winners-modal__pagination'
+    }
+  }
 };

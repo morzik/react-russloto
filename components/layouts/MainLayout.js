@@ -10,6 +10,12 @@ import Safety from "../safety/Safety";
 import Footer from "../footer/Footer";
 import Pagination from "../pagination/Pagination";
 import Statistics from "../statistics/Statistics";
+import WinnersModal from "../winnersModal/WinnersModal";
+import CustomModal from "../customModal/CustomModal";
+import {registerModal, modalStorage} from "../../redux/reducer/modals";
+import ModalController from "../modalController/modalController.js";
+import store from "../../redux/store";
+import {Provider} from "react-redux";
 import {
   intro,
   about,
@@ -20,39 +26,57 @@ import {
   rules,
   safety,
   footer,
-  pagination
+  pagination,
+  winnersModal
 } from "../../constants/copyright";
 
 
-const MainLayout = ({children}) => (
-  <div className={'main-container'}>
-    <Head>
-      <meta charSet="utf-8"/>
-      <title>title</title>
-      {/*<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>*/}
-      <meta name="viewport" content="width=device-width"/>
-      <meta name="description" content="description"/>
-      <meta name="mobile-web-app-capable" content="yes"/>
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
-      <meta name="format-detection" content="telephone=no"/>
-      <meta name="apple-mobile-web-app-capable" content="yes"/>
-      <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-      <link rel="icon" href="/favicon.ico"/>
-    </Head>
+const MainLayout = () => {
+  const myModal = function () {
+    return (
+      <CustomModal animation={"custom-modal_fade-top"} horizontalPosition={"custom-modal_center"}
+                   verticalPosition={"custom-modal_middle"}>
+        <WinnersModal {...winnersModal}/>
+      </CustomModal>
+    )
+  };
+  registerModal(myModal, 'winnersModal');
 
-    <Intro {...intro}/>
-    <About {...about}/>
+  return (
+    <div className={'main-container'}>
+      <Head>
+        <meta charSet="utf-8"/>
+        <title>Русское лото. Реакт</title>
+        {/*<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>*/}
+        <meta name="viewport" content="width=device-width"/>
+        <meta name="description" content="description"/>
+        <meta name="mobile-web-app-capable" content="yes"/>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+        <link rel="icon" href="/favicon.ico"/>
+      </Head>
 
-    <Instruction {...instruction}/>
-    <InfoBlock {...infoBlock}/>
-    <Winners {...winners}/>
-    <Statistics {...statistics}/>
-    <Rules {...rules}/>
-    <Safety {...safety}/>
-    <Footer {...footer}/>
-    <Pagination {...pagination}/>
+      <Intro {...intro}/>
+      <About {...about}/>
 
-  </div>
-);
+      <Instruction {...instruction}/>
+      <InfoBlock {...infoBlock}/>
+      <Winners {...winners}/>
+      <Statistics {...statistics}/>
+      <Rules {...rules}/>
+      <Safety {...safety}/>
+      <Footer {...footer}/>
+      <Pagination {...pagination}/>
+
+      <Provider store={store}>
+        <ModalController modalStorage={modalStorage}/>
+      </Provider>
+    </div>
+
+
+  )
+};
 
 export default MainLayout;

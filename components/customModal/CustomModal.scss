@@ -34,7 +34,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1050;
+  z-index: $z-modal;
   display: block;
   width: 100%;
   height: 100%;
@@ -48,7 +48,8 @@
     z-index: 1040;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(#000, 0.5);
+    background-color: rgba(#000, 0.8);
+    backdrop-filter: blur(20px);
 
     .custom-modal-enter &{
       opacity: 0;
@@ -65,12 +66,13 @@
       transition: opacity 300ms, transform 300ms;
     }
   }
+
   &__container{
     position: relative;
     width: 100%;
     height: 100%;
     overflow: auto;
-    z-index: 1040;
+    z-index: $z-modal - 10;
   }
 
   &__block{
@@ -85,18 +87,22 @@
     width: auto;
     margin: .5rem auto;
     pointer-events: none;
-    z-index: 1050;
+    z-index: $z-modal;
     transform-style: preserve-3d;
 
     @media screen and (min-width: 576px){
-      max-width: 500px;
+      //max-width: 500px;
       margin: 1.75rem auto;
       min-height: calc(100% - 1rem);
     }
 
     @media screen and (min-width: 992px){
-      max-width: 800px;
+      //max-width: 800px;
       min-height: calc(100% - 3.5rem);
+    }
+
+    @include mod("middle"){
+      top: 0;
     }
 
     @include mod("bottom"){
@@ -315,14 +321,52 @@
     flex-direction: column;
     width: 100%;
     pointer-events: auto;
-    background-color: #fff;
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, .2);
     border-radius: .3rem;
     outline: 0;
+    transform: translate(0,100%);
+    transition: transform .6s .3s ease-in-out ;
 
     @include mod("fullpage"){
       height: 100%;
+    }
+
+    @include mod("fade"){
+    }
+    @include mod("fade-top"){
+      transform: translate(0,0);
+    }
+    @include mod("center"){
+      margin: auto;
+      width: auto;
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    @include option(top, -50px, -10);
+    @include option(right, -50px, -10);
+    @include option(width, 25px + 25px + 25px);
+    @include option(height, 25px + 25px + 25px);
+    @include option(padding, 25px);
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: opacity .3s ease-in-out;
+
+    @include HOVER{
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+  }
+  &__close-btn-icon {
+    @include cross(100%, 2px, $WHITE);
+
+    @include MOBILE{
+      &:before, &:after{
+        background-color: #CECECE;
+      }
     }
   }
 }

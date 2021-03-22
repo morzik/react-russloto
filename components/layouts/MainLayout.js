@@ -34,8 +34,7 @@ import {
 const MainLayout = () => {
   const myModal = function () {
     return (
-      <CustomModal animation={"custom-modal_fade-top"} horizontalPosition={"custom-modal_center"}
-                   verticalPosition={"custom-modal_middle"}>
+      <CustomModal animation={"fade-top"} horizontalPosition={"center"} verticalPosition={"middle"}>
         <WinnersModal {...winnersModal}/>
       </CustomModal>
     )

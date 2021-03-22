@@ -8,7 +8,7 @@ const CustomModal = (props) => {
   const dispatch = useDispatch();
   return (
     <TransitionGroup>
-      <div className={`custom-modal ${props.animation} ${props.horizontalPosition} ${props.verticalPosition}`}>
+      <div className={`custom-modal ${props.animation} custom-modal_${props.horizontalPosition} custom-modal_${props.verticalPosition}`}>
         <div className={"custom-modal__bg"}/>
         <div className={"custom-modal__block"}>
           <div className={"custom-modal__content"}>

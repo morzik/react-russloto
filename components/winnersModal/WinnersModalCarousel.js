@@ -21,12 +21,12 @@ const WinnersModalCarousel = ({list, ...attr}) => {
           <div className="winners-modal__pagination"/>
         </Swiper>
 
-        <div className="winners-modal__carousel-nav winners-modal__carousel-nav_prev">
+        <button className="winners-modal__carousel-nav winners-modal__carousel-nav_prev">
           <div className="winners-modal__carousel-nav-block winners-modal__carousel-nav-block_prev"/>
-        </div>
-        <div className="winners-modal__carousel-nav winners-modal__carousel-nav_next">
+        </button>
+        <button className="winners-modal__carousel-nav winners-modal__carousel-nav_next">
           <div className="winners-modal__carousel-nav-block winners-modal__carousel-nav-block_next"/>
-        </div>
+        </button>
       </div>
     </>
   )

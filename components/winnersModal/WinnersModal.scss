@@ -69,9 +69,12 @@
     @include option(width, 20.2px);
     @include option(height, 22.56px);
     margin: auto 0;
+    padding: 0;
     transition: transform 0.3s, opacity 0.3s;
     z-index: 2;
     cursor: pointer;
+    background: none;
+    border: none;
 
     &_prev {
       @include option(left, -119px, -17px);

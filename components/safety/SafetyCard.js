@@ -4,8 +4,8 @@ import {safeHTML} from "../../utils/safeHTML";
 
 const SafetyCard = ({icon, title, text, links}) => {
 
-  const listItems = links.map((item) => (
-    <li key={item.src} className={"safety__card-link"}>
+  const listItems = links.map((item,index) => (
+    <li key={index} className={"safety__card-link"}>
       <img src={item.src} alt={item.alt}/>
     </li>
   ));

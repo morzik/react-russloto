@@ -305,57 +305,10 @@ export const winners = {
       alt: "decoration"
     }
   },
-  item: {
-    id: "0",
-    photo: {
-      sourceData: {
-        srcSetPrefix: "images/winners/1",
-        sources: [
-          {
-            "srcSetSuffix": "-m.webp",
-            "type": "image/webp",
-            "media": "(max-width:1023px)"
-          },
-          {
-            "srcSetSuffix": "-m.png",
-            "media": "(max-width:1023px)"
-          },
-          {
-            "srcSetSuffix": ".webp",
-            "type": "image/webp"
-          }
-        ]
-      },
-      imgAttr: {
-        "data-src": "images/winners/1.png",
-        className: "lazyload"
-      }
-    },
-    prev: {
-      sourceData: {
-        sources: [
-          {
-            srcSet: "images/winners/prev/1.webp",
-            type: "image/webp"
-          }
-        ]
-      },
-      imgAttr: {
-        "data-src": "images/winners/prev/1.png",
-        className: "lazyload"
-      }
-    },
-    logo_1: "images/winners/logo/1.svg",
-    logo_2: "images/winners/logo/1_m.svg",
-    title: "&laquo;Хотела себя ущипнуть и&nbsp;убедиться, что не&nbsp;сплю&raquo;",
-    history: "Марина участвует в&nbsp;лотереях вместе с&nbsp;супругом. Они приобретают билеты на&nbsp;праздничные тиражи и&nbsp;даты, имеющие особое значение для их&nbsp;семьи. Она купила билеты, забыла про них, а&nbsp;потом проверила через два месяца в&nbsp;лотерейном киоске и&nbsp;узнала о&nbsp;своей победе.",
-    name: "Ирина \nМолчанова",
-    sum: "3 000 000",
-    sign: "Выигрыш"
-  },
   carousel: [
     {
       id: "1",
+      image: "images/winners/1.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/1",
@@ -394,8 +347,6 @@ export const winners = {
           className: "lazyload"
         }
       },
-      logo_1: "images/winners/logo/1.svg",
-      logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Забыли про билеты на&nbsp;два месяца&raquo;",
       history: "Марина участвует в&nbsp;лотереях вместе с&nbsp;супругом. Они приобретают билеты на&nbsp;праздничные тиражи и&nbsp;даты, имеющие особое значение для их&nbsp;семьи. Она купила билеты, забыла про них, а&nbsp;потом проверила через два месяца в&nbsp;лотерейном киоске и&nbsp;узнала о&nbsp;своей победе.",
       name: "Марина \nСинцова",
@@ -404,6 +355,7 @@ export const winners = {
     },
     {
       id: "2",
+      image: "images/winners/2.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/2",
@@ -442,8 +394,6 @@ export const winners = {
           className: "lazyload"
         }
       },
-      logo_1: "images/winners/logo/1.svg",
-      logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Победа перевернула мой мир&raquo;",
       history: "Наталья всегда считала себя невезучей и&nbsp;участвовала в&nbsp;лотерее только раз &mdash; на&nbsp;Новый год. Счастливый билет выбрала и&nbsp;подарила ей&nbsp;подруга. Наталья забыла о&nbsp;розыгрыше и&nbsp;проверила результаты только через пару недель на&nbsp;сайте &laquo;Столото&raquo;.",
       name: "Наталья \nАрабаджи",
@@ -452,6 +402,7 @@ export const winners = {
     },
     {
       id: "3",
+      image: "images/winners/3.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/3",
@@ -491,8 +442,6 @@ export const winners = {
           className: "lazyload"
         }
       },
-      logo_1: "images/winners/logo/1.svg",
-      logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Удачно я&nbsp;на&nbsp;почту зашёл&raquo;",
       history: "Андрей участвует в&nbsp;лотереях три года, приобретает билеты в&nbsp;разных местах. Счастливый билет он&nbsp;купил в&nbsp;почтовом отделении, взял первый попавшийся. Мужчина узнал о&nbsp;выигрыше в&nbsp;понедельник, проверив результаты розыгрыша на&nbsp;сайте &laquo;Столото&raquo;.",
       name: "Андрей \nПавлик",
@@ -501,6 +450,7 @@ export const winners = {
     },
     {
       id: "4",
+      image: "images/winners/4.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/4",
@@ -539,8 +489,6 @@ export const winners = {
           className: "lazyload"
         }
       },
-      logo_1: "images/winners/logo/1.svg",
-      logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Конечно, я&nbsp;рад такому повороту событий&raquo;",
       history: "Мужчина три года участвует в&nbsp;лотереях, покупает билеты на&nbsp;сайте &laquo;Столото&raquo;. В&nbsp;одном из&nbsp;тиражей &laquo;Русского лото&raquo; он&nbsp;выиграл двести рублей и&nbsp;купил на&nbsp;них два билета на&nbsp;следующий тираж. Один из&nbsp;этих билетов принёс ему потрясающий выигрыш!",
       name: "Махмудапанди \nДжамалодинов",
@@ -549,6 +497,7 @@ export const winners = {
     },
     {
       id: "5",
+      image: "images/winners/5.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/5",
@@ -587,8 +536,6 @@ export const winners = {
           className: "lazyload"
         }
       },
-      logo_1: "images/winners/logo/1.svg",
-      logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Всегда думал, что готов к новым победам&raquo;",
       history: "Для участника это уже второй крупный выигрыш в&nbsp;лотерею. Счастливый билет Артем купил в&nbsp;мобильном приложении &laquo;Столото&raquo;. Когда на&nbsp;телефон пришло СМС, победитель зашел личный кабинет и&nbsp;очень обрадовался.",
       name: "Артём \nАринич",
@@ -597,6 +544,7 @@ export const winners = {
     },
     {
       id: "6",
+      image: "images/winners/6.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/6",
@@ -635,8 +583,6 @@ export const winners = {
           className: "lazyload"
         }
       },
-      logo_1: "images/winners/logo/1.svg",
-      logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Приятно осознавать, что выиграл в&nbsp;лотерею&raquo;",
       history: "Иван делал покупки в&nbsp;продуктовом магазине у&nbsp;дома и&nbsp;приобрёл один лотерейный билет. Через несколько дней мужчина узнал, как ему повезло. С&nbsp;помощью выигрыша он&nbsp;закрыл кредит, а&nbsp;оставшуюся часть вложил в&nbsp;свой бизнес.",
       name: "Иван \nГромик",
@@ -645,6 +591,7 @@ export const winners = {
     },
     {
       id: "7",
+      image: "images/winners/7.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/7",
@@ -683,8 +630,6 @@ export const winners = {
           className: "lazyload"
         }
       },
-      logo_1: "images/winners/logo/1.svg",
-      logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Билет оказался с&nbsp;сюрпризом&raquo;",
       history: "Богдан решил последовать примеру отца, который участвует в&nbsp;лотереях уже пятнадцать лет. Счастливый билет был куплен в&nbsp;киоске &laquo;Столото&raquo;. Богдан взял сразу 10&nbsp;билетов, и&nbsp;один из&nbsp;них принёс большую победу!",
       name: "Богдан\nДубина",
@@ -693,6 +638,7 @@ export const winners = {
     },
     {
       id: "8",
+      image: "images/winners/8.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/8",
@@ -731,8 +677,6 @@ export const winners = {
           className: "lazyload"
         }
       },
-      logo_1: "images/winners/logo/1.svg",
-      logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Потерял дар речи&raquo;",
       history: "Сначала Анатолий купил девять билетов. В&nbsp;каждом искал в&nbsp;свои любимые числа и&nbsp;дату рождения. Через несколько дней ярославец выбрал случайным образом ещё один билет на&nbsp;сайте &laquo;Столото&raquo;. Все десять билетов оказались выигрышными, но&nbsp;именно последний принёс большую удачу!",
       name: "Анатолий \nЕрмилов",
@@ -741,6 +685,7 @@ export const winners = {
     },
     {
       id: "9",
+      image: "images/winners/9.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/9",
@@ -779,8 +724,6 @@ export const winners = {
           className: "lazyload"
         }
       },
-      logo_1: "images/winners/logo/1.svg",
-      logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Почти затёрли билет до&nbsp;дыр!&raquo;",
       history: "Татьяна покупает билеты для супруга&nbsp;&mdash; ему нравится следить за&nbsp;трансляциями тиражей по&nbsp;телевизору и&nbsp;зачёркивать числа в&nbsp;игровых полях. &laquo;В&nbsp;этот раз продавец в&nbsp;лотерейном киоске сказала, что я&nbsp;должна выиграть крупную сумму. И&nbsp;оказалась права&raquo;!",
       name: "Татьяна \nКайбелева",
@@ -789,6 +732,7 @@ export const winners = {
     },
     {
       id: "10",
+      image: "images/winners/10.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/10",
@@ -827,8 +771,6 @@ export const winners = {
           className: "lazyload"
         }
       },
-      logo_1: "images/winners/logo/1.svg",
-      logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Чуть со&nbsp;стула не&nbsp;упал&raquo;",
       history: "Денис считает, что секрет успеха в&nbsp;том, что он&nbsp;покупает лотерейные билеты в&nbsp;хорошем настроении. Также мужчина всегда ищет в&nbsp;игровых полях числа, связанные с&nbsp;значимыми для него датами. В&nbsp;выигрышном билете, например, было число 21&nbsp;&mdash; его день рождения.",
       name: "Денис \nКондратов",
@@ -837,6 +779,7 @@ export const winners = {
     },
     {
       id: "11",
+      image: "images/winners/11.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/11",
@@ -875,8 +818,6 @@ export const winners = {
           className: "lazyload"
         }
       },
-      logo_1: "images/winners/logo/1.svg",
-      logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Некоторое время хлопал глазами&raquo;",
       history: "Денис предпочитает участвовать в&nbsp;числовых лотереях и&nbsp;анализирует архивы тиражей. Но&nbsp;в&nbsp;этот раз он&nbsp;поступил иначе: перед сном купил билет в&nbsp;мобильном приложении &laquo;Столото&raquo;. Через несколько дней ярославец получил СМС-уведомление о&nbsp;выигрыше!",
       name: "Денис \nМильто",
@@ -885,6 +826,7 @@ export const winners = {
     },
     {
       id: "12",
+      image: "images/winners/12.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/12",
@@ -923,8 +865,6 @@ export const winners = {
           className: "lazyload"
         }
       },
-      logo_1: "images/winners/logo/1.svg",
-      logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Неужели это произошло наяву?&raquo;",
       history: "Елена участвует в&nbsp;лотереях давно, но&nbsp;не&nbsp;регулярно. Она купила счастливый билет в&nbsp;почтовом отделении, когда отправляла письмо. Женщина смотрела трансляцию розыгрыша тиража по&nbsp;телевизору и&nbsp;испытала яркие эмоции, когда услышала, что победитель из&nbsp;Орловской области!",
       name: "Елена \nМогилевцева",
@@ -933,6 +873,7 @@ export const winners = {
     },
     {
       id: "13",
+      image: "images/winners/13.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/13",
@@ -971,8 +912,6 @@ export const winners = {
           className: "lazyload"
         }
       },
-      logo_1: "images/winners/logo/1.svg",
-      logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Я&nbsp;&mdash; богатый дедушка&raquo;",
       history: "Владимир приобретает лотерейные билеты по&nbsp;праздникам и&nbsp;в&nbsp;значимые для него даты, чаще всего на&nbsp;почте. Мужчина не&nbsp;забудет о&nbsp;сотруднике почтового отделения, продавшем ему счастливый билет&nbsp;&mdash; порадует сладким презентом. Кстати, это лето стало особенным для Владимира: в&nbsp;июле он&nbsp;выиграл в&nbsp;лотерею, а&nbsp;в&nbsp;августе стал дедушкой уже в&nbsp;седьмой раз!",
       name: "Владимир \nПетров",
@@ -981,6 +920,7 @@ export const winners = {
     },
     {
       id: "14",
+      image: "images/winners/14.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/14",
@@ -1019,8 +959,6 @@ export const winners = {
           className: "lazyload"
         }
       },
-      logo_1: "images/winners/logo/1.svg",
-      logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Моё желание исполнилось&raquo;",
       history: "Год назад Владимир зарегистрировался на&nbsp;сайте &laquo;Столото&raquo;. С&nbsp;тех пор он&nbsp;старается не&nbsp;пропускать еженедельные розыгрыши. Мужчина был с&nbsp;сыном и&nbsp;другом в&nbsp;магазине, когда ему пришло СМС-уведомление о&nbsp;выигрыше. Владимир обрадовался победе как ребёнок!",
       name: "Владимир \nСажин",
@@ -1029,6 +967,7 @@ export const winners = {
     },
     {
       id: "15",
+      image: "images/winners/15.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/15",
@@ -1067,8 +1006,6 @@ export const winners = {
           className: "lazyload"
         }
       },
-      logo_1: "images/winners/logo/1.svg",
-      logo_2: "images/winners/logo/1_m.svg",
       title: "&laquo;Я&nbsp;&mdash; оптимист&raquo;",
       history: "Виктор не&nbsp;стал&nbsp;бы лотерейным победителем, если&nbsp;бы не&nbsp;съездил в&nbsp;гости к&nbsp;другу в&nbsp;город Шахты Ростовской области. Он&nbsp;купил счастливый билет за&nbsp;компанию. Друзья решили посоревноваться, кому больше повезёт.",
       name: "Виктор Чернов",

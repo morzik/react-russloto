@@ -13,7 +13,7 @@ const WinnersPrev = ({attr,prev,name,sum}) => {
         </div>
         <div className="winners__prev-info">
           <p className="winners__prev-info-name">{safeHTML(name)}</p>
-          <p className="winners__prev-info-sum">{safeHTML(sum)}</p>
+          <strong className="winners__prev-info-sum">{safeHTML(sum)}</strong>
           <p className="winners__prev-info-read">{"Читать историю"}</p>
         </div>
       </div>

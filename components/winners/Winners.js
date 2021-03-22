@@ -8,11 +8,10 @@ import WinnersPrevius from "./WinnersPrevius";
 import {requestModal} from "../../redux/reducer/modals";
 import {useDispatch} from "react-redux";
 
-const Winners = ({attr, bg, carousel, item, button, link, previewsAttr, carouselAttr}) => {
+const Winners = ({attr, bg, carousel, button, link, previewsAttr, carouselAttr}) => {
   const [width, setWidth] = useState(null);
   const [newId, setId] = useState(carousel[0].id);
 
-  // console.log("carousel[0].id:",carousel[0].id);
   useEffect(() => {
     global.window && global.window.addEventListener("resize", () => {
       setWidth(global.window && global.window.innerWidth);
@@ -28,34 +27,34 @@ const Winners = ({attr, bg, carousel, item, button, link, previewsAttr, carousel
           <div className="winners__bg">
             <Picture {...bg}/>
           </div>
-          {getItem(item, carousel, carouselAttr, width)}
+          {getItem(carousel, carouselAttr, width, newId)}
           <Button {...button}>{safeHTML(button.text)}</Button>
           <Button {...link} onClick={() => {dispatch(requestModal({type: 'winnersModal'}))}} >{safeHTML(link.text)}</Button>
         </div>
-        {getPreview(carousel, previewsAttr, width)}
+        {getPreview(carousel, previewsAttr, width, newId, setId)}
 
       </div>
     </section>
   )
 };
 
-function getPreview(carousel, previewsAttr, width) {
+function getPreview(carousel, previewsAttr, width, newId, setId) {
   if (width < 1023)
     return null;
   else
     return (
       <div className="winners__preview">
-        <WinnersPrevius carousel={carousel} {...previewsAttr}/>
+        <WinnersPrevius carousel={carousel} {...previewsAttr} newId={newId} onClick={setId}/>
       </div>
     );
 }
 
-function getItem(item, carousel, carouselAttr, width) {
+function getItem(carousel, carouselAttr, width, newId) {
   return width < 1023 ? (
     <div className="winners__carousel">
       <WinnersCarousel carousel={carousel} {...carouselAttr}/>
     </div>
-  ) : (<WinnersItem {...item}/>);
+  ) : (<WinnersItem {...carousel[newId - 1]}/>);
 }
 
 

@@ -32,12 +32,12 @@ const WinnersCarousel = ({carousel, ...attr}) => {
 
         {listItems}
       </Swiper>
-      <div className={"winners__carousel-nav winners__carousel-nav_prev"} ref={prevRef}>
+      <button className={"winners__carousel-nav winners__carousel-nav_prev"} ref={prevRef}>
         <div className="winners__carousel-nav-block winners__carousel-nav-block_prev"/>
-      </div>
-      <div className={"winners__carousel-nav winners__carousel-nav_next"} ref={nextRef}>
+      </button>
+      <button className={"winners__carousel-nav winners__carousel-nav_next"} ref={nextRef}>
         <div className="winners__carousel-nav-block winners__carousel-nav-block_next"/>
-      </div>
+      </button>
     </>
 
   )

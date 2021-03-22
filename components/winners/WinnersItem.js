@@ -1,15 +1,17 @@
-import React,{useState} from "react";
+import React from "react";
 import Collapse, {Panel} from 'rc-collapse';
 import {safeHTML} from "../../utils/safeHTML";
-import Picture from "../picture/Picture";
+// import Picture from "../picture/Picture";
+// import {TransitionGroup, CSSTransition} from "react-transition-group";
 
-const WinnersItem = ({attr,photo,name,title,history,sum,sign,className}) => {
+const WinnersItem = ({attr, image, name, title, history, sum, sign, className}) => {
   return (
-    <div className={`winners__item ${className?className:""}`} {...attr}>
+    <div className={`winners__item`} {...attr}>
       <img data-src="images/winners/winners.svg" alt={"decoration"} className={"winners__item-decor lazyload"}/>
       <div className="winners__item-bg">
         <div className="winners__item-bg-block">
-          <Picture {...photo} />
+          {/*<Picture {...photo} />*/}
+          <img src={image} alt={title}/>
         </div>
       </div>
       <div className="winners__item-about">

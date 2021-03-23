@@ -45,7 +45,7 @@ const MainLayout = () => {
 
   const myModal = function () {
     return (
-      <CustomModal animation={"fade-top"} horizontalPosition={"center"} verticalPosition={"middle"}>
+      <CustomModal animation={"fade scale"} horizontalPosition={"center"} verticalPosition={"middle"}>
         <WinnersModal {...winnersModal}/>
       </CustomModal>
     )
@@ -78,7 +78,6 @@ const MainLayout = () => {
       <Rules {...rules}/>
       <Safety {...safety}/>
       <Footer {...footer}/>
-      {/*<Pagination {...pagination}/>*/}
       {getPagination(pagination,width)}
 
       <Provider store={store}>

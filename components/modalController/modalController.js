@@ -5,15 +5,13 @@ import {CSSTransition, TransitionGroup} from "react-transition-group";
 function ModalController({modalStorage}){
     useSelector(data=>data.modalReducer);
     const modals = modalStorage ? modalStorage.map((val) =>
-      <CSSTransition key={val.id} classNames={'fade-modal'} timeout={300}>
-        <React.Fragment>
-            {val.modal}
-        </React.Fragment>
+      <CSSTransition key={val.id} classNames={'custom-modal'} timeout={{enter:500, exit:500}}>
+        {val.modal}
       </CSSTransition>
     ) : <></>;
 
     return (
-        <TransitionGroup>
+        <TransitionGroup component={null}>
             {modals}
         </TransitionGroup>
     )

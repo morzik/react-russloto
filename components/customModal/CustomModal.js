@@ -6,7 +6,7 @@ import {useDispatch} from "react-redux";
 const CustomModal = (props) => {
   const dispatch = useDispatch();
   return (
-    <div className={`custom-modal custom-modal_${props.horizontalPosition} custom-modal_${props.verticalPosition}`}>
+    <div className={`custom-modal ${props.animation} custom-modal_${props.horizontalPosition} custom-modal_${props.verticalPosition}`}>
       <div className={"custom-modal__bg"}/>
       <div className={"custom-modal__block"}>
         <div className={"custom-modal__content"}>

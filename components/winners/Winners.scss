@@ -6,7 +6,6 @@
     }
   }
 
-
   @mixin box($mod) {
     @include modifier("winners__card-box", $mod){
       @content;
@@ -128,12 +127,18 @@
   }
 
 
-  &__item{
+  &__item {
     position: relative;
     width: 100%;
-    box-sizing: border-box;
+  }
+
+  &__item-content{
+    width: 100%;
 
     @include MOBILE{
+      position: relative;
+      width: 100%;
+      box-sizing: border-box;
       display: flex;
       justify-content: flex-start;
       flex-direction: column;

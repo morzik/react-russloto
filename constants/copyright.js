@@ -302,7 +302,6 @@ export const winners = {
   carousel: [
     {
       id: "1",
-      image: "images/winners/1.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/1",
@@ -347,7 +346,6 @@ export const winners = {
     },
     {
       id: "2",
-      image: "images/winners/2.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/2",
@@ -392,7 +390,6 @@ export const winners = {
     },
     {
       id: "3",
-      image: "images/winners/3.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/3",
@@ -437,7 +434,6 @@ export const winners = {
     },
     {
       id: "4",
-      image: "images/winners/4.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/4",
@@ -482,7 +478,6 @@ export const winners = {
     },
     {
       id: "5",
-      image: "images/winners/5.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/5",
@@ -527,7 +522,6 @@ export const winners = {
     },
     {
       id: "6",
-      image: "images/winners/6.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/6",
@@ -572,7 +566,6 @@ export const winners = {
     },
     {
       id: "7",
-      image: "images/winners/7.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/7",
@@ -617,7 +610,6 @@ export const winners = {
     },
     {
       id: "8",
-      image: "images/winners/8.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/8",
@@ -642,7 +634,7 @@ export const winners = {
         }
       },
       prev: {
-        sourceDate: {
+        sourceData: {
           sources: [
             {
               srcSet: "images/winners/prev/8.webp",
@@ -651,8 +643,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          src: "images/winners/prev/8.png",
-
+          src: "images/winners/prev/8.png"
         }
       },
       title: "&laquo;Потерял дар речи&raquo;",
@@ -663,7 +654,6 @@ export const winners = {
     },
     {
       id: "9",
-      image: "images/winners/9.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/9",
@@ -688,7 +678,7 @@ export const winners = {
         }
       },
       prev: {
-        sourceDate: {
+        sourceData: {
           sources: [
             {
               srcSet: "images/winners/prev/9.webp",
@@ -708,7 +698,6 @@ export const winners = {
     },
     {
       id: "10",
-      image: "images/winners/10.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/10",
@@ -733,7 +722,7 @@ export const winners = {
         }
       },
       prev: {
-        sourceDate: {
+        sourceData: {
           sources: [
             {
               srcSet: "images/winners/prev/10.webp",
@@ -753,7 +742,6 @@ export const winners = {
     },
     {
       id: "11",
-      image: "images/winners/11.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/11",
@@ -778,7 +766,7 @@ export const winners = {
         }
       },
       prev: {
-        sourceDate: {
+        sourceData: {
           sources: [
             {
               srcSet: "images/winners/prev/11.webp",
@@ -798,7 +786,6 @@ export const winners = {
     },
     {
       id: "12",
-      image: "images/winners/12.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/12",
@@ -823,7 +810,7 @@ export const winners = {
         }
       },
       prev: {
-        sourceDate: {
+        sourceData: {
           sources: [
             {
               srcSet: "images/winners/prev/12.webp",
@@ -843,7 +830,6 @@ export const winners = {
     },
     {
       id: "13",
-      image: "images/winners/13.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/13",
@@ -868,7 +854,7 @@ export const winners = {
         }
       },
       prev: {
-        sourceDate: {
+        sourceData: {
           sources: [
             {
               srcSet: "images/winners/prev/13.webp",
@@ -888,7 +874,6 @@ export const winners = {
     },
     {
       id: "14",
-      image: "images/winners/14.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/14",
@@ -913,7 +898,7 @@ export const winners = {
         }
       },
       prev: {
-        sourceDate: {
+        sourceData: {
           sources: [
             {
               srcSet: "images/winners/prev/14.webp",
@@ -933,7 +918,6 @@ export const winners = {
     },
     {
       id: "15",
-      image: "images/winners/15.png",
       photo: {
         sourceData: {
           srcSetPrefix: "images/winners/15",

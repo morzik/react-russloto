@@ -1,33 +1,33 @@
 .custom-modal {
   @mixin modifier($class, $mod) {
-  $modTmp: unquote("");
-  @if type-of($mod) == list {
-    @each $m in $mod {
-      $modTmp: $modTmp + unquote(".#{$class}_#{$m}");
+    $modTmp: unquote("");
+    @if type-of($mod) == list {
+      @each $m in $mod {
+        $modTmp: $modTmp + unquote(".#{$class}_#{$m}");
+      }
+    } @else {
+      $modTmp: unquote(".#{$class}_#{$mod}");
     }
-  } @else {
-    $modTmp: unquote(".#{$class}_#{$mod}");
-  }
 
-  //@debug nth(nth(&, 1), 1);
-  $first-class: split-pseudo-class(nth(nth(&, 1), 1));
-  @if length($first-class) > 1 {
-    @for $i from 2 through length($first-class) {
-      $modTmp: $modTmp + unquote("::") + nth($first-class, $i);
+    //@debug nth(nth(&, 1), 1);
+    $first-class: split-pseudo-class(nth(nth(&, 1), 1));
+    @if length($first-class) > 1 {
+      @for $i from 2 through length($first-class) {
+        $modTmp: $modTmp + unquote("::") + nth($first-class, $i);
+      }
+    }
+
+    @if (nth($first-class, 1) != unquote(".#{$class}")) {
+      $modTmp: $modTmp + unquote(" &");
+    }
+
+    @at-root #{$modTmp} {
+      @content;
     }
   }
-
-  @if (nth($first-class, 1) != unquote(".#{$class}")) {
-    $modTmp: $modTmp + unquote(" &");
-  }
-
-  @at-root #{$modTmp} {
-    @content;
-  }
-}
   // Константы
   @mixin mod($mod) {
-    @include modifier("custom-modal", $mod){
+    @include modifier("custom-modal", $mod) {
       @content;
     }
   }
@@ -41,7 +41,7 @@
   overflow: auto;
   outline: 0;
 
-  &__bg{
+  &__bg {
     position: fixed;
     top: 0;
     left: 0;
@@ -52,7 +52,7 @@
     backdrop-filter: blur(20px);
   }
 
-  &__container{
+  &__container {
     position: relative;
     width: 100%;
     height: 100%;
@@ -60,7 +60,7 @@
     z-index: $z-modal - 10;
   }
 
-  &__block{
+  &__block {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -75,62 +75,62 @@
     z-index: $z-modal;
     transform-style: preserve-3d;
 
-    @media screen and (min-width: 576px){
+    @media screen and (min-width: 576px) {
       //max-width: 500px;
       margin: 1.75rem auto;
       min-height: calc(100% - 1rem);
     }
 
-    @media screen and (min-width: 992px){
+    @media screen and (min-width: 992px) {
       //max-width: 800px;
       min-height: calc(100% - 3.5rem);
     }
 
-    @include mod("middle"){
+    @include mod("middle") {
       top: 0;
     }
 
-    @include mod("bottom"){
+    @include mod("bottom") {
       justify-content: flex-end;
       min-height: calc(100% - 0.5rem);
       margin-bottom: 0;
 
-      @media screen and (min-width: 576px){
+      @media screen and (min-width: 576px) {
         min-height: calc(100% - 1.75rem);
       }
     }
 
-    @include mod("top"){
+    @include mod("top") {
       justify-content: flex-start;
       min-height: calc(100% - 0.5rem);
       margin-top: 0;
 
-      @media screen and (min-width: 576px){
+      @media screen and (min-width: 576px) {
         min-height: calc(100% - 1.75rem);
       }
     }
 
-    @include mod("left"){
+    @include mod("left") {
       align-items: flex-start;
       margin-left: 0.5em;
       margin-right: auto;
 
-      @media screen and (min-width: 576px){
+      @media screen and (min-width: 576px) {
         margin-left: 1.75rem;
       }
     }
 
-    @include mod("right"){
+    @include mod("right") {
       align-items: flex-end;
       margin-left: auto;
       margin-right: 0.5em;
 
-      @media screen and (min-width: 576px){
+      @media screen and (min-width: 576px) {
         margin-right: 1.75rem;
       }
     }
 
-    @include mod("fullpage"){
+    @include mod("fullpage") {
       flex-direction: column;
       justify-content: flex-start;
       max-width: 100%;
@@ -138,169 +138,208 @@
       height: 100%;
       margin: 0;
 
-      @media screen and (min-width: 576px){
+      @media screen and (min-width: 576px) {
         max-width: 100%;
         margin: 0;
       }
 
-      @media screen and (min-width: 992px){
+      @media screen and (min-width: 992px) {
         max-width: 100%;
       }
     }
 
     ////fade
-    .custom-modal-enter.fade &{
+    .custom-modal-enter.fade & {
       opacity: 0;
     }
-    .custom-modal-enter-active.fade &{
+
+    .custom-modal-enter-active.fade & {
       opacity: 1;
       transition: opacity 300ms, transform 300ms;
     }
-    .custom-modal-exit.fade &{
+
+    .custom-modal-exit.fade & {
       opacity: 1;
     }
-    .custom-modal-exit-active.fade &{
+
+    .custom-modal-exit-active.fade & {
       opacity: 0;
       transition: opacity 300ms, transform 300ms;
     }
+
     ////scale
-    .custom-modal-enter.scale &{
+    .custom-modal-enter.scale & {
       transform: scale(0.7);
     }
-    .custom-modal-enter-active.scale &{
+
+    .custom-modal-enter-active.scale & {
       transform: translateX(0);
-        ransition: opacity 300ms, transform 300ms;
+      ransition: opacity 300ms, transform 300ms;
     }
-    .custom-modal-exit.scale &{
+
+    .custom-modal-exit.scale & {
       transform: scale(1);
     }
-    .custom-modal-exit-active.scale &{
+
+    .custom-modal-exit-active.scale & {
       transform: scale(0.7);
       transition: opacity 300ms, transform 300ms;
     }
+
     ////slide-right
-    .custom-modal-enter.slide-right &{
+    .custom-modal-enter.slide-right & {
       transform: translateX(20%);
     }
-    .custom-modal-enter-active.slide-right &{
+
+    .custom-modal-enter-active.slide-right & {
       transform: translateX(0);
       transition: opacity 300ms, transform 300ms;
     }
-    .custom-modal-exit.slide-right &{
+
+    .custom-modal-exit.slide-right & {
       transform: translateX(0%);
     }
-    .custom-modal-exit-active.slide-right &{
+
+    .custom-modal-exit-active.slide-right & {
       transform: translateX(20%);
       transition: opacity 300ms, transform 300ms;
     }
+
     ////slide-in
-    .custom-modal-enter.slide-in &{
+    .custom-modal-enter.slide-in & {
       transform: translateY(20%);
     }
-    .custom-modal-enter-active.slide-in &{
+
+    .custom-modal-enter-active.slide-in & {
       transform: translateY(0);
       transition: opacity 300ms, transform 300ms;
     }
-    .custom-modal-exit.slide-in &{
+
+    .custom-modal-exit.slide-in & {
       transform: translateY(0%);
     }
-    .custom-modal-exit-active.slide-in &{
+
+    .custom-modal-exit-active.slide-in & {
       transform: translateY(20%);
       transition: opacity 300ms, transform 300ms;
     }
+
     ////fall
-    .custom-modal-enter.fall &{
+    .custom-modal-enter.fall & {
       transform: translateZ(600px) rotateX(20deg);
     }
-    .custom-modal-enter-active.fall &{
+
+    .custom-modal-enter-active.fall & {
       transform: translateZ(0px) rotateX(0deg);
       transition: opacity 300ms, transform 300ms;
     }
-    .custom-modal-exit.fall &{
+
+    .custom-modal-exit.fall & {
       transform: translateZ(0px) rotateX(0deg);
     }
-    .custom-modal-exit-active.fall &{
+
+    .custom-modal-exit-active.fall & {
       transform: translateZ(600px) rotateX(20deg);
       transition: opacity 300ms, transform 300ms;
     }
+
     ////side-fall
-    .custom-modal-enter.side-fall &{
+    .custom-modal-enter.side-fall & {
       transform: translate(30%) translateZ(600px) rotate(10deg);
     }
-    .custom-modal-enter-active.side-fall &{
+
+    .custom-modal-enter-active.side-fall & {
       transform: translate(0%) translateZ(0px) rotateX(0deg);
       transition: opacity 300ms, transform 300ms;
     }
-    .custom-modal-exit.side-fall &{
+
+    .custom-modal-exit.side-fall & {
       transform: translate(0%) translateZ(0px) rotateX(0deg);
     }
-    .custom-modal-exit-active.side-fall &{
+
+    .custom-modal-exit-active.side-fall & {
       transform: translate(30%) translateZ(600px) rotate(10deg);
       transition: opacity 300ms, transform 300ms;
     }
+
     ////flip-horiz
-    .custom-modal-enter.flip-horiz &{
+    .custom-modal-enter.flip-horiz & {
       transform: rotateY(-70deg);
     }
-    .custom-modal-enter-active.flip-horiz &{
+
+    .custom-modal-enter-active.flip-horiz & {
       transform: rotateY(0deg);
       transition: opacity 300ms, transform 300ms;
     }
-    .custom-modal-exit.flip-horiz &{
+
+    .custom-modal-exit.flip-horiz & {
       transform: rotateY(0deg);
     }
-    .custom-modal-exit-active.flip-horiz &{
+
+    .custom-modal-exit-active.flip-horiz & {
       transform: rotateY(-70deg);
       transition: opacity 300ms, transform 300ms;
     }
+
     ////flip-vert
-    .custom-modal-enter.flip-vert &{
+    .custom-modal-enter.flip-vert & {
       transform: rotateX(-70deg);
     }
-    .custom-modal-enter-active.flip-vert &{
+
+    .custom-modal-enter-active.flip-vert & {
       transform: rotateX(0deg);
       transition: opacity 300ms, transform 300ms;
     }
-    .custom-modal-exit.flip-vert &{
+
+    .custom-modal-exit.flip-vert & {
       transform: rotateX(0deg);
     }
-    .custom-modal-exit-active.flip-vert &{
+
+    .custom-modal-exit-active.flip-vert & {
       transform: rotateX(-70deg);
       transition: opacity 300ms, transform 300ms;
     }
+
     ////super-scale
-    .custom-modal-enter.super-scale &{
+    .custom-modal-enter.super-scale & {
       transform: scale(2);
     }
-    .custom-modal-enter-active.super-scale &{
+
+    .custom-modal-enter-active.super-scale & {
       transform: scale(1);
       transition: opacity 300ms, transform 300ms;
     }
-    .custom-modal-exit.super-scale &{
+
+    .custom-modal-exit.super-scale & {
       transform: scale(1);
     }
-    .custom-modal-exit-active.super-scale &{
+
+    .custom-modal-exit-active.super-scale & {
       transform: scale(2);
       transition: opacity 300ms, transform 300ms;
     }
+
     /////rotate-left
-    .custom-modal-enter.rotate-left &{
+    .custom-modal-enter.rotate-left & {
       transform: translateZ(100px) translateX(-30%) rotateY(90deg);
     }
-    .custom-modal-enter-active.rotate-left &{
+
+    .custom-modal-enter-active.rotate-left & {
       transform: translateZ(0px) translateX(0%) rotateY(0deg);
       transition: opacity 300ms, transform 300ms;
     }
-    .custom-modal-exit.rotate-left &{
+
+    .custom-modal-exit.rotate-left & {
       transform: translateZ(0px) translateX(0%) rotateY(0deg);
     }
-    .custom-modal-exit-active.rotate-left &{
+
+    .custom-modal-exit-active.rotate-left & {
       transform: translateZ(100px) translateX(-30%) rotateY(90deg);
       transition: opacity 300ms, transform 300ms;
     }
   }
 
-  &__content{
+  &__content {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -311,19 +350,38 @@
     border-radius: .3rem;
     outline: 0;
 
-    @include mod("fullpage"){
+    @include mod("fullpage") {
       height: 100%;
     }
 
-    @include mod("fade"){
+    @include mod("fade") {
       animation: fade-in .6s ease-in-out both;
     }
-    @include mod("fade-top"){
+    @include mod("fade-top") {
       animation: fade-in-top .6s ease-in-out both;
     }
-    @include mod("center"){
+    @include mod("center") {
       margin: auto;
       width: auto;
+    }
+
+
+    .fade-modal-enter & {
+      transform: translate(0, 100%);
+    }
+
+    .fade-modal-enter-active & {
+      transform: translate(0, 0);
+      transition: transform 300ms ease-out;
+    }
+
+    .fade-modal-exit & {
+      transform: translate(0, 0);
+    }
+
+    .fade-modal-exit-active & {
+      transform: translate(0, -100%);
+      transition: transform 300ms ease-in;
     }
   }
 
@@ -338,29 +396,32 @@
     cursor: pointer;
     transition: opacity .3s ease-in-out;
 
-    @include HOVER{
-      &:hover{
+    @include HOVER {
+      &:hover {
         opacity: 0.8;
       }
     }
   }
+
   &__close-btn-icon {
     @include cross(100%, 2px, $WHITE);
 
-    @include MOBILE{
-      &:before, &:after{
+    @include MOBILE {
+      &:before, &:after {
         background-color: #CECECE;
       }
     }
   }
 }
+
 .custom-modal.fall,
 .custom-modal.rotate-left,
 .custom-modal.flip-horiz,
 .custom-modal.flip-vert,
-.custom-modal.side-fall{
+.custom-modal.side-fall {
   perspective: 1300px;
 }
+
 .custom-modal.fade:not(.show) {
   opacity: 1;
 }

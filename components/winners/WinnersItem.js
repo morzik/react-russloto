@@ -4,16 +4,18 @@ import {safeHTML} from "../../utils/safeHTML";
 import Picture from "../picture/Picture";
 import {TransitionGroup, CSSTransition} from "react-transition-group";
 
+{/*<TransitionGroup > <CSSTransition key={id} timeout={300} classNames={"fade"}> </CSSTransition> </TransitionGroup>*/
+}
+
 const WinnersItem = ({id, attr, photo, name, title, history, sum, sign}) => {
   return (
     <TransitionGroup className={"winners__item"}>
       <CSSTransition key={id} timeout={300} classNames={"fade"}>
-        <div  {...attr}>
+        <div className={"winners__item-content"} {...attr}>
           <img src="images/winners/winners.svg" alt={"decoration"} className={"winners__item-decor"}/>
           <div className="winners__item-bg">
             <div className="winners__item-bg-block">
               <Picture {...photo} />
-              {/*<img src={image} alt={title}/>*/}
             </div>
           </div>
           <div className="winners__item-about">

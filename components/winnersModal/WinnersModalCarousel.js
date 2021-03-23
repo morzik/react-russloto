@@ -6,9 +6,8 @@ import WinnersModalSlide from "./WinnersModalSlide";
 SwiperCore.use([Navigation, Pagination, EffectCoverflow]);
 
 const WinnersModalCarousel = ({list, ...attr}) => {
-  console.log(list);
-  const listItems = list.map(({list})=>(
-    <SwiperSlide className={"winners-modal__slide"}>
+  const listItems = list.map(({list},index)=>(
+    <SwiperSlide key={index} className={"winners-modal__slide"}>
       <WinnersModalSlide list={list}/>
     </SwiperSlide>
   ));

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Head from "next/dist/next-server/lib/head";
 import Intro from '../intro/Intro';
 import About from '../about/About';
@@ -29,9 +29,20 @@ import {
   pagination,
   winnersModal
 } from "../../constants/copyright";
+import IntroLogo from "../intro/IntroLogo";
+import CustomMenu from "../customMenu/CustomMenu";
 
 
 const MainLayout = () => {
+  const [width, setWidth] = useState(null);
+
+  useEffect(() => {
+    global.window && global.window.addEventListener("resize", () => {
+      setWidth(global.window && global.window.innerWidth);
+    });
+    setWidth(global.window && global.window.innerWidth);
+  }, []);
+
   const myModal = function () {
     return (
       <CustomModal animation={"fade-top"} horizontalPosition={"center"} verticalPosition={"middle"}>
@@ -67,15 +78,22 @@ const MainLayout = () => {
       <Rules {...rules}/>
       <Safety {...safety}/>
       <Footer {...footer}/>
-      <Pagination {...pagination}/>
+      {/*<Pagination {...pagination}/>*/}
+      {getPagination(pagination,width)}
 
       <Provider store={store}>
         <ModalController modalStorage={modalStorage}/>
       </Provider>
     </div>
-
-
   )
 };
+
+function getPagination(pagination, width) {
+  if (width < 1023)
+    return null;
+  else
+    return <Pagination {...pagination}/>;
+
+}
 
 export default MainLayout;

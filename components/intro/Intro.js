@@ -1,5 +1,4 @@
 import React from "react";
-import * as PropTypes from "prop-types";
 import IntroMark from "./IntroMark";
 import IntroBg from "./IntroBg";
 import Button from "../button/Button";
@@ -7,6 +6,7 @@ import IntroHeader from "./IntroHeader";
 import {safeHTML} from "../../utils/safeHTML";
 
 const Intro = ({attr, title, subtitle, text, prize, mark, header, button, bg}) => {
+
   return (
     <section >
       <div className={"intro"} {...attr}>
@@ -31,23 +31,5 @@ const Intro = ({attr, title, subtitle, text, prize, mark, header, button, bg}) =
   )};
 
 
-Intro.propTypes = {
-  /**
-   * заголовок
-   */
-  title: PropTypes.string,
-  /**
-   * подзаголовок
-   */
-  subtitle: PropTypes.string,
-  /**
-   * приз
-   */
-  prize: PropTypes.string,
-  /**
-   * текст в марке
-   */
-  text: PropTypes.string,
-};
 export default Intro;
 

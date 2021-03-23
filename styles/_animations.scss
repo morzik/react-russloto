@@ -114,3 +114,43 @@
     background-position: 0 100%;
   }
 }
+
+
+.fade{
+  &-enter {
+    opacity: 0;
+  }
+  &-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-out 100ms;
+  }
+  &-exit {
+    position: absolute;
+    bottom: 0;
+    opacity: 1;
+  }
+  &-exit-active {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+  }
+}
+
+.fade-modal{
+  &-enter {
+    opacity: 0;
+  }
+  &-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-out;
+  }
+  &-exit {
+    opacity: 1;
+  }
+  &-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+  }
+}
+

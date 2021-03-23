@@ -24,26 +24,12 @@
     $all:6;
     $t-setp: $t/$all;
     animation: infinite $t steam-anim;
-    &_1{
-      animation-delay: 0s;
-    }
-    &_2{
-      animation-delay: ($t-setp*1);
-    }
-    &_3{
-      animation-delay: ($t-setp*2);
-    }
-    &_4{
-      animation-delay: ($t-setp*3);
-    }
-    &_5{
-      animation-delay: ($t-setp*4);
-    }
-    &_6{
-      animation-delay:($t-setp*5);
+    @for $i from 1 through 6 {
+      &_#{$i} {
+        animation-delay: ($t-setp*$i);
+      }
     }
   }
-
 }
 
 @keyframes steam-anim {

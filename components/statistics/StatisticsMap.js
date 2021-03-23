@@ -1,14 +1,18 @@
 import React from "react";
 import Picture from "../picture/Picture";
-
+import LazyLoad from "react-lazyload";
 
 const StatisticsMap = ({image}) => (
   <div className={"statistics__map"} >
     <div className="statistics__map-salute">
-      <img data-src="images/statistics/salute-1.svg" data-expand="-5" className={"lazyload"} alt="salute"/>
+      <LazyLoad>
+        <img src="images/statistics/salute-1.svg"  alt="salute"/>
+      </LazyLoad>
     </div>
     <div className="statistics__map-salute">
-      <img data-src="images/statistics/salute-2.svg" data-expand="-5" className={"lazyload"} alt="salute"/>
+      <LazyLoad>
+        <img src="images/statistics/salute-2.svg"  alt="salute"/>
+      </LazyLoad>
     </div>
     <Picture {...image}/>
 

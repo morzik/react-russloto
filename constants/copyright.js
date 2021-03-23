@@ -36,9 +36,9 @@ export const intro = {
         ]
       },
       imgAttr: {
-        "data-src": "images/intro/person.png",
+        src: "images/intro/person.png",
         alt: "icons-1",
-        className: "lazyload"
+
       }
     },
     table: {
@@ -60,9 +60,9 @@ export const intro = {
         ]
       },
       imgAttr: {
-        "data-src": "images/intro/table.png",
+        src: "images/intro/table.png",
         alt: "icons-2",
-        className: "lazyload"
+
       }
     }
   },
@@ -75,9 +75,9 @@ export const intro = {
       },
       image: {
         imgAttr: {
-          "data-src": "images/intro/logo.svg",
+          src: "images/intro/logo.svg",
           alt: "Русское лото",
-          className: "lazyload"
+
         }
       }
     },
@@ -124,20 +124,16 @@ export const about = {
   sign_m: "На этой неделе: ",
   image: {
     imgAttr: {
-      "data-src": "images/about/img.svg",
-      alt: "icons-1",
-      "data-expand": "-5",
-      className: "lazyload"
+      src: "images/about/img.svg",
+      alt: "icons-1"
     }
   },
   items: [
     {
       image: {
         imgAttr: {
-          "data-src": "images/about/1.svg",
-          alt: "icons-1",
-          "data-expand": "-5",
-          className: "lazyload"
+          src: "images/about/1.svg",
+          alt: "icons-1"
         }
       },
       text: "50 загородных домов в 4-х тиражах, денежные призы"
@@ -145,10 +141,8 @@ export const about = {
     {
       image: {
         imgAttr: {
-          "data-src": "images/about/2.svg",
-          alt: "icons-2",
-          "data-expand": "-5",
-          className: "lazyload"
+          src: "images/about/2.svg",
+          alt: "icons-2"
         }
       },
       text: "останется 3 бочонка – выигрывает каждый \n3-й билет"
@@ -190,10 +184,8 @@ export const instruction = {
         ]
       },
       imgAttr: {
-        "data-src": "images/instruction/video-pic.png",
-        alt: "iphone",
-        "data-expand": "-5",
-        className: "lazyload"
+        src: "images/instruction/video-pic.png",
+        alt: "iphone"
       },
     }
   },
@@ -273,6 +265,9 @@ export const infoBlock = {
     }
   ],
   more: {
+    icon:{
+      name:"info-block/tv"
+    },
     text: "<span>Результаты розыгрыша смотрите по воскресеньям в 8:20 на НТВ</span> Время в вашем регионе может отличаться от указанного. Следите за ТВ-программой.",
     data: "Данные с 2012 года"
   },
@@ -300,8 +295,7 @@ export const winners = {
       ]
     },
     imgAttr: {
-      "data-src": "images/winners/bg.svg",
-      className: "lazyload",
+      src: "images/winners/bg.svg",
       alt: "decoration"
     }
   },
@@ -329,8 +323,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/1.png",
-          className: "lazyload"
+          src: "images/winners/1.png"
         }
       },
       prev: {
@@ -343,8 +336,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/prev/1.png",
-          className: "lazyload"
+          src: "images/winners/prev/1.png"
         }
       },
       title: "&laquo;Забыли про билеты на&nbsp;два месяца&raquo;",
@@ -376,8 +368,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/2.png",
-          className: "lazyload"
+          src: "images/winners/2.png"
         }
       },
       prev: {
@@ -390,8 +381,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/prev/2.png",
-          className: "lazyload"
+          src: "images/winners/prev/2.png"
         }
       },
       title: "&laquo;Победа перевернула мой мир&raquo;",
@@ -423,9 +413,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/3.png"
-          ,
-          className: "lazyload"
+          src: "images/winners/3.png"
         }
       },
       prev: {
@@ -438,8 +426,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/prev/3.png",
-          className: "lazyload"
+          src: "images/winners/prev/3.png"
         }
       },
       title: "&laquo;Удачно я&nbsp;на&nbsp;почту зашёл&raquo;",
@@ -471,8 +458,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/4.png",
-          className: "lazyload"
+          src: "images/winners/4.png"
         }
       },
       prev: {
@@ -485,8 +471,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/prev/4.png",
-          className: "lazyload"
+          src: "images/winners/prev/4.png"
         }
       },
       title: "&laquo;Конечно, я&nbsp;рад такому повороту событий&raquo;",
@@ -518,8 +503,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/5.png",
-          className: "lazyload"
+          src: "images/winners/5.png"
         }
       },
       prev: {
@@ -532,8 +516,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/prev/5.png",
-          className: "lazyload"
+          src: "images/winners/prev/5.png"
         }
       },
       title: "&laquo;Всегда думал, что готов к новым победам&raquo;",
@@ -565,8 +548,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/6.png",
-          className: "lazyload"
+          src: "images/winners/6.png"
         }
       },
       prev: {
@@ -579,8 +561,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/prev/6.png",
-          className: "lazyload"
+          src: "images/winners/prev/6.png"
         }
       },
       title: "&laquo;Приятно осознавать, что выиграл в&nbsp;лотерею&raquo;",
@@ -612,8 +593,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/7.png",
-          className: "lazyload"
+          src: "images/winners/7.png"
         }
       },
       prev: {
@@ -626,8 +606,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/prev/7.png",
-          className: "lazyload"
+          src: "images/winners/prev/7.png"
         }
       },
       title: "&laquo;Билет оказался с&nbsp;сюрпризом&raquo;",
@@ -659,8 +638,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/8.png",
-          className: "lazyload"
+          src: "images/winners/8.png"
         }
       },
       prev: {
@@ -673,8 +651,8 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/prev/8.png",
-          className: "lazyload"
+          src: "images/winners/prev/8.png",
+
         }
       },
       title: "&laquo;Потерял дар речи&raquo;",
@@ -706,8 +684,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/9.png",
-          className: "lazyload"
+          src: "images/winners/9.png"
         }
       },
       prev: {
@@ -720,8 +697,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/prev/9.png",
-          className: "lazyload"
+          src: "images/winners/prev/9.png"
         }
       },
       title: "&laquo;Почти затёрли билет до&nbsp;дыр!&raquo;",
@@ -753,8 +729,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/10.png",
-          className: "lazyload"
+          src: "images/winners/10.png"
         }
       },
       prev: {
@@ -767,8 +742,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/prev/10.png",
-          className: "lazyload"
+          src: "images/winners/prev/10.png"
         }
       },
       title: "&laquo;Чуть со&nbsp;стула не&nbsp;упал&raquo;",
@@ -800,8 +774,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/11.png",
-          className: "lazyload"
+          src: "images/winners/11.png"
         }
       },
       prev: {
@@ -814,8 +787,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/prev/11.png",
-          className: "lazyload"
+          src: "images/winners/prev/11.png"
         }
       },
       title: "&laquo;Некоторое время хлопал глазами&raquo;",
@@ -847,8 +819,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/12.png",
-          className: "lazyload"
+          src: "images/winners/12.png"
         }
       },
       prev: {
@@ -861,8 +832,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/prev/12.png",
-          className: "lazyload"
+          src: "images/winners/prev/12.png"
         }
       },
       title: "&laquo;Неужели это произошло наяву?&raquo;",
@@ -894,8 +864,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/13.png",
-          className: "lazyload"
+          src: "images/winners/13.png"
         }
       },
       prev: {
@@ -908,8 +877,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/prev/13.png",
-          className: "lazyload"
+          src: "images/winners/prev/13.png"
         }
       },
       title: "&laquo;Я&nbsp;&mdash; богатый дедушка&raquo;",
@@ -941,8 +909,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/14.png",
-          className: "lazyload"
+          src: "images/winners/14.png"
         }
       },
       prev: {
@@ -955,8 +922,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/prev/14.png",
-          className: "lazyload"
+          src: "images/winners/prev/14.png"
         }
       },
       title: "&laquo;Моё желание исполнилось&raquo;",
@@ -988,8 +954,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/15.png",
-          className: "lazyload"
+          src: "images/winners/15.png"
         }
       },
       prev: {
@@ -1002,8 +967,7 @@ export const winners = {
           ]
         },
         imgAttr: {
-          "data-src": "images/winners/prev/15.png",
-          className: "lazyload"
+          src: "images/winners/prev/15.png"
         }
       },
       title: "&laquo;Я&nbsp;&mdash; оптимист&raquo;",
@@ -1071,25 +1035,12 @@ export const statistics = {
         ]
       },
       imgAttr: {
-        "data-src": "images/statistics/map.png",
-        alt: "map",
-        "data-expand": "-5",
-        className: "lazyload"
+        src: "images/statistics/map.png",
+        alt: "map"
       }
     }
   },
-  salutes: [
-    {
-      "data-src": "images/statistics/salut-1.svg",
-      "data-expand": "-5",
-      className: "lazyload"
-    },
-    {
-      "data-src": "images/statistics/salut-2.svg",
-      "data-expand": "-5",
-      className: "lazyload"
-    }
-  ],
+
   list: [
     {
       index: "9 286 991 717 ₽",
@@ -1128,10 +1079,8 @@ export const rules = {
       id: "1",
       image: {
         imgAttr: {
-          "data-src": "images/information-block/1.svg",
-          alt: "Первый тур",
-          "data-expand": "-5",
-          className: "lazyload"
+          src: "images/information-block/1.svg",
+          alt: "Первый тур"
         }
       },
       title: "Первый тур",
@@ -1149,10 +1098,8 @@ export const rules = {
           ]
         },
         imgAttr: {
-          "data-src": "images/information-block/2.svg",
-          alt: "Второй тур",
-          "data-expand": "-5",
-          className: "lazyload"
+          src: "images/information-block/2.svg",
+          alt: "Второй тур"
         }
       },
       title: "Второй тур",
@@ -1162,10 +1109,8 @@ export const rules = {
       id: "3",
       image: {
         imgAttr: {
-          "data-src": "images/information-block/3.svg",
-          "data-expand": "-5",
-          alt: "Третий и последующие туры",
-          className: "lazyload"
+          src: "images/information-block/3.svg",
+          alt: "Третий и последующие туры"
         }
       },
       title: "Третий \nи последующие туры",
@@ -1237,18 +1182,15 @@ export const safety = {
       text: "Мы не сохраняем номера банковских карт, платёжные пароли и другие данные, которые вы вводите при оплате билетов. Вся информация хранится только на стороне платёжной системы, которую вы выбираете сами.",
       links: [
         {
-          "data-src": "images/safety/links/1.svg",
-          className: "lazyload",
+          src: "images/safety/links/1.svg",
           alt: "visa"
         },
         {
-          "data-src": "images/safety/links/2.svg",
-          className: "lazyload",
+          src: "images/safety/links/2.svg",
           alt: "mastercard"
         },
         {
-          "data-src": "images/safety/links/3.svg",
-          className: "lazyload",
+          src: "images/safety/links/3.svg",
           alt: "мир"
         }
       ],
@@ -1299,10 +1241,8 @@ export const footer = {
   logo: {
     image: {
       imgAttr: {
-        "data-src": "images/footer/logo-footer.svg",
-        alt: "logo",
-        "data-expand": "-5",
-        className: "lazyload"
+        src: "images/footer/logo-footer.svg",
+        alt: "logo"
       }
     },
     target: "_blank",
@@ -1390,10 +1330,8 @@ export const footer = {
           ]
         },
         imgAttr: {
-          "data-src": "images/footer/part-1.png",
-          alt: "icons-1",
-          "data-expand": "-5",
-          className: "lazyload"
+          src: "images/footer/part-1.png",
+          alt: "icons-1"
         }
       },
       text: "Организаторами лотерей являются Министерство спорта РФ и Министерство финансов РФ."
@@ -1419,10 +1357,8 @@ export const footer = {
           ]
         },
         imgAttr: {
-          "data-src": "images/footer/part-2.png",
-          alt: "icons-1",
-          "data-expand": "-5",
-          className: "lazyload"
+          src: "images/footer/part-2.png",
+          alt: "icons-2"
         }
       },
       className: "footer__partner-icon_big",
@@ -1484,8 +1420,7 @@ export const winnersModal = {
               ]
             },
             imgAttr: {
-              "data-src": "images/winnersModal/1.png",
-              className: "lazyload"
+              src: "images/winnersModal/1.png"
             }
           }
         },
@@ -1500,8 +1435,7 @@ export const winnersModal = {
               ]
             },
             imgAttr: {
-              "data-src": "images/winnersModal/2.png",
-              className: "lazyload"
+              src: "images/winnersModal/2.png"
             }
           }
         },
@@ -1516,8 +1450,7 @@ export const winnersModal = {
               ]
             },
             imgAttr: {
-              "data-src": "images/winnersModal/3.png",
-              className: "lazyload"
+              src: "images/winnersModal/3.png"
             }
           }
         },
@@ -1532,8 +1465,7 @@ export const winnersModal = {
               ]
             },
             imgAttr: {
-              "data-src": "images/winnersModal/4.png",
-              className: "lazyload"
+              src: "images/winnersModal/4.png"
             }
           }
         }
@@ -1552,8 +1484,7 @@ export const winnersModal = {
               ]
             },
             imgAttr: {
-              "data-src": "images/winnersModal/5.png",
-              className: "lazyload"
+              src: "images/winnersModal/5.png"
             }
           }
         },
@@ -1568,8 +1499,7 @@ export const winnersModal = {
               ]
             },
             imgAttr: {
-              "data-src": "images/winnersModal/6.png",
-              className: "lazyload"
+              src: "images/winnersModal/6.png"
             }
           }
         },
@@ -1584,8 +1514,7 @@ export const winnersModal = {
               ]
             },
             imgAttr: {
-              "data-src": "images/winnersModal/7.png",
-              className: "lazyload"
+              src: "images/winnersModal/7.png"
             }
           }
         },
@@ -1600,8 +1529,7 @@ export const winnersModal = {
               ]
             },
             imgAttr: {
-              "data-src": "images/winnersModal/8.png",
-              className: "lazyload"
+              src: "images/winnersModal/8.png"
             }
           }
         }

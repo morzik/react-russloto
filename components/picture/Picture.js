@@ -1,13 +1,16 @@
 import React from "react";
 import * as PropTypes from "prop-types";
-import "lazysizes";
+import LazyLoad from 'react-lazyload';
 
-const Picture = ({ attr = {}, sourceData, imgAttr } = {}) => {
+
+const Picture = ({attr = {}, sourceData, imgAttr} = {}) => {
   return (
-    <picture {...attr}>
-      {getSources(sourceData)}
-      {getImage(imgAttr)}
-    </picture>
+    <LazyLoad>
+      <picture {...attr}>
+        {getSources(sourceData)}
+        {getImage(imgAttr)}
+      </picture>
+    </LazyLoad>
   );
 };
 
@@ -15,12 +18,12 @@ function getSources(sourceData) {
   return sourceData ? (
     <>
       {sourceData.sources.map(
-        ({ type, media, srcSetSuffix, srcSet }, index) => (
+        ({type, media, srcSetSuffix, srcSet}, index) => (
           <source
             key={index}
             type={type}
             media={media}
-            data-srcset={`${
+            srcSet={`${
               srcSet ? srcSet : sourceData.srcSetPrefix + srcSetSuffix
             }`}
           />

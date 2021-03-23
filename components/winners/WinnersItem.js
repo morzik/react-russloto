@@ -1,33 +1,37 @@
 import React from "react";
 import Collapse, {Panel} from 'rc-collapse';
 import {safeHTML} from "../../utils/safeHTML";
-// import Picture from "../picture/Picture";
-// import {TransitionGroup, CSSTransition} from "react-transition-group";
+import Picture from "../picture/Picture";
+import {TransitionGroup, CSSTransition} from "react-transition-group";
 
-const WinnersItem = ({attr, image, name, title, history, sum, sign, className}) => {
+const WinnersItem = ({id, attr, photo, name, title, history, sum, sign}) => {
   return (
-    <div className={`winners__item`} {...attr}>
-      <img data-src="images/winners/winners.svg" alt={"decoration"} className={"winners__item-decor lazyload"}/>
-      <div className="winners__item-bg">
-        <div className="winners__item-bg-block">
-          {/*<Picture {...photo} />*/}
-          <img src={image} alt={title}/>
+    <TransitionGroup>
+      <CSSTransition key={id} timeout={300} classNames={"fade"}>
+      <div className={`winners__item`} {...attr}>
+        <img data-src="images/winners/winners.svg" alt={"decoration"} className={"winners__item-decor lazyload"}/>
+        <div className="winners__item-bg">
+          <div className="winners__item-bg-block">
+            <Picture {...photo} />
+            {/*<img src={image} alt={title}/>*/}
+          </div>
+        </div>
+        <div className="winners__item-about">
+          <span className="winners__item-title">{safeHTML(title)}</span>
+          <Collapse className={"winners__history"}>
+            <Panel header={"История победителя"}>
+              {safeHTML(history)}
+            </Panel>
+          </Collapse>
+        </div>
+        <div className="winners__item-info">
+          <p className="winners__item-info-name">{safeHTML(name)}</p>
+          <p className="winners__item-info-sign">{safeHTML(sign)}</p>
+          <p className="winners__item-info-sum">{safeHTML(sum)}</p>
         </div>
       </div>
-      <div className="winners__item-about">
-        <span className="winners__item-title">{safeHTML(title)}</span>
-        <Collapse className={"winners__history"}>
-          <Panel header={"История победителя"}>
-            {safeHTML(history)}
-          </Panel>
-        </Collapse>
-      </div>
-      <div className="winners__item-info">
-        <p className="winners__item-info-name">{safeHTML(name)}</p>
-        <p className="winners__item-info-sign">{safeHTML(sign)}</p>
-        <p className="winners__item-info-sum">{safeHTML(sum)}</p>
-      </div>
-    </div>
+      </CSSTransition>
+    </TransitionGroup>
   )
 };
 

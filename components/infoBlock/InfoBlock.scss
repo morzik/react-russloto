@@ -69,14 +69,15 @@
 
   &__item {
     flex: 0 1 32%;
-    @include option(margin, 0, 0 0 30px);
 
+    &_1{
+      @include option(margin, 0, 0 0 30px);
+    }
     &_2{
       @include option(margin, 0, 0 0 7px);
     }
-
     &_3 {
-      margin: 0;
+      @include option(margin, 0);
     }
 
     @include MOBILE {
@@ -153,12 +154,15 @@
 
   &__more-icon {
     flex: 0 0 auto;
-    display: block;
+    display: inline-block;
     @include option(font-size, 38px, 59px);
     width: 1em;
     height: 1em;
     @include option(margin, 0 9px 3px 0, 3px 19px 0px 5px);
-    background: image("info-block/tv.svg") no-repeat center / contain;
+    svg{
+      height: 100%;
+      display: block;
+    }
   }
 
   &__more-text {

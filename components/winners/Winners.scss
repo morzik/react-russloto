@@ -129,7 +129,7 @@
 
 
   &__item{
-    position: relative;
+    //position: relative;
     width: 100%;
     box-sizing: border-box;
 
@@ -514,22 +514,4 @@
   }
 }
 
-.fade{
-  &-enter {
-    opacity: 0;
-  }
-  &-enter-active {
-    opacity: 1;
-    transition: opacity 300ms ease-out 100ms;
-  }
-  &-exit {
-    position: absolute;
-    bottom: 0;
-    opacity: 1;
-  }
-  &-exit-active {
-    opacity: 0;
-    transition: opacity 300ms ease-in;
-  }
-}
 

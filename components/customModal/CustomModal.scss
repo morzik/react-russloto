@@ -50,21 +50,6 @@
     height: 100vh;
     background-color: rgba(#000, 0.8);
     backdrop-filter: blur(20px);
-
-    .custom-modal-enter &{
-      opacity: 0;
-    }
-    .custom-modal-enter-active &{
-      opacity: 1;
-      transition: opacity 300ms, transform 300ms;
-    }
-    .custom-modal-exit &{
-      opacity: 1;
-    }
-    .custom-modal-exit-active &{
-      opacity: 0;
-      transition: opacity 300ms, transform 300ms;
-    }
   }
 
   &__container{

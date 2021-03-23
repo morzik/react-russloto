@@ -2,26 +2,24 @@ import React from "react";
 import PropTypes from 'prop-types';
 import {closeModal} from "../../redux/reducer/modals";
 import {useDispatch} from "react-redux";
-import {TransitionGroup, CSSTransition} from "react-transition-group";
 
 const CustomModal = (props) => {
   const dispatch = useDispatch();
   return (
-    <TransitionGroup>
-      <div className={`custom-modal ${props.animation} custom-modal_${props.horizontalPosition} custom-modal_${props.verticalPosition}`}>
-        <div className={"custom-modal__bg"}/>
-        <div className={"custom-modal__block"}>
-          <div className={"custom-modal__content"}>
-            <div className={"custom-modal__close-btn"} onClick={() => {
-              dispatch(closeModal({all: true}))
-            }}>
-              <div className={"custom-modal__close-btn-icon"}/>
-            </div>
-            {props.children}
+    <div className={`custom-modal custom-modal_${props.horizontalPosition} custom-modal_${props.verticalPosition}`}>
+      <div className={"custom-modal__bg"}/>
+      <div className={"custom-modal__block"}>
+        <div className={"custom-modal__content"}>
+          <div className={"custom-modal__close-btn"} onClick={() => {
+            dispatch(closeModal({all: true}))
+          }}>
+            <div className={"custom-modal__close-btn-icon"}/>
           </div>
+          {props.children}
         </div>
       </div>
-    </TransitionGroup>
+    </div>
+
   )
 };
 

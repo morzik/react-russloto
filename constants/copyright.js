@@ -1536,7 +1536,7 @@ export const winnersModal = {
       ]
     }
   ],
-  caruselAttr:{
+  carouselAttr:{
     slidesPerView: 'auto',
     spaceBetween: 50,
     loop: false,

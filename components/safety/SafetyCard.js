@@ -1,12 +1,15 @@
 import React from "react";
 import Icon from "../icon/Icon";
 import {safeHTML} from "../../utils/safeHTML";
+import LazyLoad from 'react-lazyload';
 
 const SafetyCard = ({icon, title, text, links}) => {
 
   const listItems = links.map((item,index) => (
     <li key={index} className={"safety__card-link"}>
-      <img src={item.src} alt={item.alt}/>
+      <LazyLoad>
+        <img src={item.src} alt={item.alt}/>
+      </LazyLoad>
     </li>
   ));
 
@@ -19,7 +22,9 @@ const SafetyCard = ({icon, title, text, links}) => {
               <div className="safety__card-side-bg"/>
               <div className="safety__card-side-image">
                 <div className="safety__card-side-image-block">
-                  <Icon {...icon}/>
+                  <LazyLoad>
+                    <Icon {...icon}/>
+                  </LazyLoad>
                 </div>
               </div>
               <p className="safety__card-side-title">{safeHTML(title)}</p>

@@ -2,6 +2,7 @@ import React from "react";
 import Collapse, {Panel} from 'rc-collapse';
 import {safeHTML} from "../../utils/safeHTML";
 import Picture from "../picture/Picture";
+import LazyLoad from "react-lazyload";
 import {TransitionGroup, CSSTransition} from "react-transition-group";
 
 const WinnersItem = ({id, attr, photo, name, title, history, sum, sign}) => {
@@ -9,7 +10,9 @@ const WinnersItem = ({id, attr, photo, name, title, history, sum, sign}) => {
     <TransitionGroup>
       <CSSTransition key={id} timeout={300} classNames={"fade"}>
       <div className={`winners__item`} {...attr}>
-        <img data-src="images/winners/winners.svg" alt={"decoration"} className={"winners__item-decor lazyload"}/>
+        <LazyLoad>
+          <img src="images/winners/winners.svg" alt={"decoration"} className={"winners__item-decor"}/>
+        </LazyLoad>
         <div className="winners__item-bg">
           <div className="winners__item-bg-block">
             <Picture {...photo} />
